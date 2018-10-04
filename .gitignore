@@ -1,4 +1,5 @@
 # Directories #
+design/css/
 globalResources/*.json
 src/style/
 target/

@@ -11,6 +11,38 @@
         letter-spacing: 0.6px;
         color: #0087ff;
     }
+
+    .pure-u-1 {
+        position: relative;
+    }
+
+    .arrow {
+        position: absolute;
+        right: 40px;
+        bottom: 9px;
+    }
+
+    .arrow-left {
+        width: 35px;
+        height: 35px;
+        background-image: resolve('icon-arrow-left.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .arrow-right {
+        width: 35px;
+        height: 35px;
+        margin-left: 15px;
+        background-image: resolve('icon-arrow-left.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
 }
 
 .roadmap-item {

@@ -2,22 +2,11 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <meta name="keywords" content="virtual dressing room, virtual fitting room, try clothes online">
-      <title>Your Virtual Dressing Room: Try Clothes Online</title>
-      <meta name="description" content="Create your 3D Model and try clothes online at Style.me. Our Virtual Fitting Room is the ultimate online tool to shop clothing online with confidence!">
+      <meta name="keywords" content="">
+      <title></title>
+      <meta name="description" content="">
       <meta name="author" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
-      <meta name="google-site-verification" content="lRtEbvPvFNn_k3jDTGt3gZQR1GiBY_RLr94VGRo9EoE" />
-
-      <meta property="og:url" content="<%= htmlWebpackPlugin.options.domain %>" />
-      <meta property="og:title" content="Your Virtual Dressing Room: Try Clothes Online" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="<%= htmlWebpackPlugin.options.domain %>/share.jpg?t=<%= htmlWebpackPlugin.options.timestamp %>" />
-      <meta property="og:site_name" content="Style.me" />
-      <meta property="og:description" content="Create your 3D Model and try clothes online at Style.me. Our Virtual Fitting Room is the ultimate online tool to shop clothing online with confidence!" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@StyleMe3D" />
 
       <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" sizes="16x16">
 

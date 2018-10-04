@@ -1586,6 +1586,35 @@ body {
     letter-spacing: 0.6px;
     color: #0087ff;
 }
+.section-roadmap .pure-u-1 {
+    position: relative;
+}
+.section-roadmap .arrow {
+    position: absolute;
+    right: 40px;
+    bottom: 9px;
+}
+.section-roadmap .arrow-left {
+    width: 35px;
+    height: 35px;
+    background-image: url('../img/icon-arrow-left.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+}
+.section-roadmap .arrow-right {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+    background-image: url('../img/icon-arrow-left.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    cursor: pointer;
+}
 .roadmap-item {
     font-size: 17px;
     line-height: 2.29;
@@ -1848,7 +1877,7 @@ footer .email-subscription {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 .footer-links {
     margin-top: 100px;

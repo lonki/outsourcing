@@ -90,6 +90,14 @@ export default class Roadmap extends React.PureComponent {
     });
   }
 
+  next = () => {
+    this.slider.slickNext();
+  }
+
+  prev = () => {
+    this.slider.slickPrev();
+  }
+
   render() {
     const { i18n } = this.props;
 
@@ -97,11 +105,15 @@ export default class Roadmap extends React.PureComponent {
       <section id="roadmap" className="section-roadmap">
         <div className="section row pure-g">
           <div className="pure-u-1">
-            <h2 className="section-title">{i18n({ id: 'section.exchange.title' }, 'html')}</h2>
+            <h2 className="section-title">{i18n({ id: 'section.roadmap.title' }, 'html')}</h2>
+            <div className="arrow">
+              <div className="arrow-left" onClick={this.prev} />
+              <div className="arrow-right" onClick={this.next} />
+            </div>
           </div>
 
           <div className="pure-u-1">
-            <Slider {...this.sliderSettings}>
+            <Slider ref={(slider) => { this.slider = slider; }} {...this.sliderSettings}>
               {this.sliderItemsRender()}
             </Slider>
           </div>
