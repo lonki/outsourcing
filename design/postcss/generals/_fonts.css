@@ -1,0 +1,12 @@
+body {
+    font-family: $font-main;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}

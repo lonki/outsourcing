@@ -1,0 +1,1 @@
+export RequireBrandId from './RequireBrandId';

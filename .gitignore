@@ -1,0 +1,31 @@
+# Directories #
+globalResources/*.json
+src/style/
+target/
+dist/
+node_modules/
+npm-debug.log
+/build/
+/bin/
+
+# Package Files #
+**/target/*
+*.class
+*.jar
+*.war
+
+# VS code files
+jsconfig.json
+
+######################
+# Windows
+######################
+Thumbs.db
+Desktop.ini
+
+######################
+# OSX
+######################
+.DS_Store
+*.DS_Store
+

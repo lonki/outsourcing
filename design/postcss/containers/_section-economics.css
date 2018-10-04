@@ -1,0 +1,120 @@
+.section-economics {
+    position: relative;
+    background-color: #133364;
+
+    .section-economics-bg {
+        width: 563px;
+        height: 563px;
+        position: absolute;
+        left: -69px;
+        bottom: 0;
+        background-image: resolve('economics-bg.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .pure-u-1-3, .pure-u-1-2, .pure-u-1-4 {
+        z-index: 2;
+    }
+
+    .section {
+        justify-content: center;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 1.09;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+    }
+
+    .section-msg {
+        font-size: 17px;
+        line-height: 1.59;
+        color: #ffffff;
+    }
+
+    .circle {
+        height: 240px;
+        width: 240px;
+        margin-top: 38px;
+        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.09);
+        background-color: rgba(0, 135, 255, 0.8);
+        border-radius: 50%;
+        display: inline-block;
+
+        &.blue {
+            margin-left: -50px;
+            background-color: rgba(30, 192, 255, 0.8);
+        }
+    }
+
+    .circle-text {
+        transform: translate(0, 100px);
+        height: 50%;
+        text-align: center;
+        font-size: 55px;
+        font-weight: bold;
+        line-height: 0.51;
+        letter-spacing: -0.4px;
+        color: #ffffff;
+    }
+
+    .circle-tips {
+        margin-top: 18px;
+        opacity: 0.7;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: -0.2px;
+        color: #ffffff;
+    }
+
+    .chart-container {
+        padding: 0 150px 100px 150px;
+    }
+
+    .chart-center-text {
+        transform: translate(0, 190px);
+        font-size: 55px;
+        font-weight: bold;
+        line-height: 0.51;
+        color: #ffffff;
+    }
+
+    .chart-center-tips {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.94;
+        color: #ffffff;
+    }
+
+
+    .labels {
+        display: flex;
+        height: 300px;
+        flex-direction: column;
+    }
+
+    .labels-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.94;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+
+        .title {
+            font-size: 29px;
+            font-weight: bold;
+            line-height: 0.97;
+            color: #0085fd;
+        }
+    }
+}

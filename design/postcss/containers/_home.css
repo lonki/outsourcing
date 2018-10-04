@@ -1,0 +1,166 @@
+.section-mainly {
+    min-height: 570px;
+    position: relative;
+    background-color: #133364;
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        display: block;
+        content: '';
+        opacity: 0.8;
+        background-image: linear-gradient(to bottom, #133364, #036ad8);
+        z-index: 2;
+    }
+
+    .section {
+        padding-top: 165px;
+    }
+
+    .section-content {
+        z-index: 4;
+    }
+
+    .section-title {
+        max-width: 396px;
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 1.09;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+    }
+
+    .section-msg {
+        max-width: 340px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .section-mainly-bg-container {
+        position: absolute;
+        top: 118px;
+        right: 0;
+        z-index: 3;
+    }
+
+    .section-mainly-bg {
+        width: 700px;
+        height: 346px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        background-image: resolve('macbook.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
+
+    .email-subscription {
+        justify-content: left;
+    }
+
+    .rate-link {
+        position: absolute;
+        left: 0;
+        bottom: 35px;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+
+        .left-link {
+            margin-right: 50px;
+        }
+
+        .link-img {
+            width: 98px;
+            height: 35px;
+            margin-right: 8px;
+            display: inline-block;
+        }
+
+        .ico-track {
+            background-image: resolve('icon-track.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .ico-bench {
+            background-image: resolve('icon-bench.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .rate {
+            font-size: 19px;
+            font-weight: bold;
+            color: #1ec0ff;
+            vertical-align: bottom;
+            line-height: 40px;
+
+            &.small {
+                font-size: 15px;
+                line-height: 38px;
+
+                &:after {
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    top: 12px;
+                    margin-left: 5px;
+                    content: "";
+                    background-image: resolve('icon-star.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.fixed-button {
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #1ec0ff;
+    z-index: 200;
+    cursor: pointer;
+    
+    &:after {
+        width: 27px;
+        height: 24px;
+        position: absolute;
+        top: 16px;
+        left: 11px;
+        display: block;
+        content: '';
+        background-image: resolve('icon-t.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media $breakpoint-big-desktop {
+    .section-mainly {
+        .section-mainly-bg {
+            right: -150px;
+        }
+    }
+}
+
+@media $breakpoint-medium-desktop {
+    .section-mainly {
+        .section-mainly-bg {
+            right: -250px;
+        }
+    }
+}

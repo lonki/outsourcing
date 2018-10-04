@@ -1,0 +1,178 @@
+.section-media {
+    background-color: #133364;
+
+    .section-title {
+        margin-bottom: 30px;
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 1.09;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+    }
+}
+
+.media-container {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.56;
+    color: #133364;
+    display: inline-block;
+}
+
+.media-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.48) 39%, rgba(0, 0, 0, 0.48) 58%, #000000);
+}
+
+.media-title {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 17px;
+    line-height: 1.41;
+    color: #ffffff;
+}
+
+.media-logo {
+    width: 130px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.media-img {
+    width: 270px;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+}
+
+.media-img-crow {
+    background-image: resolve('media_pic_CryptoCrow.jpg');
+}
+
+.media-img-bad {
+    background-image: resolve('media_pic_TheBadCryptoPodca.jpg');
+}
+
+.media-img-prome {
+    background-image: resolve('media_pic_Prometheus.jpg');
+}
+
+.media-logo-crow {
+    background-image: resolve('media-logo-crow.png');
+}
+
+.media-logo-bad {
+    background-image: resolve('media-logo-bad.png');
+}
+
+.media-logo-prome {
+    background-image: resolve('media-logo-prome.png');
+}
+
+.media-link-container {
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.media-link {
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.media-link-its {
+    width: 129px;
+    background-image: resolve('link-its.png');
+}
+
+.media-link-exchange {
+    width: 129px;
+    background-image: resolve('link-exchange.png');
+}
+
+.media-link-bitsonline {
+    width: 129px;
+    background-image: resolve('link-bitsonline.png');
+}
+
+.media-link-idol {
+    width: 129px;
+    background-image: resolve('link-idol.png');
+}
+
+.media-link-reuters {
+    width: 129px;
+    background-image: resolve('link-reuters.png');
+}
+
+.media-link-cryptomode {
+    width: 129px;
+    background-image: resolve('link-cryptomode.png');
+}
+
+.media-link-oracle {
+    width: 129px;
+    background-image: resolve('link-oracle.png');
+}
+
+.media-link-speaker {
+    width: 129px;
+    background-image: resolve('link-speaker.png');
+}
+
+.media-link-nvezz {
+    width: 129px;
+    background-image: resolve('link-nvezz.png');
+}
+
+.media-link-bitcoin {
+    width: 129px;
+    background-image: resolve('link-bitcoin.png');
+}
+
+.media-s-link {
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.media-s-link-bench {
+    background-image: resolve('link-s-bench.png');
+}
+
+.media-s-link-track {
+    background-image: resolve('link-s-track.png');
+}
+
+.media-s-link-icodr {
+    background-image: resolve('link-s-icodr.png');
+}
+
+.media-s-link-rating {
+    background-image: resolve('link-s-rating.png');
+}
+
+.media-s-link-icoholder {
+    background-image: resolve('link-s-icoholder.png');
+}
+
+.media-s-link-watch {
+    background-image: resolve('link-s-watch.png');
+}
+
+.media-s-link-marks {
+    background-image: resolve('link-s-marks.png');
+}

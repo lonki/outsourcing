@@ -1,0 +1,59 @@
+.section-roadmap {
+    font-size: 19px;
+    line-height: 1.53;
+    color: #133364;
+
+    .section-title {
+        margin-bottom: 50px;
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 1.09;
+        letter-spacing: 0.6px;
+        color: #0087ff;
+    }
+}
+
+.roadmap-item {
+    font-size: 17px;
+    line-height: 2.29;
+    color: #133364;
+    border-top: solid 1px rgba(19, 51, 100, 0.3);
+
+    &.selected {
+        margin-right: 6px;
+        border-top: solid 2px #0087ff;
+
+        .title {
+            color: #0087ff;
+        }
+    }
+
+    .title {
+        margin: 27px 0;
+        font-size: 29px;
+        font-weight: bold;
+        color: #133364;
+    }
+
+    li {
+        position: relative;
+        padding: 0 30px;
+
+        &:before {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 10px;
+            left: 0px;
+            display: block;
+            content: '';
+            background-image: resolve('icon-checked.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.slick-slide div {
+    outline: 0;
+}
