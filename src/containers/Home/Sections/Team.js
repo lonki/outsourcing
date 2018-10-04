@@ -24,7 +24,7 @@ export default class Team extends React.PureComponent {
             <h2 className="section-title">{i18n({ id: 'section.team.title' }, 'html')}</h2>
           </div>
 
-          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 text-center">
+          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 text-center member-container-shadow">
             <div className="member-container">
               <div className="member-img" />
               <div className="member-desc">
@@ -36,7 +36,7 @@ export default class Team extends React.PureComponent {
             </div>
           </div>
 
-          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 text-center">
+          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 text-center member-container-shadow">
             <div className="member-container">
               <div className="member-img" />
               <div className="member-desc">
@@ -48,7 +48,7 @@ export default class Team extends React.PureComponent {
             </div>
           </div>
 
-          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 text-center">
+          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 text-center member-container-shadow">
             <div className="member-container">
               <div className="member-img" />
               <div className="member-desc">

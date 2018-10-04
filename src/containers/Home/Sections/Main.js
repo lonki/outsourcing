@@ -28,8 +28,25 @@ export default class Main extends React.PureComponent {
     setEmailSubscription: PropTypes.func.isRequired,
   };
 
-  constructor(props, context) {
-    super(props, context);
+  componentWillReceiveProps(nextProps) {
+    const { setEmailSubscriptionPending, setEmailSubscriptionSuc, setEmailSubscriptionErr } = this.props;
+    const {
+      setEmailSubscriptionPending: nextSetEmailSubscriptionPending,
+      setEmailSubscriptionSuc: nextSetEmailSubscriptionSuc,
+      setEmailSubscriptionErr: nextSetEmailSubscriptionErr,
+    } = nextProps;
+
+    if (!setEmailSubscriptionPending && nextSetEmailSubscriptionPending) {
+      this.subscription.reset();
+    }
+
+    if (!setEmailSubscriptionSuc && nextSetEmailSubscriptionSuc) {
+      this.subscription.openSucText();
+    }
+
+    if (!setEmailSubscriptionErr && nextSetEmailSubscriptionErr) {
+      this.subscription.openFailText();
+    }
   }
 
   render() {
@@ -41,7 +58,7 @@ export default class Main extends React.PureComponent {
           <div className="pure-u-1-2 section-content">
             <h2 className="section-title">{i18n('home.section.main.title')}</h2>
             <p className="section-msg">{i18n('home.section.main.desc')}</p>
-            <Subscription onClick={this.props.setEmailSubscription} />
+            <Subscription ref={ref => { this.subscription = ref; }} onClick={this.props.setEmailSubscription} />
           </div>
         </div>
         <div className="rate-link">

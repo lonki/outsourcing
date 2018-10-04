@@ -1,0 +1,39 @@
+.icon-social {
+    width: 31px;
+    height: 27px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.icon-social-telegram {
+    background-image: resolve('icon-telegram.svg');
+}
+
+.icon-social-twitter {
+    background-image: resolve('icon-twitter.svg');
+}
+
+.icon-social-fb {
+    background-image: resolve('icon-fb.svg');
+}
+
+.icon-social-medium {
+    background-image: resolve('icon-medium.svg');
+}
+
+.icon-social-youtube {
+    background-image: resolve('icon-youtube.svg');
+}
+
+.icon-social-bitcoin {
+    background-image: resolve('icon-bitcoin.svg');
+}
+
+.icon-social-linkedin {
+    background-image: resolve('icon-linkedin-social.svg');
+}
+
+.icon-social-reddit {
+    background-image: resolve('icon-reddit.svg');
+}

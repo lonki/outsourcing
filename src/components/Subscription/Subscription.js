@@ -14,6 +14,8 @@ export default class Subscription extends React.PureComponent {
 
     this.state = {
       inputText: '',
+      isSuccess: false,
+      isFail: false,
     };
   }
 
@@ -26,18 +28,60 @@ export default class Subscription extends React.PureComponent {
 
     if (inputText) {
       this.props.onClick(inputText);
+      this.setState({
+        inputText: '',
+      });
     }
   }
 
+  reset = () => {
+    clearTimeout(this.timeoutId);
+    this.setState({
+      isSuccess: false,
+      isFail: false,
+    });
+  }
+
+  openSucText = () => {
+    clearTimeout(this.timeoutId);
+    this.setState({
+      isSuccess: true,
+    });
+
+    this.timeoutId = setTimeout(() => {
+      this.setState({
+        isSuccess: false,
+      });
+    }, 3000);
+  }
+
+  openFailText = () => {
+    clearTimeout(this.timeoutId);
+    this.setState({
+      isFail: true,
+    });
+
+    this.timeoutId = setTimeout(() => {
+      this.setState({
+        isFail: false,
+      });
+    }, 3000);
+  }
+
   render() {
-    const { inputText } = this.state;
+    const { inputText, isSuccess, isFail } = this.state;
+    const sucClasss = isSuccess ? 'success' : '';
+    const failClasss = isFail ? 'fail' : '';
+    const sucText = isSuccess ? 'Successfully subscribed' : '';
+    const failText = isFail ? 'Email repeat subscription' : '';
 
     return (
       <div className="email-subscription">
-        <input className="email-subscription-input" placeholder="Keep Me Updated" onChange={this.inputOnChange} value={inputText} />
+        <input type="text" className="email-subscription-input" placeholder="Keep Me Updated" onChange={this.inputOnChange} value={inputText} />
         <div className="email-subscription-group" onClick={this.send}>
           <img className="email-subscription-img" src={MAIL} width="25" height="18" />
         </div>
+        <p className={`tips ${sucClasss} ${failClasss}`}>{`${sucText}${failText}`}</p>
       </div>
     );
   }

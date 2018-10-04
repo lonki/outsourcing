@@ -5,6 +5,48 @@
     align-items: center;
     justify-content: center;
     z-index: 3;
+
+    .tips {
+        position: absolute;
+        left: 20px;
+        bottom: -20px;
+        font-size: 13px;
+        line-height: 13px;
+        color: #ffffff;
+        opacity: 0;
+        transition: opacity 3s;
+    }
+    .success {
+        opacity: 1;
+        &:before {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: -2px;
+            left: -20px;
+            display: block;
+            content: '';
+            background-image: resolve('icon-success.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .fail {
+        opacity: 1;
+        &:before {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: -2px;
+            left: -20px;
+            display: block;
+            content: '';
+            background-image: resolve('icon-fail.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .email-subscription-text {
@@ -16,11 +58,18 @@
     min-width: 250px;
     min-height: 35px;
     display: flex;
-    opacity: 0.12;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background-color: #ffffff;
-    border: solid 1px #979797;
+    background-color: rgba(74, 144, 226, 0.35);
+    border: solid 0.1px rgba(74, 144, 226, 0.35);
+    color: #ffffff;
+
+    &::placeholder {
+        margin-left: 6px;
+        font-size: 13px;
+        line-height: 2.54;
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .email-subscription-group {

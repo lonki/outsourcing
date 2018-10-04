@@ -16,6 +16,24 @@
     }
 }
 
+.member-container-shadow {
+    position: relative;
+    &:before {
+        width: 280px;
+        height: 302px;
+        position: absolute;
+        top: 0;
+        margin-top: 85px;
+        margin-right: 3px;
+        opacity: 0.25;
+        border-radius: 5px;
+        filter: blur(20.3px);
+        background-image: linear-gradient(to left, #133364, #0087ff);
+        content: '';
+        display: inline-block;
+    }
+}
+
 .member-container {
     position: relative;
     width: 280px;
@@ -24,7 +42,6 @@
     padding-top: 90px;
     border-radius: 5px;
     background-color: $color-white;
-    box-shadow: 0px 0px 21px 0px rgba(19, 51, 100, 0.25);
     display: inline-block;
 
     .link {

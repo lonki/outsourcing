@@ -1,3 +1,7 @@
+const common = {
+  'common.logo': 'DINNGO',
+};
+
 const header = {
   'header.about': 'About',
   'header.token': 'Token',
@@ -9,6 +13,11 @@ const header = {
 const footer = {
   'footer.title': 'EMAIL<br>SUBSCRIPTION',
   'footer.copyright': '© 2018 DINNGO. All rights reserved.',
+
+  'footer.link.a': 'Join Us',
+  'footer.link.b': 'Privacy Policy',
+  'footer.link.c': 'Terms Of Use',
+  'footer.link.d': 'FAQ',
 };
 
 const pageHome = {
@@ -83,6 +92,7 @@ const sectionRoadmap = {
 
 export default Object.assign(
   {},
+  common,
   header,
   footer,
   pageHome,

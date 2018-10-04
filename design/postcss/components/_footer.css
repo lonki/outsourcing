@@ -1,6 +1,11 @@
 footer {
+    min-height: 433px;
     position: relative;
     background: #0a336a;
+
+    .section {
+        padding: 48px 0;
+    }
 
     .section-title {
         font-size: 46px;
@@ -12,11 +17,23 @@ footer {
 
     .email-subscription {
         justify-content: left;
+        margin-bottom: 13px;
     }
 }
 
 .footer-links {
+    margin-top: 100px;
+    transform: translate(0, 15px);
+    font-size: 15px;
+    line-height: 2.6;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+
     .link {
+        opacity: 0.7;
+        font-size: 15px;
+        color: #ffffff;
         &:after {
             margin: 0 20px;
             display: inline-block;
@@ -42,7 +59,10 @@ footer {
     position: absolute;
     right: 77px;
     bottom: 34px;
-    color: white;
+    opacity: 0.4;
+    font-size: 13px;
+    line-height: 2.54;
+    color: #ffffff;
 }
 
 .footer-right-bg {
@@ -54,4 +74,14 @@ footer {
     background-image: resolve('footer-bg.png');
     background-repeat: no-repeat;
     z-index: 1;
+}
+
+.footer-email {
+    align-items: flex-end;
+    display: flex;
+}
+
+.social-list {
+    padding: 0 20%;
+    margin-top: 100px;
 }

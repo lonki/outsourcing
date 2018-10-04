@@ -31,6 +31,13 @@ input[type=text], input[type=email], textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+	text-decoration: none;
+	outline: none;
+
+	&:hover, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
 }
 
 .row {

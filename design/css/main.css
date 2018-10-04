@@ -25,6 +25,12 @@ input[type=text], input[type=email], textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    text-decoration: none;
+    outline: none;
+}
+input[type=text]:hover, input[type=text]:focus, input[type=email]:hover, input[type=email]:focus, textarea:hover, textarea:focus {
+    text-decoration: none;
+    outline: none;
 }
 .row {
     display: block;
@@ -756,6 +762,37 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
+.icon-social {
+    width: 31px;
+    height: 27px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.icon-social-telegram {
+    background-image: url('../img/icon-telegram.svg');
+}
+.icon-social-twitter {
+    background-image: url('../img/icon-twitter.svg');
+}
+.icon-social-fb {
+    background-image: url('../img/icon-fb.svg');
+}
+.icon-social-medium {
+    background-image: url('../img/icon-medium.svg');
+}
+.icon-social-youtube {
+    background-image: url('../img/icon-youtube.svg');
+}
+.icon-social-bitcoin {
+    background-image: url('../img/icon-bitcoin.svg');
+}
+.icon-social-linkedin {
+    background-image: url('../img/icon-linkedin-social.svg');
+}
+.icon-social-reddit {
+    background-image: url('../img/icon-reddit.svg');
+}
 .section-mainly {
     min-height: 570px;
     position: relative;
@@ -782,7 +819,7 @@ body {
     font-size: 18px;
     font-weight: 300;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
 }
 .section-mainly .section-mainly-bg-container {
     position: absolute;
@@ -1303,6 +1340,25 @@ body {
     font-weight: bold;
     color: #0087ff;
 }
+.member-container-shadow {
+    position: relative;
+}
+.member-container-shadow:before {
+    width: 280px;
+    height: 302px;
+    position: absolute;
+    top: 0;
+    margin-top: 85px;
+    margin-right: 3px;
+    opacity: 0.25;
+    border-radius: 5px;
+    -webkit-filter: blur(20.3px);
+            filter: blur(20.3px);
+    background-image: -webkit-gradient(linear, right top, left top, from(#133364), to(#0087ff));
+    background-image: linear-gradient(to left, #133364, #0087ff);
+    content: '';
+    display: inline-block;
+}
 .member-container {
     position: relative;
     width: 280px;
@@ -1311,8 +1367,6 @@ body {
     padding-top: 90px;
     border-radius: 5px;
     background-color: #FFF;
-    -webkit-box-shadow: 0px 0px 21px 0px rgba(19, 51, 100, 0.25);
-            box-shadow: 0px 0px 21px 0px rgba(19, 51, 100, 0.25);
     display: inline-block;
 }
 .member-container .link {
@@ -1776,8 +1830,12 @@ body {
     }
 }
 footer {
+    min-height: 433px;
     position: relative;
     background: #0a336a;
+}
+footer .section {
+    padding: 48px 0;
 }
 footer .section-title {
     font-size: 46px;
@@ -1790,8 +1848,23 @@ footer .email-subscription {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+    margin-bottom: 13px;
 }
-.footer-links .link {}
+.footer-links {
+    margin-top: 100px;
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+    font-size: 15px;
+    line-height: 2.6;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+}
+.footer-links .link {
+    opacity: 0.7;
+    font-size: 15px;
+    color: #ffffff;
+}
 .footer-links .link:after {
     margin: 0 20px;
     display: inline-block;
@@ -1811,7 +1884,10 @@ footer .email-subscription {
     position: absolute;
     right: 77px;
     bottom: 34px;
-    color: white;
+    opacity: 0.4;
+    font-size: 13px;
+    line-height: 2.54;
+    color: #ffffff;
 }
 .footer-right-bg {
     width: 17%;
@@ -1822,6 +1898,18 @@ footer .email-subscription {
     background-image: url('../img/footer-bg.png');
     background-repeat: no-repeat;
     z-index: 1;
+}
+.footer-email {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.social-list {
+    padding: 0 20%;
+    margin-top: 100px;
 }
 .email-subscription {
     position: relative;
@@ -1838,6 +1926,47 @@ footer .email-subscription {
             justify-content: center;
     z-index: 3;
 }
+.email-subscription .tips {
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #ffffff;
+    opacity: 0;
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
+}
+.email-subscription .success {
+    opacity: 1;
+}
+.email-subscription .success:before {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    display: block;
+    content: '';
+    background-image: url('../img/icon-success.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.email-subscription .fail {
+    opacity: 1;
+}
+.email-subscription .fail:before {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    display: block;
+    content: '';
+    background-image: url('../img/icon-fail.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .email-subscription-text {
     color: white;
     margin-right: 35px;
@@ -1848,11 +1977,29 @@ footer .email-subscription {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    opacity: 0.12;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background-color: #ffffff;
-    border: solid 1px #979797;
+    background-color: rgba(74, 144, 226, 0.35);
+    border: solid 0.1px rgba(74, 144, 226, 0.35);
+    color: #ffffff;
+}
+.email-subscription-input::-webkit-input-placeholder {
+    margin-left: 6px;
+    font-size: 13px;
+    line-height: 2.54;
+    color: rgba(255, 255, 255, 0.6);
+}
+.email-subscription-input:-ms-input-placeholder {
+    margin-left: 6px;
+    font-size: 13px;
+    line-height: 2.54;
+    color: rgba(255, 255, 255, 0.6);
+}
+.email-subscription-input::placeholder {
+    margin-left: 6px;
+    font-size: 13px;
+    line-height: 2.54;
+    color: rgba(255, 255, 255, 0.6);
 }
 .email-subscription-group {
     min-width: 68px;
