@@ -26,9 +26,6 @@ const pageHome = {
 
   'home.section.main.title': 'THE MOBILE DIGITAL CURRENCY EXCHANGE',
   'home.section.main.desc': 'DINNGO allows you to instantly trade digital currency and store it in your cold wallet.',
-
-  'home.section.roadmap.item.title': '2018 Q4',
-  'home.section.roadmap.item.desc': 'Launch Exchange Beta<BR>- Run Bug Bounty Campaign<BR>- Delivery the first shipment of DINNGO cold wallets<BR>- Keep the first response of customer support standard to be within 1 day',
 };
 
 const sectionExchange = {
@@ -88,6 +85,35 @@ const sectionMedia = {
 
 const sectionRoadmap = {
   'section.roadmap.title': 'ROADMAP<br>PLAN',
+
+  'section.roadmap.card.title.1': '2018 Q4',
+  'section.roadmap.card.title.2': '2019 Q1',
+  'section.roadmap.card.title.3': '2019 Q2',
+  'section.roadmap.card.title.4': '2019 Q3',
+  'section.roadmap.card.title.5': '2019 Q4',
+  'section.roadmap.card.title.6': '2020 Q1',
+
+  'section.roadmap.card.1.1': 'Launch Exchange Beta',
+  'section.roadmap.card.1.2': 'Run Bug Bounty Campaign',
+  'section.roadmap.card.1.3': 'Delivery the first shipment of DINNGO cold wallets',
+  'section.roadmap.card.1.4': 'Keep the first response of customer support standard to be within 1 day',
+
+  'section.roadmap.card.2.1': 'Launch Exchange Official',
+  'section.roadmap.card.2.2': 'Support English and Chinese',
+  'section.roadmap.card.2.3': 'Reach Single Day Transaction Volume of $ 2,000,000',
+
+  'section.roadmap.card.3.1': 'Open SDK to other wallet providers',
+  'section.roadmap.card.3.2': 'Support Japanese and Korean',
+
+  'section.roadmap.card.4.1': 'Support BTC transactions',
+  'section.roadmap.card.4.2': 'Support advanced trading functions',
+
+  'section.roadmap.card.5.1': 'Support NEO, GAS, NEP-5 transactions',
+  'section.roadmap.card.5.2': 'Launch DINNGO Merchant Beta',
+  'section.roadmap.card.5.3': 'Reach Single Day Transaction Volume of $ 50,000,000',
+
+  'section.roadmap.card.6.1': 'Support QRC-20 transactions',
+  'section.roadmap.card.6.2': 'Launch DINNGO Merchant Official',
 };
 
 export default Object.assign(

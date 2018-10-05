@@ -48,12 +48,52 @@ export default class Roadmap extends React.PureComponent {
     };
 
     this.ROADMAP = [
-      { title: i18n('home.section.roadmap.item.title'), desc: i18n({ id: 'home.section.roadmap.item.desc' }, 'html') },
-      { title: i18n('home.section.roadmap.item.title'), desc: i18n({ id: 'home.section.roadmap.item.desc' }, 'html') },
-      { title: i18n('home.section.roadmap.item.title'), desc: i18n({ id: 'home.section.roadmap.item.desc' }, 'html') },
-      { title: i18n('home.section.roadmap.item.title'), desc: i18n({ id: 'home.section.roadmap.item.desc' }, 'html') },
-      { title: i18n('home.section.roadmap.item.title'), desc: i18n({ id: 'home.section.roadmap.item.desc' }, 'html') },
-      { title: i18n('home.section.roadmap.item.title'), desc: i18n({ id: 'home.section.roadmap.item.desc' }, 'html') },
+      {
+        title: i18n('section.roadmap.card.title.1'),
+        cards: [
+          i18n('section.roadmap.card.1.1'),
+          i18n('section.roadmap.card.1.2'),
+          i18n('section.roadmap.card.1.3'),
+          i18n('section.roadmap.card.1.4'),
+        ],
+      },
+      {
+        title: i18n('section.roadmap.card.title.2'),
+        cards: [
+          i18n('section.roadmap.card.2.1'),
+          i18n('section.roadmap.card.2.2'),
+          i18n('section.roadmap.card.2.3'),
+        ],
+      },
+      {
+        title: i18n('section.roadmap.card.title.3'),
+        cards: [
+          i18n('section.roadmap.card.3.1'),
+          i18n('section.roadmap.card.3.2'),
+        ],
+      },
+      {
+        title: i18n('section.roadmap.card.title.4'),
+        cards: [
+          i18n('section.roadmap.card.4.1'),
+          i18n('section.roadmap.card.4.2'),
+        ],
+      },
+      {
+        title: i18n('section.roadmap.card.title.5'),
+        cards: [
+          i18n('section.roadmap.card.5.1'),
+          i18n('section.roadmap.card.5.2'),
+          i18n('section.roadmap.card.5.3'),
+        ],
+      },
+      {
+        title: i18n('section.roadmap.card.title.6'),
+        cards: [
+          i18n('section.roadmap.card.6.1'),
+          i18n('section.roadmap.card.6.2'),
+        ],
+      },
     ];
 
     this.state = {
@@ -73,19 +113,25 @@ export default class Roadmap extends React.PureComponent {
 
     return this.ROADMAP.map((road, index) => {
       const selectedClass = sliderIndex === index ? 'selected' : '';
+      const { cards } = road;
 
       return (
         <div key={`roadmap_${index}`}>
           <div className={`roadmap-item ${selectedClass}`} onClick={this.selectItem} data-index={index}>
             <p className="title">{road.title}</p>
             <ul>
-              <li>Launch Exchange Beta</li>
-              <li>Run Bug Bounty Campaign</li>
-              <li>Delivery the first shipment of DINNGO cold wallets</li>
-              <li>Keep the first response of customer support standard to be within 1 day</li>
+              { this.sliderItemDetailRender(cards) }
             </ul>
           </div>
         </div>
+      );
+    });
+  }
+
+  sliderItemDetailRender = (cards) => {
+    return cards.map((card) => {
+      return (
+        <li key={card}>{card}</li>
       );
     });
   }
