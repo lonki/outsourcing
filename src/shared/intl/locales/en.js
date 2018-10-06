@@ -29,7 +29,7 @@ const pageHome = {
 };
 
 const sectionExchange = {
-  'section.exchange.title': 'Exchange<br>Features',
+  'section.exchange.title': 'EXCHANGE<br>FEATURES',
   'section.exchange.desc': 'DINNGO is revolutionizing the way you trade digital currencies. The exchange integrates with cold wallets seamlessly, providing the secure, fast and convenient asset trading service the market needs.',
   'section.exchange.list.a.title': 'Cold Wallet Service',
   'section.exchange.list.a.desc': 'Strengthen the security of your digital currencies storage and the efficiency of the exchange.',
@@ -60,6 +60,7 @@ const sectionEconomics = {
   'section.economics.circle.right.title': 'DGO',
   'section.economics.circle.right.desc': 'Utility Token',
 
+  'section.economics.chart.left.title': '1 ETH = 2,125 DGO',
   'section.economics.chart.center.title': '200M',
   'section.economics.chart.center.desc': 'TOTAL SUPPLY DGO',
   'section.economics.chart.a.label': 'Private Sale',

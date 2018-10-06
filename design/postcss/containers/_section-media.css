@@ -1,5 +1,9 @@
 .section-media {
     background-color: #133364;
+    
+    .section {
+        padding-bottom: 100px;
+    }
 
     .section-title {
         margin-bottom: 30px;

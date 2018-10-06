@@ -16,7 +16,7 @@
     }
 
     .section-msg {
-        max-width: 360px;
+        max-width: 70%;
         font-size: 17px;
         line-height: 1.59;
         color: #133364;
@@ -65,8 +65,8 @@
     }
 
     .section-exchange-video {
-        width: 450px;
-        height: 322px;
+        width: 500px;
+        height: 365px;
         margin-top: 65px;
         background-image: resolve('mv.jpg');
         background-size: contain;
@@ -103,7 +103,7 @@
     }
 
     .list-desc {
-        max-width: 240px;
+        max-width: 85%;
         font-size: 17px;
         line-height: 1.59;
         color: #133364;
@@ -163,10 +163,30 @@
         color: #0087ff;
     }
 
-    .flex-center {
+    .desktop-slider-circle-container {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .section-exchange-loader {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        .loader-circle {
+            width: 17px;
+            height: 17px;
+        }
+
+        .loader-circle-left {
+            margin-left: 0px;
+        }
+
+        .loader-circle-right {
+            margin-left: -4px;
+        }
     }
 
     .desktop-slider-circle {
@@ -189,6 +209,7 @@
         opacity: 0.8;
         background-color: #0087ff;
         border-radius: 50%;
+        z-index: 2;
 
         &:before {
             width: 52px;
@@ -213,6 +234,7 @@
         opacity: 0.8;
         background-color: #1ec0ff;
         border-radius: 50%;
+        z-index: 1;
 
         &:before {
             width: 40px;
@@ -229,7 +251,7 @@
     }
 
     .desktop-slider-item {
-        width: 280px;
+        width: 90%;
         height: 100px;
         position: relative;
         margin-top: 25px;
@@ -266,27 +288,20 @@
             text-align: left;
         }
     }
-}
 
-.video-content {
-    iframe {
-        margin: 15px 15px;
-        width: 650px;
-        height: 360px;
-    }
-    i.icon-close {
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        cursor: pointer;
-    }
-}
 
-@media $breakpoint-tablet {
-    .video-content {
-        iframe {
-            width: calc(80vw);
-            height: auto;
+    @media $breakpoint-big-desktop{
+        .section-exchange-video {
+            width: 475px;
+            height: 338px;
+        }
+    }
+
+    @media $breakpoint-medium-desktop{
+        .section-exchange-video {
+            width: 450px;
+            height: 322px;
         }
     }
 }
+

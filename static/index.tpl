@@ -57,6 +57,7 @@
         .loader-circle {
           width:44.5px;
           height:44.5px;
+          position:relative;
           border-radius:100%;
           display: inline-block;
           animation: slide 1.5s infinite;

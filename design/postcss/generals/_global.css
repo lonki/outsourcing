@@ -93,6 +93,20 @@ input[type=text], input[type=email], textarea {
 	vertical-align: top;
 }
 
+.video-content {
+    iframe {
+        margin: 15px 15px;
+        width: 650px;
+        height: 360px;
+    }
+    i.icon-close {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        cursor: pointer;
+    }
+}
+
 @media $breakpoint-xbig-desktop {
     .section {
 		padding: 75px 79px;
@@ -115,4 +129,11 @@ input[type=text], input[type=email], textarea {
 	.logo-text {
 		display: none;
 	}
+
+	.video-content {
+        iframe {
+            width: calc(80vw);
+            height: auto;
+        }
+    }
 }

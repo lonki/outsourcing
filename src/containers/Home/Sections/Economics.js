@@ -56,7 +56,7 @@ export default class Economics extends React.PureComponent {
 
     return (
       <section id="economics" className="section-economics">
-        <div className="section row pure-g">
+        <div className="section row pure-g two-circle-container">
           <div className="section-economics-bg" />
 
           <div className="pure-u-1-2">
@@ -78,16 +78,15 @@ export default class Economics extends React.PureComponent {
               </div>
             </div>
           </div>
+
+          <div className="pure-u-1 section-sub-title">
+            {i18n('section.economics.chart.left.title')}
+          </div>
         </div>
 
 
         <div className="pure-u-1">
           <div className="section row pure-g chart-container">
-            <div className="pure-u-1-2 chart-center-text text-center">
-              {i18n('section.economics.chart.center.title')}
-              <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
-            </div>
-            <div className="pure-u-1-2"></div>
             <div className="pure-u-1-2">
               <Doughnut
                 data={this.doughnutSettings}
@@ -134,6 +133,12 @@ export default class Economics extends React.PureComponent {
                 </div>
               </div>
             </div>
+
+            <div className="pure-u-1-2 chart-center-text text-center">
+              {i18n('section.economics.chart.center.title')}
+              <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
+            </div>
+            <div className="pure-u-1-2" />
           </div>
         </div>
       </section>

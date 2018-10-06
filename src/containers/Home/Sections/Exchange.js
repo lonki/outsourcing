@@ -143,10 +143,14 @@ export default class Exchange extends React.PureComponent {
               <p className="desc">Freely design your own interface at your need.</p>
             </div>
           </div>
-          <div className="pure-u-1-3 flex-center">
+          <div className="pure-u-1-3 desktop-slider-circle-container">
             <div className="desktop-slider-circle">
-              <div className="desktop-slider-circle-2"></div>
-              <div className="desktop-slider-circle-3"></div>
+              <div className="desktop-slider-circle-2" />
+              <div className="desktop-slider-circle-3" />
+            </div>
+            <div className="section-exchange-loader">
+              <div className="loader-circle loader-circle-left" />
+              <div className="loader-circle loader-circle-right loader-circle-delay" />
             </div>
           </div>
           <div className="pure-u-1-3 text-right">
