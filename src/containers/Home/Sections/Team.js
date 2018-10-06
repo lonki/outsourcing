@@ -20,7 +20,7 @@ export default class Team extends React.PureComponent {
 
     for (let i = 1; i <= 13; i += 1) {
       render.push((
-        <div className="pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1 text-center member-container-shadow">
+        <div key={i18n(`section.team.name.${i}`)} className="pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1 text-center member-container-shadow">
           <div className="member-container">
             <div className={`member-img member-team-${i18n(`section.team.img.${i}`)}`} />
             <div className="member-desc">

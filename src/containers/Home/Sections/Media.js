@@ -35,7 +35,7 @@ export default class Media extends React.PureComponent {
 
   openVideo = (e) => {
     this.setState({
-      media: e.currentTarget.getAttribute('data-media')
+      media: e.currentTarget.getAttribute('data-media'),
     });
     this.videoModal.show();
   }

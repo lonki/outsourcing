@@ -156,6 +156,7 @@
         line-height: 1.94;
         text-align: center;
         color: rgba(255, 255, 255, 0.7);
+        cursor: pointer;
 
         .title {
             font-size: 29px;

@@ -72,6 +72,23 @@ export default class Economics extends React.PureComponent {
     });
   }
 
+  showChartTooltip = (e) => {
+    clearTimeout(this.timeoutId);
+    const index = e.currentTarget.getAttribute('data-index');
+    const { chartInstance } = this.chart;
+    const item = chartInstance.getDatasetMeta(0).data[index];
+    this.onHover(null, [item]);
+    chartInstance.tooltip._active = [item];
+    chartInstance.tooltip.update();
+    chartInstance.render();
+
+    this.timeoutId = setTimeout(() => {
+      this.onHover(null, []);
+      chartInstance.tooltip._active = [];
+      chartInstance.tooltip.update();
+      chartInstance.render();
+    }, 2000);
+  }
   render() {
     const { i18n } = this.props;
     const { isShowChart } = this.state;
@@ -135,29 +152,29 @@ export default class Economics extends React.PureComponent {
               <div className="pure-u-1-2">
                 <div className="row pure-g">
                   <div className="labels text-center pure-u-1-2">
-                    <div className="labels-item">
+                    <div className="labels-item" data-index="0" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[0] }}>{this.data[0]}%</p>
                       <p>{this.labels[0]}</p>
                     </div>
-                    <div className="labels-item">
+                    <div className="labels-item" data-index="1" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[1]}%</p>
                       <p>{this.labels[1]}</p>
                     </div>
-                    <div className="labels-item">
+                    <div className="labels-item" data-index="2" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[2]}%</p>
                       <p>{this.labels[2]}</p>
                     </div>
                   </div>
                   <div className="labels text-center pure-u-1-2">
-                    <div className="labels-item">
+                    <div className="labels-item" data-index="3" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[3] }}>{this.data[3]}%</p>
                       <p>{this.labels[3]}</p>
                     </div>
-                    <div className="labels-item">
+                    <div className="labels-item" data-index="4" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[4] }}>{this.data[4]}%</p>
                       <p>{this.labels[4]}</p>
                     </div>
-                    <div className="labels-item">
+                    <div className="labels-item" data-index="5" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[5] }}>{this.data[5]}%</p>
                       <p>{this.labels[5]}</p>
                     </div>
