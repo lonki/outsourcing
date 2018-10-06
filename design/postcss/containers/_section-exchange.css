@@ -75,20 +75,6 @@
         cursor: pointer;
     }
 
-    .video-content {
-        iframe {
-            margin: 15px 15px;
-            width: 650px;
-            height: 360px;
-        }
-        i.icon-close {
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            cursor: pointer;
-        }
-    }
-
     .list-img-a {
         width: 70px;
         background-image: resolve('exchange-list-01.svg');
@@ -282,14 +268,25 @@
     }
 }
 
+.video-content {
+    iframe {
+        margin: 15px 15px;
+        width: 650px;
+        height: 360px;
+    }
+    i.icon-close {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        cursor: pointer;
+    }
+}
 
 @media $breakpoint-tablet {
-    .section-exchange {
-        .video-content {
-            iframe {
-                width: calc(80vw);
-                height: auto;
-            }
+    .video-content {
+        iframe {
+            width: calc(80vw);
+            height: auto;
         }
     }
 }

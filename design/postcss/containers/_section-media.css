@@ -49,8 +49,8 @@
 }
 
 .media-img {
-    width: 270px;
-    height: 170px;
+    width: 320px;
+    height: 220px;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
@@ -87,63 +87,53 @@
 }
 
 .media-link {
-    height: 55px;
+    height: 65px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .media-link-its {
-    width: 129px;
     background-image: resolve('link-its.png');
 }
 
 .media-link-exchange {
-    width: 129px;
     background-image: resolve('link-exchange.png');
 }
 
 .media-link-bitsonline {
-    width: 129px;
     background-image: resolve('link-bitsonline.png');
 }
 
 .media-link-idol {
-    width: 129px;
     background-image: resolve('link-idol.png');
 }
 
 .media-link-reuters {
-    width: 129px;
     background-image: resolve('link-reuters.png');
 }
 
 .media-link-cryptomode {
-    width: 129px;
     background-image: resolve('link-cryptomode.png');
 }
 
 .media-link-oracle {
-    width: 129px;
     background-image: resolve('link-oracle.png');
 }
 
 .media-link-speaker {
-    width: 129px;
     background-image: resolve('link-speaker.png');
 }
 
 .media-link-nvezz {
-    width: 129px;
     background-image: resolve('link-nvezz.png');
 }
 
 .media-link-bitcoin {
-    width: 129px;
     background-image: resolve('link-bitcoin.png');
 }
 
 .media-s-link {
-    height: 32px;
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
@@ -175,4 +165,34 @@
 
 .media-s-link-marks {
     background-image: resolve('link-s-marks.png');
+}
+
+@media $breakpoint-big-desktop{
+    .media-img {
+        width: 300px;
+        height: 189px;
+    }
+
+    .media-link {
+        height: 65px;
+    }
+
+    .media-s-link {
+        height: 36px;
+    }
+}
+
+@media $breakpoint-medium-desktop{
+    .media-img {
+        width: 270px;
+        height: 170px;
+    }
+
+    .media-link {
+        height: 55px;
+    }
+
+    .media-s-link {
+        height: 32px;
+    }
 }

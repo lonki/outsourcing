@@ -72,15 +72,125 @@ const sectionEconomics = {
 
 const sectionTeam = {
   'section.team.title': 'OUR<br>TEAM',
-  'section.economics.desc': 'DGO token is a utility token which supports the DINNGO ecosystem. Holders will not only enjoy a 50% discount on transaction fees but receive numerous exclusive benefits.',
+  
+  'section.team.img.1': 'teddy',
+  'section.team.name.1': 'HSUAN-TING CHU',
+  'section.team.position.1': 'Chief Executive Officer',
+  'section.team.desc.1': 'Founder & CEO, a serial entrepreneur who built multiple VC funded business. Founder of Jessyfrup, extensive experience in US financial market.',
+  'section.team.link.1': 'https://www.linkedin.com/in/hsuantingchu/',
+
+  'section.team.img.2': 'blake',
+  'section.team.name.2': 'BLAKE HO',
+  'section.team.position.2': 'Chief Operating Officer',
+  'section.team.desc.2': 'Chief Operating Officer, finance major with banking and operating expertise. Years of experience in Citi bank focusing on banking and marketing.',
+  'section.team.link.2': 'https://www.linkedin.com/in/blakeho/',
+
+  'section.team.img.3': 'ben',
+  'section.team.name.3': 'BEN HUANG',
+  'section.team.position.3': 'Chief Blockchain Officer',
+  'section.team.desc.3': 'Chief Blockchain Officer, engaged in research and development in blockchain technology since 2014. The core blockchain developer of Gcoin and DiQi.',
+  'section.team.link.3': 'https://www.linkedin.com/in/pthuang/',
+
+  'section.team.img.4': 'johnny',
+  'section.team.name.4': 'JOHNNY CHUANG',
+  'section.team.position.4': 'Chief Financial Officer',
+  'section.team.desc.4': 'Chief Financial Officer, ex-Deloitte, Boston Consulting Group. Columbia University Master with M&A and Japanese Market expertise.',
+  'section.team.link.4': 'https://www.linkedin.com/in/johnnychuang/',
+
+  'section.team.img.5': 'star',
+  'section.team.name.5': 'STAR FAN',
+  'section.team.position.5': 'Marketing Associate',
+  'section.team.desc.5': 'Marketing Associate, the former manager in Shangri-La hotel with extensive experience in upscale customer service and sales.',
+  'section.team.link.5': 'https://www.linkedin.com/in/star-fan-a6a48980',
+
+  'section.team.img.6': 'alice',
+  'section.team.name.6': 'ALICE WU',
+  'section.team.position.6': 'Designer',
+  'section.team.desc.6': 'Designer, years of experience in branding and software UI/UX. Believe that design is to solve real problems but not just to make things beautiful.',
+  'section.team.link.6': 'https://www.linkedin.com/in/alice-wu-315b6310a',
+
+  'section.team.img.7': 'LaticiaFan',
+  'section.team.name.7': 'LATICIA FAN',
+  'section.team.position.7': 'Head of Public Relation',
+  'section.team.desc.7': 'Head of Public Relation, ex-DMG Director of New Media.',
+  'section.team.link.7': 'https://www.linkedin.com/in/laticiafan/',
+
+  'section.team.img.8': 'albert',
+  'section.team.name.8': 'ALBERT LIN',
+  'section.team.position.8': 'Senior Software Engineer',
+  'section.team.desc.8': 'Senior Software Engineer, National Chiao Tung University CS Master. The ex-backend software engineer in Promise Technology.',
+  'section.team.link.8': 'https://www.linkedin.com/in/wei-chen-lin-2ab469150/',
+
+  'section.team.img.9': 'nick',
+  'section.team.name.9': 'NICK CHEN',
+  'section.team.position.9': 'Senior Software Engineer',
+  'section.team.desc.9': 'Senior Software Engineer, years of development and management experience. Proficient in build-up backend infrastructure and software architecture design.',
+  'section.team.link.9': 'https://gitlab.com/users/nick25214/projects',
+
+  'section.team.img.10': 'TravisLiu',
+  'section.team.name.10': 'TRAVIS LIU',
+  'section.team.position.10': 'Senior Software Engineer',
+  'section.team.desc.10': 'Senior Software Engineer, AWS expert.',
+  'section.team.link.10': 'https://www.linkedin.com/in/travis-liu-98462972/',
+
+  'section.team.img.11': 'ML-Chen',
+  'section.team.name.11': 'ML CHEN',
+  'section.team.position.11': 'Senior Software Engineer',
+  'section.team.desc.11': 'Senior Software Engineer, serial entrepreneur, AWS experts.',
+  'section.team.link.11': 'https://www.linkedin.com/in/mlchens/',
+
+  'section.team.img.12': 'jack',
+  'section.team.name.12': 'JACK LIANG',
+  'section.team.position.12': 'Senior Software Engineer',
+  'section.team.desc.12': 'Quality Engineer at Apple, University of Tokyo ME Master.',
+  'section.team.link.12': 'https://www.linkedin.com/in/jackliang8/',
+
+  'section.team.img.13': 'NeilWong',
+  'section.team.name.13': 'NEIL WONG',
+  'section.team.position.13': 'Hardware Engineer',
+  'section.team.desc.13': 'Hardware Engineer Lead, Columbia University EE Master, ex-entrepreneur and SuperMicro.',
+  'section.team.link.13': 'https://www.linkedin.com/in/jun-te-wong-542b655b/',
 };
 
 const sectionAdvisors = {
   'section.advisors.title': 'Advisors',
+
+  'section.advisors.img.1': 'YKChu',
+  'section.advisors.name.1': 'YK CHU',
+  'section.advisors.desc.1': 'Managing Director of WI Harper Group, over 20 years experience in investment and technology fields.',
+  'section.advisors.link.1': 'https://wiharper.com/team_member/y-k-chu/',
+
+  'section.advisors.img.2': 'JosephFan',
+  'section.advisors.name.2': 'JOSEPH FAN',
+  'section.advisors.desc.2': 'Venture Partner with WI Harper. The Vice Chairman & CEO of Kbro Company Ltd. Specialize in telecommunications, media, and technology industries.',
+  'section.advisors.link.2': 'https://wiharper.com/team_member/joseph-fan/',
+
+  'section.advisors.img.3': 'TimHsu',
+  'section.advisors.name.3': 'TIM HSU',
+  'section.advisors.desc.3': 'Founder of Hacks In Taiwan Conference, HITCON. The security consultant of several exchanges with cybersecurity expertise.',
+  'section.advisors.link.3': 'https://www.linkedin.com/in/tim-hsu-57b40420/',
+
+  'section.advisors.img.4': 'AnthonyStaten',
+  'section.advisors.name.4': 'ANTHONY STATEN',
+  'section.advisors.desc.4': 'Financial Services Executive and ex-PwC and Accenture Consulting Manager.',
+  'section.advisors.link.4': 'https://www.linkedin.com/in/anthonystaten/',
+
+  'section.advisors.img.5': 'ScofieldYeh',
+  'section.advisors.name.5': 'SCOFIELD YEH',
+  'section.advisors.desc.5': 'CTO and cofounder of MagV with solid banking system experience and practice',
+  'section.advisors.link.5': 'https://www.linkedin.com/in/scofieldyeh/',
+
+  'section.advisors.img.6': 'ronald',
+  'section.advisors.name.6': 'RONALD YU',
+  'section.advisors.desc.6': 'CEO of Autopass, serial entrepreneur in Fintech industry.',
+  'section.advisors.link.6': 'https://www.linkedin.com/in/ronaldxxxx/',
 };
 
 const sectionMedia = {
   'section.media.title': 'MEDIA<br>EXPOSURE',
+  'section.media.media.a': 'Crypto Crow',
+  'section.media.media.b': 'The Bad Crypto Podcast',
+  'section.media.media.c': 'Prometheus',
 };
 
 const sectionRoadmap = {

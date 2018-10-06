@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
 import withI18N from 'shared/intl/withI18N';
@@ -64,47 +63,47 @@ class Footer extends React.PureComponent {
           <div className="pure-u-1 text-center">
             <div className="row pure-g social-list">
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-telegram" to="https://t.me/DINNGO_Official"></Link>
+                <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-twitter" to="https://twitter.com/dinngohq"></Link>
+                <a className="icon-social icon-social-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/dinngohq" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-fb" to="https://www.facebook.com/dinngohq"></Link>
+                <a className="icon-social icon-social-fb" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dinngohq" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-medium" to="https://medium.com/dinngo-exchange"></Link>
+                <a className="icon-social icon-social-medium" target="_blank" rel="noopener noreferrer" href="https://medium.com/dinngo-exchange" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-youtube" to="https://www.youtube.com/channel/UCb3O5Ek9JGd2v9kWp08c1xQ"></Link>
+                <a className="icon-social icon-social-youtube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCb3O5Ek9JGd2v9kWp08c1xQ" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-bitcoin" to=""></Link>
+                <a className="icon-social icon-social-bitcoin" target="_blank" rel="noopener noreferrer" href="" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-linkedin" to="https://www.linkedin.com/company/dinngo/"></Link>
+                <a className="icon-social icon-social-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/dinngo/" />
               </div>
               <div className="pure-u-1-8">
-                <Link className="icon-social icon-social-reddit" to="https://www.reddit.com/r/DINNGO/"></Link>
+                <a className="icon-social icon-social-reddit" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/DINNGO/" />
               </div>
             </div>
           </div>
 
           <div className="pure-u-1">
             <div className="footer-links">
-              <Link className="link" to="https://dinngo.workable.com/">{i18n('footer.link.a')}</Link>
-              <Link className="link" to="https://crowdsale-files.dinngo.co/terms/privacy-policy">{i18n('footer.link.b')}</Link>
-              <Link className="link" to="https://crowdsale-files.dinngo.co/terms/terms-of-use">{i18n('footer.link.c')}</Link>
-              <Link className="link" to="http://support.dinngo.co/">{i18n('footer.link.d')}</Link>
+              <a className="link" target="_blank" rel="noopener noreferrer" href="https://dinngo.workable.com/">{i18n('footer.link.a')}</a>
+              <a className="link" target="_blank" rel="noopener noreferrer" href="https://crowdsale-files.dinngo.co/terms/privacy-policy">{i18n('footer.link.b')}</a>
+              <a className="link" target="_blank" rel="noopener noreferrer" href="https://crowdsale-files.dinngo.co/terms/terms-of-use">{i18n('footer.link.c')}</a>
+              <a className="link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('footer.link.d')}</a>
             </div>
           </div>
         </div>
         <div className="footer-right-bg" />
         <div className="footer-logo logo">
-          <Link title="Go to homepage" to="/">
+          <a className="link" rel="noopener noreferrer" href="/">
             <div className="logo-img" />
             <span className="logo-text">{i18n('common.logo')}</span>
-          </Link>
+          </a>
         </div>
         <p className="copyright">{i18n('footer.copyright')}</p>
       </footer>

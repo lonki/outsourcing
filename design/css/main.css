@@ -1006,17 +1006,6 @@ body {
     display: inline-block;
     cursor: pointer;
 }
-.section-exchange .video-content iframe {
-    margin: 15px 15px;
-    width: 650px;
-    height: 360px;
-}
-.section-exchange .video-content i.icon-close {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    cursor: pointer;
-}
 .section-exchange .list-img-a {
     width: 70px;
     background-image: url('../img/exchange-list-01.svg');
@@ -1194,8 +1183,19 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.video-content iframe {
+    margin: 15px 15px;
+    width: 650px;
+    height: 360px;
+}
+.video-content i.icon-close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+}
 @media screen and (max-width: 768px) {
-    .section-exchange .video-content iframe {
+    .video-content iframe {
         width: 80vw;
         height: auto;
     }
@@ -1328,7 +1328,11 @@ body {
 .section-team {
     background-color: #f0f6fe;
 }
+.section-team .section {
+    padding-bottom: 30px;
+}
 .section-team .section-title {
+    margin-bottom: 28px;
     font-size: 46px;
     font-weight: bold;
     line-height: 1.09;
@@ -1336,20 +1340,26 @@ body {
     color: #0087ff;
 }
 .section-team .section-sub-title {
+    margin-bottom: 20px;
     font-size: 29px;
     font-weight: bold;
     color: #0087ff;
 }
+.section-advisors .section {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
 .member-container-shadow {
     position: relative;
+    margin-bottom: 30px;
 }
 .member-container-shadow:before {
-    width: 280px;
-    height: 302px;
+    width: 320px;
+    height: 348px;
     position: absolute;
     top: 0;
-    margin-top: 85px;
-    margin-right: 3px;
+    margin-top: 82px;
+    margin-left: 7px;
     opacity: 0.25;
     border-radius: 5px;
     -webkit-filter: blur(20.3px);
@@ -1361,46 +1371,47 @@ body {
 }
 .member-container {
     position: relative;
-    width: 280px;
-    min-height: 305px;
-    margin-top: 75px;
-    padding-top: 90px;
+    width: 320px;
+    min-height: 348px;
+    margin-top: 82.5px;
+    padding-top: 107.5px;
     border-radius: 5px;
     background-color: #FFF;
     display: inline-block;
 }
 .member-container .link {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     position: absolute;
-    top: 30px;
+    top: 44.5px;
     left: 19px;
     background-color: #0087ff;
     border-radius: 50%;
 }
 .member-container .link:after {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 9px;
-    left: 10px;
+    width: 38px;
+    height: 38px;
     display: block;
     content: '';
     background-image: url('../img/icon-linkedin.svg');
-    background-size: contain;
+    background-size: 50%;
+    background-position: 50% 40%;
     background-repeat: no-repeat;
 }
 .member-img {
-    width: 135px;
-    height: 135px;
+    width: 165px;
+    height: 165px;
     position: absolute;
     top: 0;
-    left: 80px;
-    -webkit-transform: translate(0, -67.5px);
-            transform: translate(0, -67.5px);
-    background-image: url('../img/team/team_photo_teddy.png');
+    left: 77.5px;
+    -webkit-transform: translate(0, -82.5px);
+            transform: translate(0, -82.5px);
     background-size: cover;
+    background-size: 101%;
+    background-position: center center;
     border-radius: 50%;
+    -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.09);
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.09);
 }
 .member-desc {
     padding: 0 19px 10px 19px;
@@ -1424,6 +1435,121 @@ body {
     font-weight: bold;
     line-height: 1.41;
     color: #097be0;
+}
+@media screen and (max-width: 1200px) {
+    .member-container-shadow {}
+    .member-container-shadow:before {
+        width: 295px;
+        height: 321px;
+    }
+    .member-container {
+        width: 295px;
+        min-height: 321px;
+        margin-top: 75px;
+        padding-top: 100px;
+    }
+    .member-img {
+        width: 150px;
+        height: 150px;
+        left: 72.5px;
+        -webkit-transform: translate(0, -75px);
+                transform: translate(0, -75px);
+    }
+}
+@media screen and (max-width: 1080px) {
+    .member-container-shadow {}
+    .member-container-shadow:before {
+        width: $member-container-medium-width;
+        height: $member-container-medium-height;
+    }
+    .member-container {
+        width: 280px;
+        min-height: 305px;
+        margin-top: 67.5px;
+        padding-top: 92.5px;
+    }
+    .member-container .link {
+        width: 36px;
+        height: 36px;
+        top: 39px;
+    }
+    .member-container .link:after {
+        width: 36px;
+        height: 36px;
+    }
+    .member-img {
+        width: 135px;
+        height: 135px;
+        left: 72.5px;
+        -webkit-transform: translate(0, -67.5px);
+                transform: translate(0, -67.5px);
+    }
+    .member-img .link {
+        width: 35px;
+        height: 35px;
+        top: 32.5px;
+    }
+    .member-img .link:after {
+        width: 35px;
+        height: 35px;
+    }
+}
+.member-advisor-YKChu {
+    background-image: url('../img/team/team_photo_YKChu.png');
+}
+.member-advisor-JosephFan {
+    background-image: url('../img/team/team_photo_JosephFan.png');
+}
+.member-advisor-TimHsu {
+    background-image: url('../img/team/team_photo_TimHsu.png');
+}
+.member-advisor-AnthonyStaten {
+    background-image: url('../img/team/team_photo_AnthonyStaten.png');
+}
+.member-advisor-ScofieldYeh {
+    background-image: url('../img/team/team_photo_ScofieldYeh.png');
+}
+.member-advisor-ronald {
+    background-image: url('../img/team/team_photo_ronald.png');
+}
+.member-team-teddy {
+    background-image: url('../img/team/team_photo_teddy.png');
+}
+.member-team-blake {
+    background-image: url('../img/team/team_photo_blake.png');
+}
+.member-team-ben {
+    background-image: url('../img/team/team_photo_ben.png');
+}
+.member-team-johnny {
+    background-image: url('../img/team/team_photo_johnny.png');
+}
+.member-team-star {
+    background-image: url('../img/team/team_photo_star.png');
+}
+.member-team-alice {
+    background-image: url('../img/team/team_photo_alice.png');
+}
+.member-team-LaticiaFan {
+    background-image: url('../img/team/team_photo_LaticiaFan.png');
+}
+.member-team-albert {
+    background-image: url('../img/team/team_photo_albert.png');
+}
+.member-team-nick {
+    background-image: url('../img/team/team_photo_nick.png');
+}
+.member-team-TravisLiu {
+    background-image: url('../img/team/team_photo_TravisLiu.png');
+}
+.member-team-ML-Chen {
+    background-image: url('../img/team/team_photo_ML-Chen.png');
+}
+.member-team-jack {
+    background-image: url('../img/team/team_photo_jack.png');
+}
+.member-team-NeilWong {
+    background-image: url('../img/team/team_photo_NeilWong.png');
 }
 .section-media {
     background-color: #133364;
@@ -1471,8 +1597,8 @@ body {
     background-size: contain;
 }
 .media-img {
-    width: 270px;
-    height: 170px;
+    width: 320px;
+    height: 220px;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
@@ -1502,52 +1628,42 @@ body {
     margin-bottom: 60px;
 }
 .media-link {
-    height: 55px;
+    height: 65px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .media-link-its {
-    width: 129px;
     background-image: url('../img/link-its.png');
 }
 .media-link-exchange {
-    width: 129px;
     background-image: url('../img/link-exchange.png');
 }
 .media-link-bitsonline {
-    width: 129px;
     background-image: url('../img/link-bitsonline.png');
 }
 .media-link-idol {
-    width: 129px;
     background-image: url('../img/link-idol.png');
 }
 .media-link-reuters {
-    width: 129px;
     background-image: url('../img/link-reuters.png');
 }
 .media-link-cryptomode {
-    width: 129px;
     background-image: url('../img/link-cryptomode.png');
 }
 .media-link-oracle {
-    width: 129px;
     background-image: url('../img/link-oracle.png');
 }
 .media-link-speaker {
-    width: 129px;
     background-image: url('../img/link-speaker.png');
 }
 .media-link-nvezz {
-    width: 129px;
     background-image: url('../img/link-nvezz.png');
 }
 .media-link-bitcoin {
-    width: 129px;
     background-image: url('../img/link-bitcoin.png');
 }
 .media-s-link {
-    height: 32px;
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
@@ -1572,6 +1688,30 @@ body {
 }
 .media-s-link-marks {
     background-image: url('../img/link-s-marks.png');
+}
+@media screen and (max-width: 1200px) {
+    .media-img {
+        width: 300px;
+        height: 189px;
+    }
+    .media-link {
+        height: 65px;
+    }
+    .media-s-link {
+        height: 36px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .media-img {
+        width: 270px;
+        height: 170px;
+    }
+    .media-link {
+        height: 55px;
+    }
+    .media-s-link {
+        height: 32px;
+    }
 }
 .section-roadmap {
     font-size: 19px;

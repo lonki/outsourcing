@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 import Scrollchor from 'react-scrollchor';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import $ from 'jquery';
@@ -109,10 +108,10 @@ class Header extends React.PureComponent {
         <div className="row pure-g">
           <div className="pure-u-1 ">
             <div className="logo">
-              <Link title="Go to homepage" to="/">
+              <a className="link" rel="noopener noreferrer" href="/">
                 <div className="logo-img" />
-                <span className="logo-text">DINNGO</span>
-              </Link>
+                <span className="logo-text">{i18n('common.logo')}</span>
+              </a>
             </div>
 
             <div className="nav-wrap">
@@ -140,13 +139,13 @@ class Header extends React.PureComponent {
                       { this.renderMenuList() }
                     </ul>
 
-                    <a title="White Paper" href="#" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+                    <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
                   </div>
                 </div>
               </CSSTransition>
             </div>
 
-            <a title="White Paper" href="#" className="btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+            <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
           </div>
         </div>
       </header>
