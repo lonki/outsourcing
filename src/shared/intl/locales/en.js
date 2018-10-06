@@ -3,10 +3,12 @@ const common = {
 };
 
 const header = {
-  'header.about': 'About',
+  'header.feature': 'Feature',
   'header.token': 'Token',
   'header.team': 'Team',
+  'header.media': 'Media',
   'header.roadmap': 'Roadmap',
+  'header.faq': 'FAQ',
   'header.white.paper': 'White Paper',
 };
 
@@ -30,24 +32,24 @@ const pageHome = {
 
 const sectionExchange = {
   'section.exchange.title': 'EXCHANGE<br>FEATURES',
-  'section.exchange.desc': 'DINNGO is revolutionizing the way you trade digital currencies. The exchange integrates with cold wallets seamlessly, providing the secure, fast and convenient asset trading service the market needs.',
-  'section.exchange.list.a.title': 'Cold Wallet Service',
+  'section.exchange.desc': 'DINNGO is revolutionizing the way we trade digital currencies. Our cold wallet integrates seamlessly with the DINNGO exchange, providing the secure, fast and convenient asset trading service the market needs.',
+  'section.exchange.list.a.title': 'Dinngo Cold Wallet',
   'section.exchange.list.a.desc': 'Strengthen the security of your digital currencies storage and the efficiency of the exchange.',
   'section.exchange.list.b.title': 'Cross-Chain Trading',
   'section.exchange.list.b.desc': 'Support trading tokens between different protocols, which is the key limitation for a decentralized exchange.',
   'section.exchange.list.c.title': 'Smart Matching Engine',
   'section.exchange.list.c.desc': 'Match the supply and demand of digital currencies to process off-chain smart pairing cost-effectively.',
-  'section.exchange.grids.a.title': 'CUSTOMIZED INTERFACE',
+  'section.exchange.grids.a.title': 'Customized Interface',
   'section.exchange.grids.a.desc': 'Freely design your own interface at your need.',
-  'section.exchange.grids.b.title': 'FREE FROM HACKING',
+  'section.exchange.grids.b.title': 'Free From Hacking',
   'section.exchange.grids.b.desc': 'No more single point of failure, the essence of decentralization.',
-  'section.exchange.grids.c.title': 'COST EFFECTIVE',
+  'section.exchange.grids.c.title': 'Cost Effective',
   'section.exchange.grids.c.desc': 'No unnecessary fee wastes on-chain.',
-  'section.exchange.grids.d.title': 'NO MORE MIDDLE MEN',
+  'section.exchange.grids.d.title': 'No More Middle Men',
   'section.exchange.grids.d.desc': 'Your own asset is under your own control.',
-  'section.exchange.grids.e.title': 'REGULATORY COMPLIANCE',
+  'section.exchange.grids.e.title': 'Regulatory Compliance',
   'section.exchange.grids.e.desc': 'Compliance is the ground of the platform for long-term service.',
-  'section.exchange.grids.f.title': '24/7 CUSTOMER SUPPORT',
+  'section.exchange.grids.f.title': '24/7 Customer Support',
   'section.exchange.grids.f.desc': 'Dedicated supporting team is always ready.',
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withI18N from 'shared/intl/withI18N';
+import { touchDeviceHoverHandlerByClass } from 'shared/util/touchDevice';
 
 @withI18N
 export default class Team extends React.PureComponent {
@@ -8,6 +9,10 @@ export default class Team extends React.PureComponent {
   static propTypes = {
     i18n: PropTypes.func.isRequired,
   };
+
+  componentDidMount() {
+    touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');
+  }
 
   teamsRender = () => {
     const { i18n } = this.props;

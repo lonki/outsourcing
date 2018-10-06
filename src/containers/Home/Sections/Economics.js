@@ -36,19 +36,28 @@ export default class Economics extends React.PureComponent {
       '#bcbcbc',
     ];
 
+    this.backgroundHoverColor = 'rgba(19, 51, 100, 0.7)';
+
     this.doughnutSettings = {
       labels: this.labels,
       datasets: [{
         data: this.data,
         backgroundColor: this.backgroundColor,
-        // hoverBackgroundColor: [
-        //   '#FF6384',
-        //   '#36A2EB',
-        //   '#FFCE56',
-        // ],
         borderWidth: 0,
       }],
     };
+  }
+
+  onHover = (e, hoverItems) => {
+    if (hoverItems.length > 0) {
+      const { _index: index } = hoverItems[0];
+      const nextBackgroundColor = Array.from(new Array(6), () => this.backgroundHoverColor);
+      nextBackgroundColor[index] = this.backgroundColor[index];
+      this.chart.chartInstance.data.datasets[0].backgroundColor = nextBackgroundColor;
+    } else {
+      this.chart.chartInstance.data.datasets[0].backgroundColor = this.backgroundColor;
+    }
+    this.chart.chartInstance.update();
   }
 
   render() {
@@ -89,12 +98,14 @@ export default class Economics extends React.PureComponent {
           <div className="section row pure-g chart-container">
             <div className="pure-u-1-2">
               <Doughnut
+                ref={(chart) => { this.chart = chart; }}
                 data={this.doughnutSettings}
                 width={260}
                 height={260}
                 options={{
                   maintainAspectRatio: false,
                   cutoutPercentage: 80,
+                  onHover: this.onHover,
                 }}
                 legend={{
                   display: false,

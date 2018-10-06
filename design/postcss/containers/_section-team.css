@@ -102,9 +102,14 @@ $member-img-medium-desktop-width: 135px;
     transform: translate(0, calc($member-img-xbig-desktop-width / 2 * -1));
     background-size: cover;
     background-size: 101%;
-    background-position: center center;
+    background-position: 50% 50%;
     border-radius: 50%;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.09);
+    transition: background-size 0.2s ease-in;
+}
+
+.member-img-hover{
+    background-size: 105%;
 }
 
 .member-desc {

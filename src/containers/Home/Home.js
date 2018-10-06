@@ -73,26 +73,26 @@ export default class Home extends Component {
         <div className="home">
           <Main />
 
-          <VisibilitySensor onChange={this.exchangeOnVisibility} partialVisibility resizeDelay={100}>
+          <VisibilitySensor offset={{ top: 75 }} minTopValue={200} scrollCheck onChange={this.exchangeOnVisibility} partialVisibility resizeDelay={100}>
             <Exchange />
           </VisibilitySensor>
 
-          <VisibilitySensor onChange={this.tokenOnVisibility} partialVisibility resizeDelay={100}>
+          <VisibilitySensor offset={{ top: 75 }} minTopValue={200} scrollCheck onChange={this.tokenOnVisibility} partialVisibility resizeDelay={100}>
             <Economics />
           </VisibilitySensor>
 
-          <VisibilitySensor onChange={this.teamOnVisibility} partialVisibility resizeDelay={100}>
+          <VisibilitySensor offset={{ top: 75 }} minTopValue={200} scrollCheck onChange={this.teamOnVisibility} partialVisibility resizeDelay={100}>
             <React.Fragment>
               <Team />
               <Advisors />
             </React.Fragment>
           </VisibilitySensor>
 
-          <VisibilitySensor onChange={this.mediaOnVisibility} partialVisibility resizeDelay={100}>
+          <VisibilitySensor offset={{ top: 75 }} minTopValue={200} scrollCheck onChange={this.mediaOnVisibility} partialVisibility resizeDelay={100}>
             <Media />
           </VisibilitySensor>
 
-          <VisibilitySensor onChange={this.roadmapOnVisibility} partialVisibility resizeDelay={100}>
+          <VisibilitySensor offset={{ top: 75 }} minTopValue={200} scrollCheck onChange={this.roadmapOnVisibility} partialVisibility resizeDelay={100}>
             <Roadmap />
           </VisibilitySensor>
         </div>

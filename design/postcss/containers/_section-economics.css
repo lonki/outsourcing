@@ -92,18 +92,20 @@
     }
 
     .chart-center-text {
-        transform: translate(0, -170px);
+        transform: translate(0, -175px);
         font-size: 55px;
         font-weight: bold;
         line-height: 0.51;
         color: #ffffff;
+        z-index: 1;
     }
 
     .chart-center-tips {
+        margin-top: 15px;
         font-size: 18px;
         font-weight: bold;
         line-height: 1.94;
-        color: #ffffff;
+        color: rgba(255, 255, 255, 0.7);
     }
 
 

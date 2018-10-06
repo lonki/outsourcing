@@ -108,21 +108,21 @@ export default class Exchange extends React.PureComponent {
             <div className="list-img list-img-a"></div>
             <div className="list-desc">
               <p className="title">{i18n('section.exchange.list.a.title')}</p>
-              <span>{i18n('section.exchange.list.a.desc')}</span>
+              <span>{i18n({ id: 'section.exchange.list.a.desc' }, 'html')}</span>
             </div>
           </div>
           <div className="pure-u-1-3">
             <div className="list-img list-img-b"></div>
             <div className="list-desc">
               <p className="title">{i18n('section.exchange.list.b.title')}</p>
-              <span>{i18n('section.exchange.list.b.desc')}</span>
+              <span>{i18n({ id: 'section.exchange.list.b.desc' }, 'html')}</span>
             </div>
           </div>
           <div className="pure-u-1-3">
             <div className="list-img list-img-c"></div>
             <div className="list-desc">
               <p className="title">{i18n('section.exchange.list.c.title')}</p>
-              <span>{i18n('section.exchange.list.c.desc')}</span>
+              <span>{i18n({ id: 'section.exchange.list.c.desc' }, 'html')}</span>
             </div>
           </div>
 
@@ -131,16 +131,16 @@ export default class Exchange extends React.PureComponent {
           </div>
           <div className="pure-u-1-3">
             <div className="desktop-slider-item">
-              <p className="title">Customized Interface</p>
-              <p className="desc">Freely design your own interface at your need.</p>
+              <p className="title">{i18n('section.exchange.grids.a.title')}</p>
+              <p className="desc">{i18n('section.exchange.grids.a.desc')}</p>
             </div>
             <div className="desktop-slider-item">
-              <p className="title">Customized Interface</p>
-              <p className="desc">Freely design your own interface at your need.</p>
+              <p className="title">{i18n('section.exchange.grids.b.title')}</p>
+              <p className="desc">{i18n('section.exchange.grids.b.desc')}</p>
             </div>
             <div className="desktop-slider-item">
-              <p className="title">Customized Interface</p>
-              <p className="desc">Freely design your own interface at your need.</p>
+              <p className="title">{i18n('section.exchange.grids.c.title')}</p>
+              <p className="desc">{i18n('section.exchange.grids.c.desc')}</p>
             </div>
           </div>
           <div className="pure-u-1-3 desktop-slider-circle-container">
@@ -155,16 +155,16 @@ export default class Exchange extends React.PureComponent {
           </div>
           <div className="pure-u-1-3 text-right">
             <div className="desktop-slider-item">
-              <p className="title">Customized Interface</p>
-              <p className="desc">Freely design your own interface at your need.</p>
+              <p className="title">{i18n('section.exchange.grids.d.title')}</p>
+              <p className="desc">{i18n('section.exchange.grids.d.desc')}</p>
             </div>
             <div className="desktop-slider-item">
-              <p className="title">Customized Interface</p>
-              <p className="desc">Freely design your own interface at your need.</p>
+              <p className="title">{i18n('section.exchange.grids.e.title')}</p>
+              <p className="desc">{i18n('section.exchange.grids.e.desc')}</p>
             </div>
             <div className="desktop-slider-item">
-              <p className="title">Customized Interface</p>
-              <p className="desc">Freely design your own interface at your need.</p>
+              <p className="title">{i18n('section.exchange.grids.f.title')}</p>
+              <p className="desc">{i18n('section.exchange.grids.f.desc')}</p>
             </div>
           </div>
 

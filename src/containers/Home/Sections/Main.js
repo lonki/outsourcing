@@ -62,12 +62,12 @@ export default class Main extends React.PureComponent {
           </div>
         </div>
         <div className="rate-link">
-          <a href="#" className="left-link">
+          <a href="https://www.trackico.io/ico/dinngo/" target="_blank" className="left-link" rel="noopener noreferrer">
             <div className="link-img ico-track" />
             <span className="rate">4</span>
             <span className="rate small">.6</span>
           </a>
-          <a href="#">
+          <a href="https://icobench.com/ico/dinngo" target="_blank" rel="noopener noreferrer">
             <div className="link-img ico-bench" />
             <span className="rate">4</span>
             <span className="rate small">.6</span>

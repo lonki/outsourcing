@@ -72,8 +72,8 @@ export default class Subscription extends React.PureComponent {
     const { inputText, isSuccess, isFail } = this.state;
     const sucClasss = isSuccess ? 'success' : '';
     const failClasss = isFail ? 'fail' : '';
-    const sucText = isSuccess ? 'Successfully subscribed' : '';
-    const failText = isFail ? 'Email repeat subscription' : '';
+    const sucText = isSuccess ? 'Welcome to join the community!' : '';
+    const failText = isFail ? 'Error! The address is invalid.' : '';
 
     return (
       <div className="email-subscription">

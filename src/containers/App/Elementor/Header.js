@@ -28,9 +28,10 @@ class Header extends React.PureComponent {
     const { i18n } = this.props;
 
     this.MENU_LIST = [
-      { path: 'exchange', text: i18n('header.about') },
+      { path: 'exchange', text: i18n('header.feature') },
       { path: 'economics', text: i18n('header.token') },
       { path: 'team', text: i18n('header.team') },
+      { path: 'media', text: i18n('header.media') },
       { path: 'roadmap', text: i18n('header.roadmap') },
     ];
 
@@ -124,6 +125,9 @@ class Header extends React.PureComponent {
 
               <ul className="nav">
                 { this.renderMenuList() }
+                <li>
+                  <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('header.faq')}</a>
+                </li>
               </ul>
 
               <CSSTransition
@@ -137,6 +141,9 @@ class Header extends React.PureComponent {
                   <div className="mobile-nav-content">
                     <ul>
                       { this.renderMenuList() }
+                      <li>
+                        <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('header.faq')}</a>
+                      </li>
                     </ul>
 
                     <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
