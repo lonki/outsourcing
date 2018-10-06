@@ -53,7 +53,7 @@
 
     &.selected {
         margin-right: 6px;
-        border-top: solid 2px #0087ff;
+        border-top: solid 1px #0087ff;
 
         .title {
             color: #0087ff;

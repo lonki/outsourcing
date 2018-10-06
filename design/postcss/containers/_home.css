@@ -1,3 +1,14 @@
+@keyframes section-mainly-bg-fade-in {
+  0% {
+    transform: translate(50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 .section-mainly {
     min-height: 90vh;
     position: relative;
@@ -59,6 +70,10 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         z-index: 3;
+    }
+
+    .section-mainly-bg-animation {
+        animation: section-mainly-bg-fade-in .7s;
     }
 
     .email-subscription {

@@ -73,6 +73,7 @@
     "axios": "^0.18.0",
     "axios-jsonp": "^1.0.2",
     "babel-polyfill": "^6.23.0",
+    "classnames": "^2.2.6",
     "immutable": "^3.8.2",
     "intl": "^1.1.0",
     "intl-locales-supported": "^1.0.0",

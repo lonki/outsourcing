@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Doughnut } from 'react-chartjs-2';
 
+import { ViewPortAnimation } from 'components';
+
 import withI18N from 'shared/intl/withI18N';
 
 @withI18N
@@ -46,6 +48,10 @@ export default class Economics extends React.PureComponent {
         borderWidth: 0,
       }],
     };
+
+    this.state = {
+      isShowChart: false,
+    };
   }
 
   onHover = (e, hoverItems) => {
@@ -60,8 +66,15 @@ export default class Economics extends React.PureComponent {
     this.chart.chartInstance.update();
   }
 
+  showChart = () => {
+    this.setState({
+      isShowChart: true,
+    });
+  }
+
   render() {
     const { i18n } = this.props;
+    const { isShowChart } = this.state;
 
     return (
       <section id="economics" className="section-economics">
@@ -74,18 +87,22 @@ export default class Economics extends React.PureComponent {
           </div>
 
           <div className="pure-u-1-2 text-center">
-            <div className="circle">
-              <div className="circle-text">
-                {i18n('section.economics.circle.left.title')}
-                <p className="circle-tips">{i18n('section.economics.circle.left.desc')}</p>
+            <ViewPortAnimation addClassName="section-economics-circle-animation">
+              <div className="circle">
+                <div className="circle-text">
+                  {i18n('section.economics.circle.left.title')}
+                  <p className="circle-tips">{i18n('section.economics.circle.left.desc')}</p>
+                </div>
               </div>
-            </div>
-            <div className="circle blue">
-              <div className="circle-text">
-                {i18n('section.economics.circle.right.title')}
-                <p className="circle-tips">{i18n('section.economics.circle.right.desc')}</p>
+            </ViewPortAnimation>
+            <ViewPortAnimation addClassName="section-economics-circle-blue-animation">
+              <div className="circle blue">
+                <div className="circle-text">
+                  {i18n('section.economics.circle.right.title')}
+                  <p className="circle-tips">{i18n('section.economics.circle.right.desc')}</p>
+                </div>
               </div>
-            </div>
+            </ViewPortAnimation>
           </div>
 
           <div className="pure-u-1 section-sub-title">
@@ -95,62 +112,66 @@ export default class Economics extends React.PureComponent {
 
 
         <div className="pure-u-1">
-          <div className="section row pure-g chart-container">
-            <div className="pure-u-1-2">
-              <Doughnut
-                ref={(chart) => { this.chart = chart; }}
-                data={this.doughnutSettings}
-                width={260}
-                height={260}
-                options={{
-                  maintainAspectRatio: false,
-                  cutoutPercentage: 80,
-                  onHover: this.onHover,
-                }}
-                legend={{
-                  display: false,
-                }}
-              />
-            </div>
-            <div className="pure-u-1-2">
-              <div className="row pure-g">
-                <div className="labels text-center pure-u-1-2">
-                  <div className="labels-item">
-                    <p className="title" style={{ color: this.backgroundColor[0] }}>{this.data[0]}%</p>
-                    <p>{this.labels[0]}</p>
+          <ViewPortAnimation isVisibleCallback={this.showChart}>
+            <div className="section row pure-g chart-container">
+              <div className="pure-u-1-2">
+                {isShowChart &&
+                  <Doughnut
+                    ref={(chart) => { this.chart = chart; }}
+                    data={this.doughnutSettings}
+                    width={260}
+                    height={260}
+                    options={{
+                      maintainAspectRatio: false,
+                      cutoutPercentage: 80,
+                      onHover: this.onHover,
+                    }}
+                    legend={{
+                      display: false,
+                    }}
+                  />
+                }
+              </div>
+              <div className="pure-u-1-2">
+                <div className="row pure-g">
+                  <div className="labels text-center pure-u-1-2">
+                    <div className="labels-item">
+                      <p className="title" style={{ color: this.backgroundColor[0] }}>{this.data[0]}%</p>
+                      <p>{this.labels[0]}</p>
+                    </div>
+                    <div className="labels-item">
+                      <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[1]}%</p>
+                      <p>{this.labels[1]}</p>
+                    </div>
+                    <div className="labels-item">
+                      <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[2]}%</p>
+                      <p>{this.labels[2]}</p>
+                    </div>
                   </div>
-                  <div className="labels-item">
-                    <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[1]}%</p>
-                    <p>{this.labels[1]}</p>
-                  </div>
-                  <div className="labels-item">
-                    <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[2]}%</p>
-                    <p>{this.labels[2]}</p>
-                  </div>
-                </div>
-                <div className="labels text-center pure-u-1-2">
-                  <div className="labels-item">
-                    <p className="title" style={{ color: this.backgroundColor[3] }}>{this.data[3]}%</p>
-                    <p>{this.labels[3]}</p>
-                  </div>
-                  <div className="labels-item">
-                    <p className="title" style={{ color: this.backgroundColor[4] }}>{this.data[4]}%</p>
-                    <p>{this.labels[4]}</p>
-                  </div>
-                  <div className="labels-item">
-                    <p className="title" style={{ color: this.backgroundColor[5] }}>{this.data[5]}%</p>
-                    <p>{this.labels[5]}</p>
+                  <div className="labels text-center pure-u-1-2">
+                    <div className="labels-item">
+                      <p className="title" style={{ color: this.backgroundColor[3] }}>{this.data[3]}%</p>
+                      <p>{this.labels[3]}</p>
+                    </div>
+                    <div className="labels-item">
+                      <p className="title" style={{ color: this.backgroundColor[4] }}>{this.data[4]}%</p>
+                      <p>{this.labels[4]}</p>
+                    </div>
+                    <div className="labels-item">
+                      <p className="title" style={{ color: this.backgroundColor[5] }}>{this.data[5]}%</p>
+                      <p>{this.labels[5]}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="pure-u-1-2 chart-center-text text-center">
-              {i18n('section.economics.chart.center.title')}
-              <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
+              <div className="pure-u-1-2 chart-center-text text-center">
+                {i18n('section.economics.chart.center.title')}
+                <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
+              </div>
+              <div className="pure-u-1-2" />
             </div>
-            <div className="pure-u-1-2" />
-          </div>
+          </ViewPortAnimation>
         </div>
       </section>
     );

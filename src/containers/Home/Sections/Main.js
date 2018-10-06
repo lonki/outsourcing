@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { Subscription } from 'components';
+import { Subscription, ViewPortAnimation } from 'components';
 
 import { setEmailSubscription } from 'redux/modules/member';
 
@@ -69,12 +69,14 @@ export default class Main extends React.PureComponent {
           </a>
           <a href="https://icobench.com/ico/dinngo" target="_blank" rel="noopener noreferrer">
             <div className="link-img ico-bench" />
-            <span className="rate">4</span>
-            <span className="rate small">.6</span>
+            <span className="rate">5</span>
+            <span className="rate small">.0</span>
           </a>
         </div>
         <div className="section-mainly-bg-container">
-          <div className="section-mainly-bg" />
+          <ViewPortAnimation addClassName="section-mainly-bg-animation">
+            <div className="section-mainly-bg" />
+          </ViewPortAnimation>
         </div>
       </section>
     );

@@ -107,6 +107,10 @@ input[type=text], input[type=email], textarea {
     }
 }
 
+.hidden {
+	opacity: 0;
+}
+
 @media $breakpoint-xbig-desktop {
     .section {
 		padding: 75px 79px;

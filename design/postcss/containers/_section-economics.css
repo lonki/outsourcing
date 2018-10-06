@@ -1,3 +1,25 @@
+@keyframes section-economics-circle-animation {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes section-economics-circle-blue-animation {
+  0% {
+    transform: translate(50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 .section-economics {
     position: relative;
     background-color: #133364;
@@ -65,6 +87,14 @@
             background-color: rgba(30, 192, 255, 0.8);
             z-index: 1;
         }
+    }
+
+    .section-economics-circle-animation {
+        animation: section-economics-circle-animation .7s;
+    }
+
+    .section-economics-circle-blue-animation {
+        animation: section-economics-circle-blue-animation .7s;
     }
 
     .circle-text {

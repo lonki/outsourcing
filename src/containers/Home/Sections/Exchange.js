@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
 
-import { Modal } from 'components';
+import { Modal, ViewPortAnimation } from 'components';
 
 import withI18N from 'shared/intl/withI18N';
 
@@ -87,7 +87,9 @@ export default class Exchange extends React.PureComponent {
         <div className="section row pure-g">
           <div className="section-exchange-bg" />
           <div className="section-exchange-right-bg" />
-          <div className="section-exchange-left-bottom-bg" />
+          <ViewPortAnimation addClassName="section-exchange-left-bottom-bg-animation">
+            <div className="section-exchange-left-bottom-bg" />
+          </ViewPortAnimation>
           <div className="section-exchange-bg-bottom">
             <div className="bg-icon" />
             <div className="bg-icon" />
@@ -129,45 +131,50 @@ export default class Exchange extends React.PureComponent {
           <div className="pure-u-1">
             <h2 className="section-h3">Other Features</h2>
           </div>
-          <div className="pure-u-1-3">
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.a.title')}</p>
-              <p className="desc">{i18n('section.exchange.grids.a.desc')}</p>
+          <ViewPortAnimation addClassName="section-exchange-slider-item-left-animation">
+            <div className="pure-u-1-3">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.a.title')}</p>
+                <p className="desc">{i18n('section.exchange.grids.a.desc')}</p>
+              </div>
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.b.title')}</p>
+                <p className="desc">{i18n('section.exchange.grids.b.desc')}</p>
+              </div>
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.c.title')}</p>
+                <p className="desc">{i18n('section.exchange.grids.c.desc')}</p>
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.b.title')}</p>
-              <p className="desc">{i18n('section.exchange.grids.b.desc')}</p>
+          </ViewPortAnimation>
+          <ViewPortAnimation addClassName="section-exchange-slider-item-center-animation">
+            <div className="pure-u-1-3 desktop-slider-circle-container">
+              <div className="desktop-slider-circle">
+                <div className="desktop-slider-circle-2" />
+                <div className="desktop-slider-circle-3" />
+              </div>
+              <div className="section-exchange-loader">
+                <div className="loader-circle loader-circle-left" />
+                <div className="loader-circle loader-circle-right loader-circle-delay" />
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.c.title')}</p>
-              <p className="desc">{i18n('section.exchange.grids.c.desc')}</p>
+          </ViewPortAnimation>
+          <ViewPortAnimation addClassName="section-exchange-slider-item-right-animation">
+            <div className="pure-u-1-3 text-right">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.d.title')}</p>
+                <p className="desc">{i18n('section.exchange.grids.d.desc')}</p>
+              </div>
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.e.title')}</p>
+                <p className="desc">{i18n('section.exchange.grids.e.desc')}</p>
+              </div>
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.f.title')}</p>
+                <p className="desc">{i18n('section.exchange.grids.f.desc')}</p>
+              </div>
             </div>
-          </div>
-          <div className="pure-u-1-3 desktop-slider-circle-container">
-            <div className="desktop-slider-circle">
-              <div className="desktop-slider-circle-2" />
-              <div className="desktop-slider-circle-3" />
-            </div>
-            <div className="section-exchange-loader">
-              <div className="loader-circle loader-circle-left" />
-              <div className="loader-circle loader-circle-right loader-circle-delay" />
-            </div>
-          </div>
-          <div className="pure-u-1-3 text-right">
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.d.title')}</p>
-              <p className="desc">{i18n('section.exchange.grids.d.desc')}</p>
-            </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.e.title')}</p>
-              <p className="desc">{i18n('section.exchange.grids.e.desc')}</p>
-            </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.f.title')}</p>
-              <p className="desc">{i18n('section.exchange.grids.f.desc')}</p>
-            </div>
-          </div>
-
+          </ViewPortAnimation>
 
           { false &&
             <div className="pure-u-1">

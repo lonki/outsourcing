@@ -78,7 +78,7 @@ class Footer extends React.PureComponent {
                 <a className="icon-social icon-social-youtube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCb3O5Ek9JGd2v9kWp08c1xQ" />
               </div>
               <div className="pure-u-1-8">
-                <a className="icon-social icon-social-bitcoin" target="_blank" rel="noopener noreferrer" href="" />
+                <a className="icon-social icon-social-bitcoin" target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=4948105.0" />
               </div>
               <div className="pure-u-1-8">
                 <a className="icon-social icon-social-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/dinngo/" />
