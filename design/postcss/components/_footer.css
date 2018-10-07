@@ -131,6 +131,12 @@ footer {
 
     .footer-links { 
         margin-top: 39px;
+
+        .link {
+            &:after {
+                margin: 0 15px;
+            }
+        }
     }
 
     .copyright {

@@ -98,12 +98,12 @@ export default class Economics extends React.PureComponent {
         <div className="section row pure-g two-circle-container">
           <div className="section-economics-bg" />
 
-          <div className="pure-u-1-2">
+          <div className="pure-u-1-1 pure-u-md-1-2">
             <h2 className="section-title">{i18n({ id: 'section.economics.title' }, 'html')}</h2>
             <p className="section-msg pure-u-1">{i18n('section.economics.desc')}</p>
           </div>
 
-          <div className="pure-u-1-2 text-center">
+          <div className="pure-u-1-1 pure-u-md-1-2 text-center">
             <ViewPortAnimation addClassName="section-economics-circle-animation">
               <div className="circle">
                 <div className="circle-text">
@@ -131,7 +131,7 @@ export default class Economics extends React.PureComponent {
         <div className="pure-u-1">
           <ViewPortAnimation isVisibleCallback={this.showChart}>
             <div className="section row pure-g chart-container">
-              <div className="pure-u-1-2">
+              <div className="pure-u-1-1 pure-u-md-1-2">
                 {isShowChart &&
                   <Doughnut
                     ref={(chart) => { this.chart = chart; }}
@@ -149,9 +149,9 @@ export default class Economics extends React.PureComponent {
                   />
                 }
               </div>
-              <div className="pure-u-1-2">
+              <div className="chart-label-container pure-u-1-1 pure-u-md-1-2">
                 <div className="row pure-g">
-                  <div className="labels text-center pure-u-1-2">
+                  <div className="labels text-center pure-u-1-1 pure-u-md-1-2">
                     <div className="labels-item" data-index="0" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[0] }}>{this.data[0]}%</p>
                       <p>{this.labels[0]}</p>
@@ -165,7 +165,7 @@ export default class Economics extends React.PureComponent {
                       <p>{this.labels[2]}</p>
                     </div>
                   </div>
-                  <div className="labels text-center pure-u-1-2">
+                  <div className="labels text-center pure-u-1-1 pure-u-md-1-2">
                     <div className="labels-item" data-index="3" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
                       <p className="title" style={{ color: this.backgroundColor[3] }}>{this.data[3]}%</p>
                       <p>{this.labels[3]}</p>
@@ -182,7 +182,7 @@ export default class Economics extends React.PureComponent {
                 </div>
               </div>
 
-              <div className="pure-u-1-2 chart-center-text text-center">
+              <div className="pure-u-1-1 pure-u-md-1-2 chart-center-text text-center">
                 {i18n('section.economics.chart.center.title')}
                 <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
               </div>

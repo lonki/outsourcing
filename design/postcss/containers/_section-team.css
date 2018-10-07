@@ -138,6 +138,12 @@ $member-img-medium-desktop-width: 135px;
     }
 }
 
+@media $breakpoint-tablet   {
+    .member-container-desktop {
+        display: none;
+    }
+}
+
 @media $breakpoint-big-desktop{
     .member-container-shadow {
         &:before {

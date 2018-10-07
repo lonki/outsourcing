@@ -169,9 +169,44 @@
 
 @media $breakpoint-tablet {
     .section-economics {
+        .circle {
+            width: 170px;
+            height: 170px;
+        }
+
+        .circle-text {
+            transform: translate(0, 70%);
+            font-size: 40px;
+        }
+
+        .circle-tips {
+            font-size: 12px;
+        }
+
+        .chart-container {
+            padding: 0 15px 40px 15px
+        }
+
+        .chart-center-text {
+            transform: translate(0, -310px);
+        }
+
         .labels {
             height: auto;
             flex-direction: row;
+
+            &:last-child {
+                margin-top: 39px;
+            }
         }
+
+        .labels-item {
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+
+    .chart-label-container {
+        margin-top: 24px;
     }
 }

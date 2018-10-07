@@ -1,7 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withI18N from 'shared/intl/withI18N';
+import Slider from "react-slick";
 import { touchDeviceHoverHandlerByClass } from 'shared/util/touchDevice';
+
+const MOBILE_SLIDER_SETTINGS = {
+  arrows: false,
+  infinite: false,
+  speed: 500,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 5000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 780,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 415,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 @withI18N
 export default class Team extends React.PureComponent {
@@ -14,13 +45,14 @@ export default class Team extends React.PureComponent {
     touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');
   }
 
-  teamsRender = () => {
+  teamsRender = (isMobile = false) => {
     const { i18n } = this.props;
     const render = [];
+    const mobileCSS = isMobile ? '' : 'member-container-desktop';
 
     for (let i = 1; i <= 13; i += 1) {
       render.push((
-        <div key={i18n(`section.team.name.${i}`)} className="pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1 text-center member-container-shadow">
+        <div key={i18n(`section.team.name.${i}`)} className={`pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1 text-center member-container-shadow ${mobileCSS}`}>
           <div className="member-container">
             <div className={`member-img member-team-${i18n(`section.team.img.${i}`)}`} />
             <div className="member-desc">
@@ -47,7 +79,14 @@ export default class Team extends React.PureComponent {
           </div>
 
           {this.teamsRender()}
+          
+          <div className="pure-hidden-sm pure-u-1-1">
+            <Slider {...MOBILE_SLIDER_SETTINGS}>
+              {this.teamsRender(true)}
+            </Slider>
+          </div>
         </div>
+
       </section>
     );
   }
