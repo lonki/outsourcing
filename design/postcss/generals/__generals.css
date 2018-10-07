@@ -1,5 +1,6 @@
 @import "global";
 @import "grid";
+@import "grid-ext";
 @import "mixins";
 @import "fonts";
 @import "icon";

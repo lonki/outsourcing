@@ -45,6 +45,10 @@
         color: #0087ff;
     }
 
+    .section-exchange-features {
+        z-index: 2;
+    }
+
     .section-msg {
         max-width: 70%;
         font-size: 17px;
@@ -98,6 +102,10 @@
         z-index: 2;
     }
 
+    .section-exchange-video-container {
+        z-index: 3;
+    }
+
     .section-exchange-video {
         width: 500px;
         height: 365px;
@@ -106,6 +114,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
+        border-radius: 6.7px;
         cursor: pointer;
     }
 
@@ -145,7 +154,7 @@
         .title {
             font-size: 23px;
             font-weight: bold;
-            color: #133364;
+            color: #0087ff;
             margin: 0;
         }
     }
@@ -377,6 +386,35 @@
 
         .desktop-slider-item {
             width: 95%;
+        }
+    }
+
+    @media $breakpoint-tablet {
+        .section-exchange-bg {
+            left: 0;
+            width: 50%;
+            height: initial;
+            padding-top: 60%;
+            background-size: cover;
+            background-position: 100% 0%;
+        }
+
+        .section-exchange-right-bg {
+            top: 15%;
+        }
+
+        .section-msg {
+            max-width: initial;
+        }   
+
+        .list-desc {
+            max-width: initial;
+        }
+
+        .section-exchange-video {
+            width: 100%;
+            height: initial;
+            padding-top: 71%;
         }
     }
 }

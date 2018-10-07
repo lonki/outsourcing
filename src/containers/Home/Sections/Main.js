@@ -55,13 +55,29 @@ export default class Main extends React.PureComponent {
     return (
       <section className="section-mainly">
         <div className="section row pure-g">
-          <div className="pure-u-1-2 section-content">
+          <div className="pure-u-1-1 pure-u-md-1-2 section-content">
             <h2 className="section-title">{i18n('home.section.main.title')}</h2>
+            <div className="pure-hidden-sm section-mainly-bg-container-mobile">
+              <div className="section-mainly-bg-mobile" />
+            </div>
+            <div className="pure-hidden-sm rate-link">
+              <a href="#" className="left-link">
+                <div className="link-img ico-track" />
+                <span className="rate">4</span>
+                <span className="rate small">.6</span>
+              </a>
+              <a href="#">
+                <div className="link-img ico-bench" />
+                <span className="rate">4</span>
+                <span className="rate small">.6</span>
+              </a>
+            </div>
+
             <p className="section-msg">{i18n('home.section.main.desc')}</p>
             <Subscription ref={ref => { this.subscription = ref; }} onClick={this.props.setEmailSubscription} />
           </div>
         </div>
-        <div className="rate-link">
+        <div className="rate-link desktop-rate-link">
           <a href="https://www.trackico.io/ico/dinngo/" target="_blank" className="left-link" rel="noopener noreferrer">
             <div className="link-img ico-track" />
             <span className="rate">4</span>

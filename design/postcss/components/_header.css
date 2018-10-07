@@ -93,6 +93,19 @@
 }
 
 @media $breakpoint-tablet {
+    .section-mainly {
+        .section-title {
+            width: 95%;
+            margin: 0 auto;
+            font-size: 34px;
+            text-align: center;
+        }
+
+        .section-msg {
+            margin: 0 auto;
+        }
+    }
+
     .header {
         height: 45px;
 

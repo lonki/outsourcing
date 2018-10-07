@@ -72,6 +72,15 @@
         z-index: 3;
     }
 
+    .section-mainly-bg-mobile {
+        margin-top: 34px;
+        width: 100%;
+        padding-top: 59%;
+        background-image: resolve('macbook.png');
+        background-size: 85% 85%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
     .section-mainly-bg-animation {
         animation: section-mainly-bg-fade-in .7s;
     }
@@ -80,10 +89,13 @@
         justify-content: left;
     }
 
-    .rate-link {
+    .desktop-rate-link {
         position: absolute;
         left: 0;
         bottom: 35px;
+    }
+
+    .rate-link {
         width: 100%;
         text-align: center;
         z-index: 3;
@@ -163,6 +175,25 @@
     }
 }
 
+@media $breakpoint-tablet {
+    .section-mainly {
+        .section-mainly-bg-container {
+            display: none;
+        }
+
+        .email-subscription {
+            display: none;
+        }
+
+        .rate-link {
+            padding: 5px 0 41px 0;
+        }
+
+        .desktop-rate-link {
+            display: none;
+        }
+    }
+}
 
 @media $breakpoint-big-desktop {
     .section-mainly {

@@ -85,3 +85,56 @@ footer {
     padding: 0 20%;
     margin-top: 100px;
 }
+
+@media $breakpoint-tablet {
+    footer {
+        padding-bottom: 20px;
+
+        .email-subscription {
+            width: 100%;
+        }
+        .section {
+            padding-left: 17px;
+            padding-right: 17px;    
+        }
+
+        .logo-img {
+            width: 32px;
+            height: 20px;
+            vertical-align: middle;    
+        }
+ 
+        .logo-text {   
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+    }
+
+    .footer-email {
+        margin: 23px 0 43px 0;
+    }
+
+    .email-subscription-input {
+        flex: 1;
+    }
+
+    .social-list {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .footer-logo {
+        position: initial;
+        text-align: center;
+    }
+
+    .footer-links { 
+        margin-top: 39px;
+    }
+
+    .copyright {
+        position: initial;
+        text-align: center;
+    }
+}

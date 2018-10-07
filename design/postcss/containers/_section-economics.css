@@ -166,3 +166,12 @@
         }
     }
 }
+
+@media $breakpoint-tablet {
+    .section-economics {
+        .labels {
+            height: auto;
+            flex-direction: row;
+        }
+    }
+}
