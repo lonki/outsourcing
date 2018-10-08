@@ -4,9 +4,13 @@ import PropTypes from 'prop-types';
 import MAIL from 'style/img/icon-mail.svg';
 
 export default class Subscription extends React.PureComponent {
-
   static propTypes = {
+    isInMobileNav: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    isInMobileNav: false,
   };
 
   constructor(props, context) {
@@ -69,6 +73,7 @@ export default class Subscription extends React.PureComponent {
   }
 
   render() {
+    const { isInMobileNav } = this.props;
     const { inputText, isSuccess, isFail } = this.state;
     const sucClasss = isSuccess ? 'success' : '';
     const failClasss = isFail ? 'fail' : '';
@@ -77,11 +82,26 @@ export default class Subscription extends React.PureComponent {
 
     return (
       <div className="email-subscription">
-        <input type="text" className="email-subscription-input" placeholder="Keep Me Updated" onChange={this.inputOnChange} value={inputText} />
-        <div className="email-subscription-group" onClick={this.send}>
-          <img className="email-subscription-img" src={MAIL} width="25" height="18" />
-        </div>
-        <p className={`tips ${sucClasss} ${failClasss}`}>{`${sucText}${failText}`}</p>
+        { !isInMobileNav &&
+          <React.Fragment>
+            <input type="text" className="email-subscription-input" placeholder="Keep Me Updated" onChange={this.inputOnChange} value={inputText} />
+            <div className="email-subscription-group" onClick={this.send}>
+              <img className="email-subscription-img" src={MAIL} width="25" height="18" />
+            </div>
+            <p className={`tips ${sucClasss} ${failClasss}`}>{`${sucText}${failText}`}</p>
+          </React.Fragment>
+        }
+        { isInMobileNav &&
+          <React.Fragment>
+            <div className="email-subscription-mobile">
+              <input type="text" className="email-subscription-input-mobile" placeholder="Mail Address" onChange={this.inputOnChange} value={inputText} />
+              <p className={`subscription-tips-mobile tips ${sucClasss} ${failClasss}`}>{`${sucText}${failText}`}</p>
+              <button className="email-subscription-btn" onClick={this.send}>
+                Keep Me Updated
+              </button>
+            </div>
+          </React.Fragment>
+        }
       </div>
     );
   }

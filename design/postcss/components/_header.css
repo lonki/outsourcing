@@ -244,4 +244,10 @@
         line-height: 40px;
         text-align: center;
     }
+
+    .email-subscription-img {
+        position: absolute;
+        right: 12px;
+        top: 15px;
+    }
 }

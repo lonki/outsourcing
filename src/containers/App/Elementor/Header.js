@@ -7,12 +7,18 @@ import iScroll from 'iscroll';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import $ from 'jquery';
 
+import { Subscription } from 'components';
+import { setEmailSubscription } from 'redux/modules/member';
 import withI18N from 'shared/intl/withI18N';
 
 @connect(
   state => ({
+    setEmailSubscriptionPending: state.member.get('setEmailSubscriptionPending'),
+    setEmailSubscriptionSuc: state.member.get('setEmailSubscriptionSuc'),
+    setEmailSubscriptionErr: state.member.get('setEmailSubscriptionErr'),
     viewPort: state.app.get('viewPort'),
   }), {
+    setEmailSubscription,
   },
 )
 @withI18N
@@ -45,11 +51,33 @@ class Header extends React.PureComponent {
     this.state = {
       openMenu: false,
       isScroll: false,
+      isShowSubscribeMail: false,
     };
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { setEmailSubscriptionPending, setEmailSubscriptionSuc, setEmailSubscriptionErr } = this.props;
+    const {
+      setEmailSubscriptionPending: nextSetEmailSubscriptionPending,
+      setEmailSubscriptionSuc: nextSetEmailSubscriptionSuc,
+      setEmailSubscriptionErr: nextSetEmailSubscriptionErr,
+    } = nextProps;
+
+    if (!setEmailSubscriptionPending && nextSetEmailSubscriptionPending) {
+      this.subscription.reset();
+    }
+
+    if (!setEmailSubscriptionSuc && nextSetEmailSubscriptionSuc) {
+      this.subscription.openSucText();
+    }
+
+    if (!setEmailSubscriptionErr && nextSetEmailSubscriptionErr) {
+      this.subscription.openFailText();
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -81,6 +109,7 @@ class Header extends React.PureComponent {
     const { openMenu } = this.state;
 
     this.setState({
+      isShowSubscribeMail: false,
       openMenu: !openMenu,
     });
   }
@@ -104,9 +133,15 @@ class Header extends React.PureComponent {
     });
   }
 
+  showSubscribeMail = () => {
+    this.setState({
+      isShowSubscribeMail: true,
+    });
+  }
+
   render() {
     const { i18n } = this.props;
-    const { openMenu, isScroll } = this.state;
+    const { openMenu, isScroll, isShowSubscribeMail } = this.state;
     const zIndex = openMenu ? '250' : '';
     const openClass = openMenu ? 'open' : '';
     const scrollClass = isScroll ? 'scrolling' : '';
@@ -146,27 +181,39 @@ class Header extends React.PureComponent {
               >
                 <div className="mobile-nav">
                   <div className="mobile-nav-content">
-                    <ul>
-                      {this.renderMenuList()}
-                      <li>
-                        <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('header.faq')}</a>
-                      </li>
-                    </ul>
-                    <div className="mobile-nav-white-paper">
-                      <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
-                    </div>
-                    <ReactIScroll iScroll={iScroll} options={this.iScrollOptions}>
-                      <div className="social-list">
-                          <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
-                          <a className="icon-social icon-social-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/dinngohq" />
-                          <a className="icon-social icon-social-fb" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dinngohq" />
-                          <a className="icon-social icon-social-medium" target="_blank" rel="noopener noreferrer" href="https://medium.com/dinngo-exchange" />
-                          <a className="icon-social icon-social-bitcoin" target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=4948105.0" />
-                          <a className="icon-social icon-social-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/dinngo/" />
-                          <a className="icon-social icon-social-reddit" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/DINNGO/" />
+                    {!isShowSubscribeMail &&
+                      <React.Fragment>
+                        <ul>
+                          {this.renderMenuList()}
+                          <li>
+                            <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('header.faq')}</a>
+                          </li>
+                        </ul>
+                        <div className="mobile-nav-white-paper">
+                          <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+                        </div>
+                        <ReactIScroll iScroll={iScroll} options={this.iScrollOptions}>
+                          <div className="social-list">
+                            <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
+                            <a className="icon-social icon-social-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/dinngohq" />
+                            <a className="icon-social icon-social-fb" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dinngohq" />
+                            <a className="icon-social icon-social-medium" target="_blank" rel="noopener noreferrer" href="https://medium.com/dinngo-exchange" />
+                            <a className="icon-social icon-social-bitcoin" target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=4948105.0" />
+                            <a className="icon-social icon-social-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/dinngo/" />
+                            <a className="icon-social icon-social-reddit" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/DINNGO/" />
+                          </div>
+                        </ReactIScroll>
+                        <img class="email-subscription-img" src="/cf276922c2046f7be93f34cc5ad59615.svg" width="25" height="18" onClick={this.showSubscribeMail}></img>
+                      </React.Fragment>
+                    }
+
+                    {isShowSubscribeMail &&
+                      <div>
+                        <Subscription ref={ref => { this.subscription = ref; }} onClick={this.props.setEmailSubscription} isInMobileNav={true}/>
                       </div>
-                    </ReactIScroll>
+                    }
                   </div>
+
                 </div>
               </CSSTransition>
             </div>

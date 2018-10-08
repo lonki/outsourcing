@@ -88,3 +88,52 @@
 .email-subscription-img {
     margin-top: -1px;
 }
+
+@media $breakpoint-big-mobile {
+    .email-subscription {
+        .subscription-tips-mobile {
+            position: static;
+            &.success,
+            &.fail {
+                &:before {
+                    position: static;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .email-subscription-mobile {
+        width: 100%;
+        padding-top: 19px;
+        padding-right: 55px;
+    }
+
+    .email-subscription-input-mobile {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        border: none;
+        font-size: 19px;
+        opacity: 0.6;
+        background: none;
+        color: #ffffff;
+
+        &::placeholder {
+            color: #ffffff;
+        }
+    }
+
+    .email-subscription-btn {
+        margin-top: 43px;
+        display: block;
+        width: 100%;
+        padding: 9px 34px;
+        border-radius: 5.7px;
+        border: none;
+        background-color: #1ec0ff;
+        color: #ffffff;
+    }
+}
