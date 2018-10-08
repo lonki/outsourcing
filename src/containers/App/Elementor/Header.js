@@ -60,6 +60,10 @@ class Header extends React.PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
+    if (!this.state.isShowSubscribeMail) {
+      return;
+    }
+
     const { setEmailSubscriptionPending, setEmailSubscriptionSuc, setEmailSubscriptionErr } = this.props;
     const {
       setEmailSubscriptionPending: nextSetEmailSubscriptionPending,
