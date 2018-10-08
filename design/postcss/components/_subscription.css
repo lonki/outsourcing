@@ -89,7 +89,11 @@
     margin-top: -1px;
 }
 
-@media $breakpoint-big-mobile {
+@media $breakpoint-tablet{
+    .email-subscription-input {
+        min-width: calc(100% - 70px);
+    }
+
     .email-subscription {
         .subscription-tips-mobile {
             position: static;
@@ -135,11 +139,5 @@
         border: none;
         background-color: #1ec0ff;
         color: #ffffff;
-    }
-}
-
-@media $breakpoint-tablet{
-    .email-subscription-input {
-        min-width: calc(100% - 70px);
     }
 }

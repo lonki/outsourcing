@@ -139,6 +139,7 @@ class Header extends React.PureComponent {
 
   showSubscribeMail = () => {
     this.setState({
+      openMenu: true,
       isShowSubscribeMail: true,
     });
   }
@@ -152,6 +153,8 @@ class Header extends React.PureComponent {
 
     return (
       <header className={`header ${scrollClass}`} style={{ zIndex }}>
+        <img class="mobile-email-subscription-img" src="/cf276922c2046f7be93f34cc5ad59615.svg" width="25" height="18" onClick={this.showSubscribeMail}></img>
+
         <div className="row pure-g">
           <div className="pure-u-1 ">
             <div className="logo">
@@ -162,6 +165,7 @@ class Header extends React.PureComponent {
             </div>
 
             <div className="nav-wrap">
+
               <div
                 className={`nav-hamburger ${openClass}`}
                 onClick={this.handleToggleMenu}
@@ -207,7 +211,6 @@ class Header extends React.PureComponent {
                             <a className="icon-social icon-social-reddit" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/DINNGO/" />
                           </div>
                         </ReactIScroll>
-                        <img class="email-subscription-img" src="/cf276922c2046f7be93f34cc5ad59615.svg" width="25" height="18" onClick={this.showSubscribeMail}></img>
                       </React.Fragment>
                     }
 
