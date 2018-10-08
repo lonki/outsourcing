@@ -128,30 +128,30 @@ export default class Exchange extends React.PureComponent {
             <div className="bg-icon" />
           </div>
 
-          <div className="section-exchange-features pure-u-1-1 pure-u-md-1-2">
+          <div className="section-exchange-features pure-u-1-1 pure-u-sm-1-2">
             <h2 className="section-title">{i18n({ id: 'section.exchange.title' }, 'html')}</h2>
             <p className="section-msg pure-u-1">{i18n('section.exchange.desc')}</p>
           </div>
 
-          <div className="section-exchange-video-container pure-u-1-1 pure-u-md-1-2 text-center">
+          <div className="section-exchange-video-container pure-u-1-1 pure-u-sm-1-2 text-center">
             <div className="section-exchange-video" onClick={this.openVideo} />
           </div>
 
-          <div className="pure-u-1-1 pure-u-md-1-3 list-container">
+          <div className="pure-u-1-1 pure-u-sm-1-3 list-container">
             <div className="list-img list-img-a"></div>
             <div className="list-desc">
               <p className="title">{i18n('section.exchange.list.a.title')}</p>
               <span>{i18n({ id: 'section.exchange.list.a.desc' }, 'html')}</span>
             </div>
           </div>
-          <div className="pure-u-1-1 pure-u-md-1-3 list-container">
+          <div className="pure-u-1-1 pure-u-sm-1-3 list-container">
             <div className="list-img list-img-b"></div>
             <div className="list-desc">
               <p className="title">{i18n('section.exchange.list.b.title')}</p>
               <span>{i18n({ id: 'section.exchange.list.b.desc' }, 'html')}</span>
             </div>
           </div>
-          <div className="pure-u-1-1 pure-u-md-1-3 list-container">
+          <div className="pure-u-1-1 pure-u-sm-1-3 list-container">
             <div className="list-img list-img-c"></div>
             <div className="list-desc">
               <p className="title">{i18n('section.exchange.list.c.title')}</p>

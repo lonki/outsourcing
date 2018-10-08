@@ -86,7 +86,7 @@ footer {
     margin-top: 100px;
 }
 
-@media $breakpoint-tablet {
+@media $breakpoint-big-mobile {
     footer {
         padding-bottom: 20px;
 

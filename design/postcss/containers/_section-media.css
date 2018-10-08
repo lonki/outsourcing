@@ -216,3 +216,15 @@
         height: 32px;
     }
 }
+
+@media $breakpoint-tablet {
+    .media-img {
+        width: 240px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .media-link-container {
+        margin: 40px 0;
+    }
+}

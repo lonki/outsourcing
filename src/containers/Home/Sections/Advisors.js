@@ -8,6 +8,8 @@ const MOBILE_SLIDER_SETTINGS = {
   infinite: false,
   speed: 500,
   dots: false,
+  centerMode: true,
+  centerPadding: '45px',
   responsive: [
     {
       breakpoint: 5000,

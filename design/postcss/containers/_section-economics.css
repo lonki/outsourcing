@@ -167,6 +167,47 @@
     }
 }
 
+@media $breakpoint-medium-desktop {
+    .section-economics {
+        .circle {
+            width: 180px;
+            height: 180px;
+        }
+
+        .circle-text {
+            transform: translate(0, 75%);
+            font-size: 40px;
+        }
+
+        .circle-tips {
+            font-size: 12px;
+        }
+    }
+}
+
+@media $breakpoint-tablet {
+    .section-economics {
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .circle {
+            width: 130px;
+            height: 130px;
+
+            &.blue {
+                margin-left: -15px;
+            }
+        }
+
+        .chart-container {
+            padding: 0 30px;
+        }
+    }
+}
+
+
 @media $breakpoint-big-mobile {
     .section-economics {
         .circle {
@@ -203,6 +244,11 @@
         .labels-item {
             font-size: 14px;
             line-height: normal;
+        }
+
+        .section-economics-bg {
+            width: 100%;
+            height: 100%;
         }
     }
 
