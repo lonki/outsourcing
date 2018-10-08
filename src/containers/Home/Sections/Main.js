@@ -55,7 +55,7 @@ export default class Main extends React.PureComponent {
     return (
       <section className="section-mainly">
         <div className="section row pure-g">
-          <div className="pure-u-1-1 pure-u-md-1-2 section-content">
+          <div className="pure-u-1-1 pure-u-sm-1-2 section-content">
             <h2 className="section-title">{i18n('home.section.main.title')}</h2>
             <div className="pure-hidden-xs section-mainly-bg-container-mobile">
               <div className="section-mainly-bg-mobile" />

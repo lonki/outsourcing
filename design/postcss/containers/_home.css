@@ -54,6 +54,7 @@
     }
 
     .section-mainly-bg-container {
+        width: 50%;
         position: absolute;
         top: 21vh;
         right: 0;
@@ -65,7 +66,7 @@
         height: 346px;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         background-image: resolve('macbook.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -196,33 +197,22 @@
     }
 }
 
-@media $breakpoint-big-desktop {
-    .section-mainly {
-        .section-mainly-bg {
-            right: -150px;
-        }
-    }
-}
-
-@media $breakpoint-medium-desktop {
-    .section-mainly {
-        .section-mainly-bg {
-            right: -250px;
-        }
-    }
-}
-
 @media $breakpoint-tablet {
     .section-mainly {
-        min-height: 70vh;
+        min-height: 80vh;
 
         .section-title {
             width: 95%;
             margin: 0 auto;
             font-size: 34px;
         }
-        .section-mainly-bg {
-            right: -320px;
+        
+        .section {
+            padding-top: 22vh;
+        }
+
+        .section-mainly-bg-container {
+            top: 19vh;
         }
     }
 }

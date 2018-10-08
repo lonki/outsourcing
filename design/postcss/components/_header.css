@@ -104,7 +104,7 @@
     }
 }
 
-@media $breakpoint-big-mobile {
+@media $breakpoint-tablet {
     .header {
         height: 45px;
 
