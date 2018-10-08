@@ -123,6 +123,12 @@ input[type=text], input[type=email], textarea {
 	}
 }
 
+@media $breakpoint-big-mobile {
+    .section {
+		padding: 40px 30px;
+	}
+}
+
 @media $breakpoint-tablet {
 	.logo-img {
 		width: 48px;

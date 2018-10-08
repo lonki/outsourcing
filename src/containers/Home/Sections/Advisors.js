@@ -73,9 +73,7 @@ export default class Advisors extends React.PureComponent {
             <h2 className="section-sub-title">{i18n('section.advisors.title')}</h2>
           </div>
 
-          <div className="advisors-container pure-u-1-1">
-            {this.advisorsRender()}
-          </div>
+          {this.advisorsRender()}
 
           <div className="pure-hidden-sm pure-u-1-1">
             <Slider {...MOBILE_SLIDER_SETTINGS}>
