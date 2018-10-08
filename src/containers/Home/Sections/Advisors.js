@@ -75,7 +75,7 @@ export default class Advisors extends React.PureComponent {
 
           {this.advisorsRender()}
 
-          <div className="pure-hidden-sm pure-u-1-1">
+          <div className="pure-hidden-xs pure-u-1-1">
             <Slider {...MOBILE_SLIDER_SETTINGS}>
               {this.advisorsRender()}
             </Slider>

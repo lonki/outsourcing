@@ -207,7 +207,7 @@ export default class Exchange extends React.PureComponent {
             </div>
           </ViewPortAnimation>
 
-          <div className="mobile-slider-circle-container pure-hidden-sm pure-u-1-1">
+          <div className="mobile-slider-circle-container pure-hidden-xs pure-u-1-1">
             <div className="mobile-slider-circle">
               <div className="mobile-slider-circle-2" />
               <div className="mobile-slider-circle-3" />
@@ -217,7 +217,7 @@ export default class Exchange extends React.PureComponent {
               <div className="loader-circle loader-circle-right loader-circle-delay" />
             </div>
           </div>
-          <div className="pure-hidden-sm pure-u-1-1">
+          <div className="pure-hidden-xs pure-u-1-1">
             <Slider {...MOBILE_SLIDER_SETTINGS}>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.a.title')}</p>

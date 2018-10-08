@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Scrollchor from 'react-scrollchor';
+import ReactIScroll from 'react-iscroll';
+import iScroll from 'iscroll';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import $ from 'jquery';
 
@@ -34,6 +36,11 @@ class Header extends React.PureComponent {
       { path: 'media', text: i18n('header.media') },
       { path: 'roadmap', text: i18n('header.roadmap') },
     ];
+
+    this.iScrollOptions = {
+      scrollX: true,
+      scrollY: false,
+    };
 
     this.state = {
       openMenu: false,
@@ -124,7 +131,7 @@ class Header extends React.PureComponent {
               </div>
 
               <ul className="nav">
-                { this.renderMenuList() }
+                {this.renderMenuList()}
                 <li>
                   <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('header.faq')}</a>
                 </li>
@@ -140,13 +147,25 @@ class Header extends React.PureComponent {
                 <div className="mobile-nav">
                   <div className="mobile-nav-content">
                     <ul>
-                      { this.renderMenuList() }
+                      {this.renderMenuList()}
                       <li>
                         <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('header.faq')}</a>
                       </li>
                     </ul>
-
-                    <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+                    <div className="mobile-nav-white-paper">
+                      <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+                    </div>
+                    <ReactIScroll iScroll={iScroll} options={this.iScrollOptions}>
+                      <div className="social-list">
+                          <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
+                          <a className="icon-social icon-social-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/dinngohq" />
+                          <a className="icon-social icon-social-fb" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dinngohq" />
+                          <a className="icon-social icon-social-medium" target="_blank" rel="noopener noreferrer" href="https://medium.com/dinngo-exchange" />
+                          <a className="icon-social icon-social-bitcoin" target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=4948105.0" />
+                          <a className="icon-social icon-social-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/dinngo/" />
+                          <a className="icon-social icon-social-reddit" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/DINNGO/" />
+                      </div>
+                    </ReactIScroll>
                   </div>
                 </div>
               </CSSTransition>

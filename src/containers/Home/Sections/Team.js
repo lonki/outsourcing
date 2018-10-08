@@ -81,8 +81,8 @@ export default class Team extends React.PureComponent {
           </div>
 
           {this.teamsRender()}
-          
-          <div className="pure-hidden-sm pure-u-1-1">
+
+          <div className="pure-hidden-xs pure-u-1-1">
             <Slider {...MOBILE_SLIDER_SETTINGS}>
               {this.teamsRender(true)}
             </Slider>

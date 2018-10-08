@@ -97,9 +97,10 @@
         .logo {
             left: 20px;
         }
-        .nav-wrap {
-            left: 185px;
-        }
+    }
+
+    .nav-wrap {
+        left: 185px;
     }
 }
 
@@ -183,6 +184,16 @@
         display: block;
         background-color: #133364;
         transition: opacity .15s ease-out;
+
+        .social-list {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .icon-social {
+            display: inline-block;
+            margin-right: 43px;
+        }
     }
 
     .mobile-nav-enter {
@@ -203,11 +214,10 @@
 
     .mobile-nav-content {
         width: 100%;
-        height: 80%;
         position: absolute;
         top: 0;
         left: 0;
-        padding: 55px 55px;
+        padding: 55px 0px 55px 55px;
         background-image: linear-gradient(to top, rgba(19, 51, 100, 0.8), rgba(3, 106, 216, 0.8));
         font-size: 19px;
         line-height: 2.68;
@@ -215,14 +225,19 @@
         a {
             color: #ffffff;
         }
+
+        .mobile-btn {
+            padding: 9px 20px;
+        }
+    }
+
+    .mobile-nav-white-paper {
+        margin: 25px 0 33px 0;
     }
 
     .mobile-btn {
         width: 125px;
         height: 40px;
-        position: absolute;
-        bottom: 0;
-        left: 55px;
         border-radius: 5.7px;
         background-color: rgba(74, 144, 226, 0.35);
         font-size: 15px;

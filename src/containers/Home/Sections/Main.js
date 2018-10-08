@@ -57,10 +57,10 @@ export default class Main extends React.PureComponent {
         <div className="section row pure-g">
           <div className="pure-u-1-1 pure-u-md-1-2 section-content">
             <h2 className="section-title">{i18n('home.section.main.title')}</h2>
-            <div className="pure-hidden-sm section-mainly-bg-container-mobile">
+            <div className="pure-hidden-xs section-mainly-bg-container-mobile">
               <div className="section-mainly-bg-mobile" />
             </div>
-            <div className="pure-hidden-sm rate-link">
+            <div className="pure-hidden-xs rate-link">
               <a href="#" className="left-link">
                 <div className="link-img ico-track" />
                 <span className="rate">4</span>
