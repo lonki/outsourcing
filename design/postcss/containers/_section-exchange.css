@@ -118,6 +118,10 @@
         cursor: pointer;
     }
 
+    .list-container {
+        z-index: 1;
+    }
+
     .list-img-a {
         width: 70px;
         background-image: resolve('exchange-list-01.svg');
@@ -249,7 +253,7 @@
     .section-exchange-loader {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 10px;
 
         .loader-circle {
             width: 17px;
@@ -390,6 +394,22 @@
     }
 
     @media $breakpoint-tablet {
+        .list-desc {
+            max-width: 95%;
+        }
+
+        .list-img {
+            margin-top: 0px;
+        }
+
+        .section-msg {
+            max-width: 90%;
+        }
+
+        .section-exchange-video {
+            width: 100%;
+        }
+
         .section-exchange-bg {
             left: 0;
             width: 50%;
@@ -399,29 +419,41 @@
             background-position: 100% 0%;
         }
 
-        .section-exchange-right-bg {
-            top: 15%;
+        .desktop-slider-item {
+            .title {
+                font-size: 15px;
+            }
+            .desc {
+                font-size: 13px;
+            }
         }
 
-        .section-msg {
-            max-width: initial;
-        }   
+        .desktop-slider-circle-2 {
+            width: 80px;
+            height: 80px;
+            top: 40%;
+            left: 35%;
 
-        .list-desc {
-            max-width: initial;
+            &:before {
+                width: 30px;
+                height: 40px;
+                top: 20px;
+                left: 26px;
+            }
         }
 
-        .section-exchange-video {
-            width: 100%;
-            height: initial;
-            padding-top: 71%;
-        }
+        .desktop-slider-circle-3 {
+            width: 60px;
+            height: 60px;
+            top: calc(35% + 65px);
+            left: calc(30% + 65px);
 
-        .section-exchange-slider {
-            display: none;
-        }
-
-        .mobile-slider-circle-container {
+            &:before {
+                width: 25px;
+                height: 40px;
+                top: 11px;
+                left: 18px;
+            }
         }
 
         .mobile-slider-circle {
@@ -480,6 +512,30 @@
                 background-position: center;
                 background-repeat: no-repeat;
             }
+        }
+    }
+
+    @media $breakpoint-big-mobile {
+        .section-exchange-slider {
+            display: none;
+        }
+
+        .section-msg {
+            max-width: initial;
+        }   
+
+        .list-desc {
+            max-width: initial;
+        }
+
+        .section-exchange-video {
+            width: 100%;
+            height: initial;
+            padding-top: 71%;
+        }
+
+        .section-exchange-right-bg {
+            top: 15%;
         }
     }
 }

@@ -167,7 +167,7 @@
     }
 }
 
-@media $breakpoint-tablet {
+@media $breakpoint-big-mobile {
     .section-economics {
         .circle {
             width: 170px;

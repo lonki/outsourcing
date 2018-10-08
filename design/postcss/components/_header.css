@@ -92,20 +92,18 @@
     display: none;
 }
 
-@media $breakpoint-tablet {
-    .section-mainly {
-        .section-title {
-            width: 95%;
-            margin: 0 auto;
-            font-size: 34px;
-            text-align: center;
+@media $breakpoint-wide-tablets {
+    .header {
+        .logo {
+            left: 20px;
         }
-
-        .section-msg {
-            margin: 0 auto;
+        .nav-wrap {
+            left: 185px;
         }
     }
+}
 
+@media $breakpoint-big-mobile {
     .header {
         height: 45px;
 

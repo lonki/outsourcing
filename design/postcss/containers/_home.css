@@ -124,6 +124,7 @@
         }
 
         .rate {
+            position: relative;
             font-size: 19px;
             font-weight: bold;
             color: #1ec0ff;
@@ -138,7 +139,7 @@
                     width: 14px;
                     height: 14px;
                     position: absolute;
-                    top: 12px;
+                    top: 0;
                     margin-left: 5px;
                     content: "";
                     background-image: resolve('icon-star.svg');
@@ -175,7 +176,7 @@
     }
 }
 
-@media $breakpoint-tablet {
+@media $breakpoint-big-mobile {
     .section-mainly {
         .section-mainly-bg-container {
             display: none;
@@ -207,6 +208,36 @@
     .section-mainly {
         .section-mainly-bg {
             right: -250px;
+        }
+    }
+}
+
+@media $breakpoint-tablet {
+    .section-mainly {
+        min-height: 70vh;
+
+        .section-title {
+            width: 95%;
+            margin: 0 auto;
+            font-size: 34px;
+        }
+        .section-mainly-bg {
+            right: -320px;
+        }
+    }
+}
+
+@media $breakpoint-big-mobile {
+    .section-mainly {
+        .section-title {
+            width: 95%;
+            margin: 0 auto;
+            font-size: 34px;
+            text-align: center;
+        }
+
+        .section-msg {
+            margin: 0 auto;
         }
     }
 }

@@ -7,6 +7,8 @@ import { touchDeviceHoverHandlerByClass } from 'shared/util/touchDevice';
 const MOBILE_SLIDER_SETTINGS = {
   arrows: false,
   infinite: false,
+  centerMode: true,
+  centerPadding: '45px',
   speed: 500,
   dots: false,
   responsive: [
