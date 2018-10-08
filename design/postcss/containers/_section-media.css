@@ -1,6 +1,6 @@
 .section-media {
     background-color: #133364;
-    
+
     .section {
         padding-bottom: 100px;
     }
@@ -169,6 +169,22 @@
 
 .media-s-link-marks {
     background-image: resolve('link-s-marks.png');
+}
+
+@media $breakpoint-big-mobile {
+    .media-list {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .media-container-desktop {
+        display: none;
+    }
+
+    .media-container {
+        margin-right: 7px;
+        display: inline-block;
+    }
 }
 
 @media $breakpoint-big-desktop{

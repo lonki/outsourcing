@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
+import ReactIScroll from 'react-iscroll';
+import iScroll from 'iscroll';
 
 import { Modal } from 'components';
 
@@ -15,6 +17,11 @@ export default class Media extends React.PureComponent {
 
   constructor(props, context) {
     super(props, context);
+
+    this.iScrollOptions = {
+      scrollX: true,
+      scrollY: false,
+    };
 
     this.settings = {
       arrows: false,
@@ -55,7 +62,7 @@ export default class Media extends React.PureComponent {
             <h2 className="section-title">{i18n({ id: 'section.media.title' }, 'html')}</h2>
           </div>
 
-          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1">
+          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 media-container-desktop">
             <div className="media-container" data-media="crypto" onClick={this.openVideo}>
               <div className="media-img media-img-crow" />
               <div className="media-mask">
@@ -65,7 +72,7 @@ export default class Media extends React.PureComponent {
             </div>
           </div>
 
-          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1">
+          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 media-container-desktop">
             <div className="media-container" data-media="bad" onClick={this.openVideo}>
               <div className="media-img media-img-bad" />
               <div className="media-mask">
@@ -75,7 +82,7 @@ export default class Media extends React.PureComponent {
             </div>
           </div>
 
-          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1">
+          <div className="pure-u-lg-1-3 pure-u-md-1-2 pure-u-sd-1 media-container-desktop">
             <div className="media-container" data-media="prome" onClick={this.openVideo}>
               <div className="media-img media-img-prome" />
               <div className="media-mask">
@@ -84,6 +91,34 @@ export default class Media extends React.PureComponent {
               </div>
             </div>
           </div>
+
+          <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs">
+            <div className="media-list">
+              <div className="media-container" data-media="crypto" onClick={this.openVideo}>
+                <div className="media-img media-img-crow" />
+                <div className="media-mask">
+                  <div className="media-logo media-logo-crow" />
+                  <p className="media-title">{i18n('section.media.media.a')}</p>
+                </div>
+              </div>
+
+              <div className="media-container" data-media="bad" onClick={this.openVideo}>
+                <div className="media-img media-img-bad" />
+                <div className="media-mask">
+                  <div className="media-logo media-logo-bad" />
+                  <p className="media-title">{i18n('section.media.media.b')}</p>
+                </div>
+              </div>
+
+              <div className="media-container" data-media="prome" onClick={this.openVideo}>
+                <div className="media-img media-img-prome" />
+                <div className="media-mask">
+                  <div className="media-logo media-logo-prome" />
+                  <p className="media-title">{i18n('section.media.media.c')}</p>
+                </div>
+              </div>
+            </div>
+          </ReactIScroll>
 
           <div className="pure-u-1 media-link-container">
             <Slider {...this.settings}>
@@ -127,7 +162,7 @@ export default class Media extends React.PureComponent {
           <div className="video-content">
             <i className="icon-close" onClick={this.closeVideo} />
 
-            { media === 'crypto' &&
+            {media === 'crypto' &&
               <iframe
                 className="video"
                 src="https://www.youtube.com/embed/oR4-GorGo-w"
@@ -137,14 +172,14 @@ export default class Media extends React.PureComponent {
               />
             }
 
-            { media === 'bad' &&
+            {media === 'bad' &&
               <iframe src="https://omny.fm/shows/badcrypto/crypto-spotlight-dinngo/embed"
                 className="video"
                 frameborder="0">
               </iframe>
             }
 
-            { media === 'prome' &&
+            {media === 'prome' &&
               <iframe
                 className="video"
                 src="https://www.youtube.com/embed/C_aRdm89yx8"
