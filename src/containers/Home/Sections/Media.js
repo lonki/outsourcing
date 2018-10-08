@@ -33,6 +33,17 @@ export default class Media extends React.PureComponent {
       speed: 2000,
       autoplaySpeed: 2000,
       cssEase: 'linear',
+      responsive: [
+        {
+          breakpoint: 568,
+          settings: {
+            centerMode: true,
+            centerPadding: '70px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
 
     this.state = {
@@ -135,26 +146,40 @@ export default class Media extends React.PureComponent {
             </Slider>
           </div>
 
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-bench" target="_blank" rel="noopener noreferrer" href="https://icobench.com/ico/dinngo" />
           </div>
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-track" target="_blank" rel="noopener noreferrer" href="https://www.trackico.io/ico/dinngo/" />
           </div>
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-icodr" target="_blank" rel="noopener noreferrer" href="https://icodrops.com/dinngo/" />
           </div>
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-rating" target="_blank" rel="noopener noreferrer" href="https://icorating.com/ico/dinngo-dgo/" />
           </div>
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-icoholder" target="_blank" rel="noopener noreferrer" href="https://icoholder.com/en/dinngo-23884" />
           </div>
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-watch" target="_blank" rel="noopener noreferrer" href="https://icowatchlist.com/ico/dinngo" />
           </div>
-          <div className="pure-u-1-7">
+          <div className="pure-u-1-7 media-desktop-link">
             <a className="media-s-link media-s-link-marks" target="_blank" rel="noopener noreferrer" href="https://icomarks.com/ico/dinngo" />
+          </div>
+
+          <div className="pure-u-1-1">
+            <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs">
+              <div className="media-list">
+                <a className="media-s-link media-s-link-bench" target="_blank" rel="noopener noreferrer" href="https://icobench.com/ico/dinngo" />
+                <a className="media-s-link media-s-link-track" target="_blank" rel="noopener noreferrer" href="https://www.trackico.io/ico/dinngo/" />
+                <a className="media-s-link media-s-link-icodr" target="_blank" rel="noopener noreferrer" href="https://icodrops.com/dinngo/" />
+                <a className="media-s-link media-s-link-rating" target="_blank" rel="noopener noreferrer" href="https://icorating.com/ico/dinngo-dgo/" />
+                <a className="media-s-link media-s-link-icoholder" target="_blank" rel="noopener noreferrer" href="https://icoholder.com/en/dinngo-23884" />
+                <a className="media-s-link media-s-link-watch" target="_blank" rel="noopener noreferrer" href="https://icowatchlist.com/ico/dinngo" />
+                <a className="media-s-link media-s-link-marks" target="_blank" rel="noopener noreferrer" href="https://icomarks.com/ico/dinngo" />
+              </div>
+            </ReactIScroll>
           </div>
         </div>
 

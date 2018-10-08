@@ -133,6 +133,7 @@ footer {
         margin-top: 39px;
 
         .link {
+            font-size: 13px;
             &:after {
                 margin: 0 15px;
             }

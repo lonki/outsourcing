@@ -153,7 +153,7 @@ class Header extends React.PureComponent {
 
     return (
       <header className={`header ${scrollClass}`} style={{ zIndex }}>
-        <img class="mobile-email-subscription-img" src="/cf276922c2046f7be93f34cc5ad59615.svg" width="25" height="18" onClick={this.showSubscribeMail}></img>
+        <img className="mobile-email-subscription-img" src="/cf276922c2046f7be93f34cc5ad59615.svg" width="25" height="18" onClick={this.showSubscribeMail}></img>
 
         <div className="row pure-g">
           <div className="pure-u-1 ">

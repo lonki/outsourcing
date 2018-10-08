@@ -37,3 +37,10 @@
 .icon-social-reddit {
     background-image: resolve('icon-reddit.svg');
 }
+
+@media $breakpoint-big-mobile {
+    .icon-social {
+        width: 21px;
+        height: 18px;
+    }
+}

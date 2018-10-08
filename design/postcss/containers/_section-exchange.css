@@ -466,14 +466,27 @@
     @media $breakpoint-big-mobile {
         .list-desc {
             max-width: 95%;
+            font-size: 17px;
+            .title {
+                font-size: 21px;
+            }
         }
 
         .list-img {
-            margin-top: 0px;
+            margin-top: 50px;
+            margin-bottom: 5px;
         }
 
         .section-msg {
             max-width: 90%;
+        }
+
+        .section-title {
+            font-size: 33px;
+        }
+        .section-msg {
+            max-width: 90%;
+            font-size: 17px;
         }
 
         .section-exchange-video {
@@ -491,10 +504,10 @@
 
         .desktop-slider-item {
             .title {
-                font-size: 15px;
+                font-size: 19px;
             }
             .desc {
-                font-size: 13px;
+                font-size: 17px;
             }
         }
 

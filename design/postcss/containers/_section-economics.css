@@ -210,9 +210,13 @@
 
 @media $breakpoint-big-mobile {
     .section-economics {
+        .section-sub-title {
+            font-size: 25px;
+        }
+        
         .circle {
-            width: 170px;
-            height: 170px;
+            width: 150px;
+            height: 150px;
         }
 
         .circle-text {

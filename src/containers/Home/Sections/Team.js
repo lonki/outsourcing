@@ -8,7 +8,7 @@ const MOBILE_SLIDER_SETTINGS = {
   arrows: false,
   infinite: false,
   centerMode: true,
-  centerPadding: '45px',
+  centerPadding: '40px',
   speed: 500,
   dots: false,
   responsive: [

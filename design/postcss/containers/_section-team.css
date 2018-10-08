@@ -337,6 +337,18 @@ $member-img-mobile-width: 130px;
             padding: 40px 0;
         }
     }
+    .section-team {
+        .section-title {
+            margin-left: 30px;
+            font-size: 33px;
+            line-height: 1.09;
+            letter-spacing: 0.4px;
+        }
+        .section-sub-title {
+            margin-left: 30px;
+            font-size: 25px;
+        }
+    }
 
     .section-advisors {
         .section {

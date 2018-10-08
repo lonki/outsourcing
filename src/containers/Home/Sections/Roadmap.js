@@ -38,8 +38,10 @@ export default class Roadmap extends React.PureComponent {
           },
         },
         {
-          breakpoint: 415,
+          breakpoint: 568,
           settings: {
+            centerMode: true,
+            centerPadding: '40px',
             slidesToShow: 1,
             slidesToScroll: 1,
           },
