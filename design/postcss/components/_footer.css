@@ -4,7 +4,8 @@ footer {
     background: #0a336a;
 
     .section {
-        padding: 48px 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     .section-title {
@@ -86,7 +87,7 @@ footer {
     margin-top: 100px;
 }
 
-@media $breakpoint-big-mobile {
+@media $breakpoint-tablet {
     footer {
         padding-bottom: 20px;
 

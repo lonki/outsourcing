@@ -7,6 +7,7 @@ import iScroll from 'iscroll';
 import { Modal } from 'components';
 
 import withI18N from 'shared/intl/withI18N';
+import { touchDeviceHoverHandlerByClass } from 'shared/util/touchDevice';
 
 @withI18N
 export default class Media extends React.PureComponent {
@@ -49,6 +50,10 @@ export default class Media extends React.PureComponent {
     this.state = {
       media: '',
     };
+  }
+
+  componentDidMount() {
+    touchDeviceHoverHandlerByClass(document.getElementsByClassName('media-container'), 'media-container-hover');
   }
 
   openVideo = (e) => {

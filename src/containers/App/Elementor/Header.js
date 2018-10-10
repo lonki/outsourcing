@@ -51,6 +51,7 @@ class Header extends React.PureComponent {
     this.state = {
       openMenu: false,
       isScroll: false,
+      isScrollInMain: false,
       isShowSubscribeMail: false,
     };
   }
@@ -98,8 +99,14 @@ class Header extends React.PureComponent {
   }
 
   handleScroll = () => {
+    const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+    const element = $('.section-mainly');
+    const offset = element.offset();
+    const bottom = offset.top + element.outerHeight();
+    
     this.setState({
-      isScroll: document.documentElement.scrollTop > 0,
+      isScroll: scrollTop > bottom,
+      isScrollInMain: scrollTop > 0 && scrollTop < bottom,
     });
   }
 
@@ -146,13 +153,14 @@ class Header extends React.PureComponent {
 
   render() {
     const { i18n } = this.props;
-    const { openMenu, isScroll, isShowSubscribeMail } = this.state;
+    const { openMenu, isScroll, isScrollInMain, isShowSubscribeMail } = this.state;
     const zIndex = openMenu ? '250' : '';
     const openClass = openMenu ? 'open' : '';
     const scrollClass = isScroll ? 'scrolling' : '';
+    const scrollInMainClass = isScrollInMain ? 'mainScrolling' : '';
 
     return (
-      <header className={`header ${scrollClass}`} style={{ zIndex }}>
+      <header className={`header ${scrollClass} ${scrollInMainClass}`} style={{ zIndex }}>
         <img className="mobile-email-subscription-img" src="/cf276922c2046f7be93f34cc5ad59615.svg" width="25" height="18" onClick={this.showSubscribeMail}></img>
 
         <div className="row pure-g">

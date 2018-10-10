@@ -53,10 +53,10 @@ class Footer extends React.PureComponent {
     return (
       <footer>
         <div className="section row pure-g">
-          <div className="pure-u-1-1 pure-u-sm-1-3">
+          <div className="pure-u-1-1 pure-u-md-1-3">
             <h2 className="section-title">{i18n({ id: 'footer.title' }, 'html')}</h2>
           </div>
-          <div className="pure-u-1-1 pure-u-sm-2-3 footer-email">
+          <div className="pure-u-1-1 pure-u-md-2-3 footer-email">
             <Subscription ref={ref => { this.subscription = ref; }} onClick={this.props.setEmailSubscription} />
           </div>
 

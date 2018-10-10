@@ -30,6 +30,7 @@
     top: 0;
     left: 0;
     background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.48) 39%, rgba(0, 0, 0, 0.48) 58%, #000000);
+    cursor: pointer;
 }
 
 .media-title {
@@ -55,10 +56,18 @@
 .media-img {
     width: 320px;
     height: 220px;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     border-radius: 5px;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+    transition: background-size 0.2s ease-in;
+}
+
+.media-container-hover{
+    .media-img {
+        background-size: 105% 105%;
+    }
 }
 
 .media-img-crow {

@@ -5,7 +5,10 @@
     width: 100%;
     z-index: 252;
     &.scrolling {
-        background-color: #133364;
+        background-image: linear-gradient(to bottom, #133364, #036ad8);
+    }
+    &.mainScrolling {
+        background-image: linear-gradient(to bottom, #133364, rgba(19, 51, 100, 0));
     }
     .logo {
         position: absolute;

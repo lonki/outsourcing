@@ -54,7 +54,7 @@ export default class Advisors extends React.PureComponent {
             <div className={`member-img member-advisor-${i18n(`section.advisors.img.${i}`)}`} />
             <div className="member-desc">
               <p className="title">{i18n(`section.advisors.name.${i}`)}</p>
-              <p className="position">{i18n('section.advisors.title')}</p>
+              <p className="position">{i18n('section.advisors.position')}</p>
               <p>{i18n(`section.advisors.desc.${i}`)}</p>
             </div>
             <a className="link text-center" title="linkedin" target="_blank" rel="noopener noreferrer" href={i18n(`section.advisors.link.${i}`)} />

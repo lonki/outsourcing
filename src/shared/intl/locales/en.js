@@ -157,6 +157,7 @@ const sectionTeam = {
 
 const sectionAdvisors = {
   'section.advisors.title': 'Advisors',
+  'section.advisors.position': 'Advisor',
 
   'section.advisors.img.1': 'YKChu',
   'section.advisors.name.1': 'YK CHU',

@@ -58,8 +58,7 @@
     min-width: 255px;
     min-height: 35px;
     display: flex;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px 0 0 5px;
     background-color: rgba(74, 144, 226, 0.35);
     border: solid 0.1px rgba(74, 144, 226, 0.35);
     color: #ffffff;
@@ -68,7 +67,7 @@
     &::placeholder {
         margin-left: 6px;
         font-size: 13px;
-        line-height: 2.54;
+        line-height: 23px;
         color: rgba(255, 255, 255, 0.6);
     }
 }

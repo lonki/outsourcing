@@ -133,7 +133,7 @@ export default class Exchange extends React.PureComponent {
             <p className="section-msg pure-u-1">{i18n('section.exchange.desc')}</p>
           </div>
 
-          <div className="section-exchange-video-container pure-u-1-1 pure-u-sm-1-2 text-center">
+          <div className="section-exchange-video-container pure-u-1-1 pure-u-sm-1-2 text-center section-exchange-video-shadow">
             <div className="section-exchange-video" onClick={this.openVideo} />
           </div>
 

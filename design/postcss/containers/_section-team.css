@@ -113,7 +113,7 @@ $member-img-mobile-width: 130px;
     left: calc(($member-container-xbig-desktop-width - $member-img-xbig-desktop-width) / 2);
     transform: translate(0, calc($member-img-xbig-desktop-width / 2 * -1));
     background-size: cover;
-    background-size: 101%;
+    background-size: 101% 101%;
     background-position: 50% 50%;
     border-radius: 50%;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.09);
@@ -121,7 +121,7 @@ $member-img-mobile-width: 130px;
 }
 
 .member-img-hover{
-    background-size: 105%;
+    background-size: 106% 106%;
 }
 
 .member-desc {

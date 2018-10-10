@@ -38,7 +38,14 @@ export default class Economics extends React.PureComponent {
       '#bcbcbc',
     ];
 
-    this.backgroundHoverColor = 'rgba(19, 51, 100, 0.7)';
+    this.backgroundHoverColor = [
+      '#1b4f9a',
+      '#27649b',
+      '#356c84',
+      '#4c6f5e',
+      '#33498a',
+      '#4e6383',
+    ];
 
     this.doughnutSettings = {
       labels: this.labels,
@@ -57,7 +64,7 @@ export default class Economics extends React.PureComponent {
   onHover = (e, hoverItems) => {
     if (hoverItems.length > 0) {
       const { _index: index } = hoverItems[0];
-      const nextBackgroundColor = Array.from(new Array(6), () => this.backgroundHoverColor);
+      const nextBackgroundColor = Array.from(this.backgroundHoverColor);
       nextBackgroundColor[index] = this.backgroundColor[index];
       this.chart.chartInstance.data.datasets[0].backgroundColor = nextBackgroundColor;
     } else {
