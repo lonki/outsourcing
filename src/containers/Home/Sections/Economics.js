@@ -131,7 +131,7 @@ export default class Economics extends React.PureComponent {
         <div className="pure-u-1">
           <ViewPortAnimation isVisibleCallback={this.showChart}>
             <div className="section row pure-g chart-container">
-              <div className="pure-u-1-1 pure-u-sm-1-2">
+              <div className="pure-u-1-1 pure-u-sm-1-2 chart-container-pie">
                 {isShowChart &&
                   <Doughnut
                     ref={(chart) => { this.chart = chart; }}

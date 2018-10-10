@@ -121,6 +121,10 @@
         padding: 0 150px 40px 150px;
     }
 
+    .chart-container-pie {
+        z-index: 2;
+    }
+
     .chart-center-text {
         transform: translate(0, -175px);
         font-size: 55px;
