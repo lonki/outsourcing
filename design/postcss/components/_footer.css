@@ -47,6 +47,11 @@ footer {
                 content: '';
             }
         }
+
+        &:hover {
+            opacity: 1;
+            color: #ffffff;
+        }
     }
 }
 
@@ -114,6 +119,14 @@ footer {
 
     .footer-email {
         margin: 23px 0 43px 0;
+    }
+
+    .footer-right-bg {
+        width: 40%;
+        height: 60px;
+        background-image: resolve('footer-mobile-bg.svg');
+        background-size: contain;
+        background-position: right 100%;
     }
 
     .email-subscription-input {

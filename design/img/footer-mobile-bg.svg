@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135" height="90" viewBox="0 0 135 90">
+    <g fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 135 0)">
+        <path fill="#1EC0FF" d="M0 45h45v45H0z"/>
+        <rect width="45" height="45" x="90" y="45" fill="#0087FF" rx="22.5"/>
+        <path fill="#1EC0FF" d="M45 0h45v45H45z"/>
+    </g>
+</svg>

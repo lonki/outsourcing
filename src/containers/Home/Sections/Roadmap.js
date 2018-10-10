@@ -21,7 +21,7 @@ export default class Roadmap extends React.PureComponent {
       infinite: false,
       speed: 500,
       dots: false,
-      focusOnSelect: true,
+      // focusOnSelect: true,
       responsive: [
         {
           breakpoint: 5000,
@@ -105,9 +105,12 @@ export default class Roadmap extends React.PureComponent {
   }
 
   selectItem = (e) => {
+    const sliderIndex = parseInt(e.currentTarget.getAttribute('data-index'), 10);
     this.setState({
-      sliderIndex: parseInt(e.currentTarget.getAttribute('data-index'), 10),
+      sliderIndex,
     });
+
+    this.slider.slickGoTo(sliderIndex);
   }
 
   sliderItemsRender = () => {

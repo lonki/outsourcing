@@ -14,7 +14,7 @@
         line-height: 13px;
         color: #ffffff;
         opacity: 0;
-        transition: opacity 3s;
+        transition: opacity 5s;
     }
     .success {
         opacity: 1;
@@ -66,8 +66,8 @@
 
     &::placeholder {
         margin-left: 6px;
-        font-size: 13px;
-        line-height: 23px;
+        font-size: 15px;
+        line-height: 21px;
         color: rgba(255, 255, 255, 0.6);
     }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Doughnut } from 'react-chartjs-2';
+import isMobile from 'ismobilejs';
 
 import { ViewPortAnimation } from 'components';
 
@@ -54,6 +55,15 @@ export default class Economics extends React.PureComponent {
         backgroundColor: this.backgroundColor,
         borderWidth: 0,
       }],
+    };
+
+    this.doughnutOptions = {
+      maintainAspectRatio: false,
+      cutoutPercentage: 80,
+      onHover: this.onHover,
+      tooltips: {
+        enabled: !isMobile.any,
+      },
     };
 
     this.state = {
@@ -145,11 +155,7 @@ export default class Economics extends React.PureComponent {
                     data={this.doughnutSettings}
                     width={260}
                     height={260}
-                    options={{
-                      maintainAspectRatio: false,
-                      cutoutPercentage: 80,
-                      onHover: this.onHover,
-                    }}
+                    options={this.doughnutOptions}
                     legend={{
                       display: false,
                     }}

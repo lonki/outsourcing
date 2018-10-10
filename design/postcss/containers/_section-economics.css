@@ -66,8 +66,8 @@
     }
 
     .section-msg {
-        font-size: 17px;
-        line-height: 1.59;
+        font-size: 20px;
+        line-height: 1.5;
         color: #ffffff;
     }
 
@@ -262,5 +262,6 @@
 
     .chart-label-container {
         margin-top: 24px;
+        z-index: 2;
     }
 }

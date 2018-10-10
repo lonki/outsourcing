@@ -6,36 +6,6 @@ import { Modal, ViewPortAnimation } from 'components';
 
 import withI18N from 'shared/intl/withI18N';
 
-const SLIDER_SETTINGS = {
-  arrows: true,
-  infinite: false,
-  speed: 500,
-  dots: true,
-  responsive: [
-    {
-      breakpoint: 5000,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 780,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 415,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
 const MOBILE_SLIDER_SETTINGS = {
   arrows: false,
   infinite: false,
@@ -211,10 +181,6 @@ export default class Exchange extends React.PureComponent {
             <div className="mobile-slider-circle">
               <div className="mobile-slider-circle-2" />
               <div className="mobile-slider-circle-3" />
-            </div>
-            <div className="section-exchange-loader">
-              <div className="loader-circle loader-circle-left" />
-              <div className="loader-circle loader-circle-right loader-circle-delay" />
             </div>
           </div>
           <div className="pure-hidden-xs pure-u-1-1">

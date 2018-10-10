@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VisibilitySensor from 'react-visibility-sensor';
 import classNames from 'classnames';
+import isMobile from 'ismobilejs';
 
 export default class ViewPortAnimation extends React.PureComponent {
 
@@ -56,8 +57,9 @@ export default class ViewPortAnimation extends React.PureComponent {
   }
 
   render() {
+    const offsetTop = isMobile.any ? 75 : 175;
     return (
-      <VisibilitySensor onChange={this.onVisibility} partialVisibility resizeDelay={100}>
+      <VisibilitySensor offset={{ top: offsetTop }} onChange={this.onVisibility} partialVisibility resizeDelay={100}>
         {this.getPassClassChildren()}
       </VisibilitySensor>
     );

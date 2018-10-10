@@ -128,7 +128,7 @@ const sectionTeam = {
   'section.team.name.9': 'NICK CHEN',
   'section.team.position.9': 'Senior Software Engineer',
   'section.team.desc.9': 'Senior Software Engineer, years of development and management experience. Proficient in build-up backend infrastructure and software architecture design.',
-  'section.team.link.9': 'https://gitlab.com/users/nick25214/projects',
+  'section.team.link.9': 'https://www.linkedin.com/in/nick-chen-a0262671/',
 
   'section.team.img.10': 'TravisLiu',
   'section.team.name.10': 'TRAVIS LIU',

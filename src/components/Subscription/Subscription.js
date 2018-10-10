@@ -56,7 +56,7 @@ export default class Subscription extends React.PureComponent {
       this.setState({
         isSuccess: false,
       });
-    }, 3000);
+    }, 5000);
   }
 
   openFailText = () => {
@@ -69,7 +69,7 @@ export default class Subscription extends React.PureComponent {
       this.setState({
         isFail: false,
       });
-    }, 3000);
+    }, 5000);
   }
 
   render() {

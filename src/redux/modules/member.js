@@ -18,8 +18,9 @@ export default function reducer(state = initialState, action = {}) {
         setEmailSubscriptionErr: false,
       });
     }
-    case cons.SET_EMAIL_SUBSCRIPTION_FULFILLED:
-      if (action.payload.data.result === 'success') {
+    case cons.SET_EMAIL_SUBSCRIPTION_FULFILLED: {
+      const { msg, result } = action.payload.data;
+      if (result === 'success' || msg === 'This email cannot be added to this list. Please enter a different email address.') {
         return state.merge({
           setEmailSubscriptionPending: false,
           setEmailSubscriptionSuc: true,
@@ -32,6 +33,7 @@ export default function reducer(state = initialState, action = {}) {
         setEmailSubscriptionSuc: false,
         setEmailSubscriptionErr: true,
       });
+    }
     case cons.SET_EMAIL_SUBSCRIPTION_REJECTED:
       return state.merge({
         setEmailSubscriptionPending: false,

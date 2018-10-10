@@ -121,7 +121,7 @@ $member-img-mobile-width: 130px;
 }
 
 .member-img-hover{
-    background-size: 106% 106%;
+    background-size: 111% 111%;
 }
 
 .member-desc {
@@ -137,7 +137,7 @@ $member-img-mobile-width: 130px;
     .title {
         font-size: 23px;
         font-weight: bold;
-        line-height: 1.04;
+        line-height: 31px;
         color: #097be0;
     }
 
@@ -145,7 +145,7 @@ $member-img-mobile-width: 130px;
         margin-bottom: 7px;
         font-size: 17px;
         font-weight: bold;
-        line-height: 1.41;
+        line-height: 23px;
         color: #097be0;
     }
 }

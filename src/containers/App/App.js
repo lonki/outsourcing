@@ -29,7 +29,7 @@ export default class App extends React.Component {
         <Header pathname={pathname} />
         {this.props.children}
         <Footer />
-        <a className="fixed-button" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
+        <a className="fixed-button" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO" />
       </React.Fragment>
     );
   }

@@ -94,6 +94,9 @@ input[type=text], input[type=email], textarea {
 }
 
 .video-content {
+	background-color: #000;
+	text-decoration: none;
+	outline: none;
     iframe {
         margin: 15px 15px;
         width: 650px;
