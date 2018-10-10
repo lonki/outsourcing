@@ -150,16 +150,22 @@ export default class Economics extends React.PureComponent {
             <div className="section row pure-g chart-container">
               <div className="pure-u-1-1 pure-u-sm-1-2 chart-container-pie">
                 {isShowChart &&
-                  <Doughnut
-                    ref={(chart) => { this.chart = chart; }}
-                    data={this.doughnutSettings}
-                    width={260}
-                    height={260}
-                    options={this.doughnutOptions}
-                    legend={{
-                      display: false,
-                    }}
-                  />
+                  <React.Fragment>
+                    <Doughnut
+                      ref={(chart) => { this.chart = chart; }}
+                      data={this.doughnutSettings}
+                      width={260}
+                      height={260}
+                      options={this.doughnutOptions}
+                      legend={{
+                        display: false,
+                      }}
+                    />
+                    <div className="pure-u-1-1 pure-u-sm-1-2 chart-center-text text-center">
+                      {i18n('section.economics.chart.center.title')}
+                      <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
+                    </div>
+                  </React.Fragment>
                 }
               </div>
               <div className="chart-label-container pure-u-1-1 pure-u-sm-1-2">
@@ -193,11 +199,6 @@ export default class Economics extends React.PureComponent {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="pure-u-1-1 pure-u-sm-1-2 chart-center-text text-center">
-                {i18n('section.economics.chart.center.title')}
-                <p className="chart-center-tips">{i18n('section.economics.chart.center.desc')}</p>
               </div>
               <div className="pure-u-1-2" />
             </div>

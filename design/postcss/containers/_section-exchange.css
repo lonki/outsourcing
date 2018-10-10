@@ -32,6 +32,10 @@
     position: relative;
     background-color: #f0f6fe;
 
+    .slick-list {
+        overflow: initial;
+    }
+
     .section {
         padding-bottom: 130px;
     }
@@ -477,23 +481,6 @@
                 font-size: 13px;
             }
         }
-        .desktop-slider-item {
-            width: 100%;
-            padding: 20px 5px 5px 25px;
-            &:before {
-                width: 14px;
-                height: 14px;
-                top: 14px;
-                left: 5px;
-            }
-            .title {
-                font-size: 14px;
-            }
-
-            .desc {
-                font-size: 12px;
-            }
-        }
 
         .desktop-slider-circle-2 {
             width: 60px;
@@ -569,10 +556,20 @@
         }
 
         .desktop-slider-item {
+            padding: 22px 15px;
+            &:before {
+                width: 14px;
+                height: 14px;
+                top: 18px;
+                left: 17px;
+            }
+
             .title {
+                padding-left: 25px;
                 font-size: 19px;
             }
             .desc {
+                padding-left: 25px;
                 font-size: 17px;
             }
         }

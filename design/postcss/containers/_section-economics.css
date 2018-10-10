@@ -122,20 +122,22 @@
     }
 
     .chart-container-pie {
+        position: relative;
         z-index: 2;
     }
 
     .chart-center-text {
-        transform: translate(0, -175px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 55px;
         font-weight: bold;
-        line-height: 0.51;
         color: #ffffff;
         z-index: 1;
     }
 
     .chart-center-tips {
-        margin-top: 15px;
         font-size: 18px;
         font-weight: bold;
         line-height: 1.94;
@@ -234,10 +236,6 @@
 
         .chart-container {
             padding: 0 15px 40px 15px
-        }
-
-        .chart-center-text {
-            transform: translate(0, -310px);
         }
 
         .labels {

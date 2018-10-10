@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
+import TextTruncate from 'react-text-truncate';
 
 import { Modal, ViewPortAnimation } from 'components';
 
@@ -11,6 +12,7 @@ const MOBILE_SLIDER_SETTINGS = {
   infinite: false,
   speed: 500,
   dots: true,
+  centerMode: true,
   responsive: [
     {
       breakpoint: 5000,
@@ -21,13 +23,6 @@ const MOBILE_SLIDER_SETTINGS = {
     },
     {
       breakpoint: 780,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 415,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -187,27 +182,63 @@ export default class Exchange extends React.PureComponent {
             <Slider {...MOBILE_SLIDER_SETTINGS}>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.a.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.a.desc')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.a.desc')}
+                  />
+                </p>
               </div>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.b.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.b.desc')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.b.desc')}
+                  />
+                </p>
               </div>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.c.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.c.desc')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.c.desc')}
+                  />
+                </p>
               </div>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.d.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.d.desc')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.d.desc')}
+                  />
+                </p>
               </div>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.e.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.e.desc')}</p>
+                <p className="desc">                  
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.e.desc')}
+                  />
+                </p>
               </div>
               <div className="desktop-slider-item">
                 <p className="title">{i18n('section.exchange.grids.f.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.f.desc')}</p>
+                <p className="desc">                  
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.f.desc')}
+                  />
+                </p>
               </div>
             </Slider>
           </div>

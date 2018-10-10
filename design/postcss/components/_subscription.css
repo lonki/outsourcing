@@ -115,17 +115,17 @@
     }
 
     .email-subscription-input-mobile {
-        padding: 15px 0;
+        padding: 15px 12px;
         display: block;
         width: 100%;
         border: none;
         font-size: 19px;
-        opacity: 0.6;
-        background: none;
+        border-radius: 5px;
+        background-color: rgba(74,144,226,0.35);
         color: #ffffff;
 
         &::placeholder {
-            color: #ffffff;
+            color: rgba(255,255,255,0.6);
         }
     }
 
