@@ -21,7 +21,8 @@ export default class Roadmap extends React.PureComponent {
       infinite: false,
       speed: 500,
       dots: false,
-      // focusOnSelect: true,
+      swipeToSlide: true,
+      touchThreshold: 10,
       responsive: [
         {
           breakpoint: 5000,

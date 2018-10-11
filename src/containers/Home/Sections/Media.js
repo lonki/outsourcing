@@ -39,6 +39,10 @@ export default class Media extends React.PureComponent {
       speed: 2000,
       autoplaySpeed: 2000,
       cssEase: 'linear',
+      swipeToSlide: true,
+      touchThreshold: 10,
+      pauseOnHover: true,
+      pauseOnFocus: true,
       responsive: [
         {
           breakpoint: 568,

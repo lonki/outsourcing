@@ -508,7 +508,7 @@
     }
 
     @media $breakpoint-big-mobile {
-        padding-bottom: 130px;
+        padding-bottom: 75px;
 
         .section {
             padding-bottom: 0px;

@@ -10,6 +10,8 @@ const MOBILE_SLIDER_SETTINGS = {
   dots: false,
   centerMode: true,
   centerPadding: '40px',
+  swipeToSlide: true,
+  touchThreshold: 10,
   responsive: [
     {
       breakpoint: 5000,

@@ -14,6 +14,8 @@ const MOBILE_SLIDER_SETTINGS = {
   dots: true,
   centerMode: true,
   centerPadding: '20px',
+  swipeToSlide: true,
+  touchThreshold: 10,
   responsive: [
     {
       breakpoint: 5000,
@@ -84,9 +86,6 @@ export default class Exchange extends React.PureComponent {
         <div className="section row pure-g">
           <div className="section-exchange-bg" />
           <div className="section-exchange-right-bg" />
-          <ViewPortAnimation addClassName="section-exchange-left-bottom-bg-animation">
-            <div className="section-exchange-left-bottom-bg" />
-          </ViewPortAnimation>
           <div className="section-exchange-bg-bottom">
             <div className="bg-icon" />
             <div className="bg-icon" />
@@ -259,6 +258,10 @@ export default class Exchange extends React.PureComponent {
             />
           </div>
         </Modal>
+      
+        <ViewPortAnimation addClassName="section-exchange-left-bottom-bg-animation">
+          <div className="section-exchange-left-bottom-bg" />
+        </ViewPortAnimation>
       </section>
     );
   }
