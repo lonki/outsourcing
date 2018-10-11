@@ -179,70 +179,71 @@ export default class Exchange extends React.PureComponent {
               <div className="mobile-slider-circle-3" />
             </div>
           </div>
-          <div className="pure-hidden-xs pure-u-1-1">
-            <Slider {...MOBILE_SLIDER_SETTINGS}>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.a.title')}</p>
-                <p className="desc">
-                  <TextTruncate
-                    line={2}
-                    truncateText="…"
-                    text={i18n('section.exchange.grids.a.desc')}
-                  />
-                </p>
-              </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.b.title')}</p>
-                <p className="desc">
-                  <TextTruncate
-                    line={2}
-                    truncateText="…"
-                    text={i18n('section.exchange.grids.b.desc')}
-                  />
-                </p>
-              </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.c.title')}</p>
-                <p className="desc">
-                  <TextTruncate
-                    line={2}
-                    truncateText="…"
-                    text={i18n('section.exchange.grids.c.desc')}
-                  />
-                </p>
-              </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.d.title')}</p>
-                <p className="desc">
-                  <TextTruncate
-                    line={2}
-                    truncateText="…"
-                    text={i18n('section.exchange.grids.d.desc')}
-                  />
-                </p>
-              </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.e.title')}</p>
-                <p className="desc">                  
-                  <TextTruncate
-                    line={2}
-                    truncateText="…"
-                    text={i18n('section.exchange.grids.e.desc')}
-                  />
-                </p>
-              </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.f.title')}</p>
-                <p className="desc">                  
-                  <TextTruncate
-                    line={2}
-                    truncateText="…"
-                    text={i18n('section.exchange.grids.f.desc')}
-                  />
-                </p>
-              </div>
-            </Slider>
-          </div>
+        </div>
+
+        <div className="pure-hidden-xs">
+          <Slider {...MOBILE_SLIDER_SETTINGS}>
+            <div className="desktop-slider-item">
+              <p className="title">{i18n('section.exchange.grids.a.title')}</p>
+              <p className="desc">
+                <TextTruncate
+                  line={2}
+                  truncateText="…"
+                  text={i18n('section.exchange.grids.a.desc')}
+                />
+              </p>
+            </div>
+            <div className="desktop-slider-item">
+              <p className="title">{i18n('section.exchange.grids.b.title')}</p>
+              <p className="desc">
+                <TextTruncate
+                  line={2}
+                  truncateText="…"
+                  text={i18n('section.exchange.grids.b.desc')}
+                />
+              </p>
+            </div>
+            <div className="desktop-slider-item">
+              <p className="title">{i18n('section.exchange.grids.c.title')}</p>
+              <p className="desc">
+                <TextTruncate
+                  line={2}
+                  truncateText="…"
+                  text={i18n('section.exchange.grids.c.desc')}
+                />
+              </p>
+            </div>
+            <div className="desktop-slider-item">
+              <p className="title">{i18n('section.exchange.grids.d.title')}</p>
+              <p className="desc">
+                <TextTruncate
+                  line={2}
+                  truncateText="…"
+                  text={i18n('section.exchange.grids.d.desc')}
+                />
+              </p>
+            </div>
+            <div className="desktop-slider-item">
+              <p className="title">{i18n('section.exchange.grids.e.title')}</p>
+              <p className="desc">
+                <TextTruncate
+                  line={2}
+                  truncateText="…"
+                  text={i18n('section.exchange.grids.e.desc')}
+                />
+              </p>
+            </div>
+            <div className="desktop-slider-item">
+              <p className="title">{i18n('section.exchange.grids.f.title')}</p>
+              <p className="desc">
+                <TextTruncate
+                  line={2}
+                  truncateText="…"
+                  text={i18n('section.exchange.grids.f.desc')}
+                />
+              </p>
+            </div>
+          </Slider>
         </div>
 
         <Modal ref={ref => { this.videoModal = ref; }}>

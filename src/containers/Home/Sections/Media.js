@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
 import ReactIScroll from 'react-iscroll';
-import iScroll from 'iscroll';
+import iscroll from 'iscroll/build/iscroll-probe';
 
 import { Modal } from 'components';
 
@@ -22,6 +22,11 @@ export default class Media extends React.PureComponent {
     this.iScrollOptions = {
       scrollX: true,
       scrollY: false,
+      probeType: 2,
+      disablePointer: true,
+      disableTouch: false, // false if you want the slider to be usable with touch devices
+      disableMouse: false,
+      preventDefault: false,
     };
 
     this.settings = {
@@ -108,33 +113,35 @@ export default class Media extends React.PureComponent {
             </div>
           </div>
 
-          <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs">
-            <div className="media-list">
-              <div className="media-container" data-media="crypto" onClick={this.openVideo}>
-                <div className="media-img media-img-crow" />
-                <div className="media-mask">
-                  <div className="media-logo media-logo-crow" />
-                  <p className="media-title">{i18n('section.media.media.a')}</p>
+          <div style={{width: '100%'}}>
+            <ReactIScroll iScroll={iscroll} options={this.iScrollOptions} className="pure-hidden-xs">
+              <div className="media-list">
+                <div className="media-container" data-media="crypto" onClick={this.openVideo}>
+                  <div className="media-img media-img-crow" />
+                  <div className="media-mask">
+                    <div className="media-logo media-logo-crow" />
+                    <p className="media-title">{i18n('section.media.media.a')}</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="media-container" data-media="bad" onClick={this.openVideo}>
-                <div className="media-img media-img-bad" />
-                <div className="media-mask">
-                  <div className="media-logo media-logo-bad" />
-                  <p className="media-title">{i18n('section.media.media.b')}</p>
+                <div className="media-container" data-media="bad" onClick={this.openVideo}>
+                  <div className="media-img media-img-bad" />
+                  <div className="media-mask">
+                    <div className="media-logo media-logo-bad" />
+                    <p className="media-title">{i18n('section.media.media.b')}</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="media-container" data-media="prome" onClick={this.openVideo}>
-                <div className="media-img media-img-prome" />
-                <div className="media-mask">
-                  <div className="media-logo media-logo-prome" />
-                  <p className="media-title">{i18n('section.media.media.c')}</p>
+                <div className="media-container" data-media="prome" onClick={this.openVideo}>
+                  <div className="media-img media-img-prome" />
+                  <div className="media-mask">
+                    <div className="media-logo media-logo-prome" />
+                    <p className="media-title">{i18n('section.media.media.c')}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ReactIScroll>
+            </ReactIScroll>
+          </div>
 
           <div className="pure-u-1 media-link-container">
             <Slider {...this.settings}>
@@ -174,7 +181,7 @@ export default class Media extends React.PureComponent {
           </div>
 
           <div className="pure-u-1-1">
-            <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs">
+            <ReactIScroll iScroll={iscroll} options={this.iScrollOptions} className="pure-hidden-xs">
               <div className="media-list">
                 <a className="media-s-link media-s-link-bench" target="_blank" rel="noopener noreferrer" href="https://icobench.com/ico/dinngo" />
                 <a className="media-s-link media-s-link-track" target="_blank" rel="noopener noreferrer" href="https://www.trackico.io/ico/dinngo/" />

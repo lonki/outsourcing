@@ -46,6 +46,10 @@ class Header extends React.PureComponent {
     this.iScrollOptions = {
       scrollX: true,
       scrollY: false,
+      disablePointer: true,
+      disableTouch: false, // false if you want the slider to be usable with touch devices
+      disableMouse: false,
+      preventDefault: false,
     };
 
     this.state = {
@@ -103,7 +107,7 @@ class Header extends React.PureComponent {
     const element = $('.section-mainly');
     const offset = element.offset();
     const bottom = offset.top + element.outerHeight();
-    
+
     this.setState({
       isScroll: scrollTop > bottom,
       isScrollInMain: scrollTop > 0 && scrollTop < bottom,
