@@ -510,6 +510,9 @@
     }
 
     @media $breakpoint-big-mobile {
+        .section {
+            padding-bottom: 90px;
+        }
         .list-desc {
             max-width: 95%;
             font-size: 17px;
@@ -681,7 +684,9 @@
         }
 
         .section-exchange-right-bg {
-            top: 15%;
+            top: 10%;
+            right: -20%;
+            background-size: auto 80%;
         }
 
         .section-exchange-left-bottom-bg {

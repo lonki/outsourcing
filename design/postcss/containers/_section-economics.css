@@ -219,6 +219,10 @@
         .section-sub-title {
             font-size: 25px;
         }
+
+        .chart-container-pie {
+            margin-bottom: 20px;
+        }
         
         .circle {
             width: 150px;
@@ -235,7 +239,7 @@
         }
 
         .chart-container {
-            padding: 0 15px 40px 15px
+            padding: 0 15px 60px 15px
         }
 
         .labels {

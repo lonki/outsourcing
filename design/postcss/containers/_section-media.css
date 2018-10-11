@@ -182,6 +182,12 @@
 }
 
 @media $breakpoint-big-mobile {
+    .section-media {
+        .section {
+            padding-bottom: 50px;
+        }
+    }
+
     .media-list {
         display: inline-block;
         white-space: nowrap;

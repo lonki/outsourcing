@@ -13,6 +13,7 @@ const MOBILE_SLIDER_SETTINGS = {
   speed: 500,
   dots: true,
   centerMode: true,
+  centerPadding: '20px',
   responsive: [
     {
       breakpoint: 5000,

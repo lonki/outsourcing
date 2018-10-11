@@ -202,6 +202,25 @@
         .desktop-rate-link {
             display: none;
         }
+
+        .rate-link {
+
+            .link-img {
+                width: 74px;
+                height: 25px;
+                margin-right: 8px;
+                display: inline-block;
+            }
+
+            .rate {
+                font-size: 15.7px;
+                line-height: 38px;
+
+                &.small {
+                    font-size: 13.7px;
+                }
+            }
+        }
     }
 }
 
