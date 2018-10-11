@@ -689,8 +689,8 @@
         }
 
         .section-exchange-right-bg {
+            width: 30%;
             top: 10%;
-            right: -20%;
             background-size: auto 80%;
         }
 
