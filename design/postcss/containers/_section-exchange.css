@@ -513,6 +513,10 @@
         .section {
             padding-bottom: 0px;
         }
+
+        .section-h3 {
+            font-size: 25px;
+        }
         .list-desc {
             max-width: 95%;
             font-size: 17px;
@@ -609,6 +613,7 @@
             width: 80%;
             margin: 0 auto;
             padding-top: 100%;
+            margin-bottom: -25px;
             position: relative;
             background-image: resolve('exchange-circle-bg.png');
             background-size: contain;
