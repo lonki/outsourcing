@@ -106,7 +106,8 @@ class Header extends React.PureComponent {
     const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
     const element = $('.section-mainly');
     const offset = element.offset();
-    const bottom = offset.top + element.outerHeight();
+    const headerHeight = $('.header').height();
+    const bottom = offset.top + element.outerHeight() - headerHeight;
 
     this.setState({
       isScroll: scrollTop > bottom,
@@ -213,7 +214,7 @@ class Header extends React.PureComponent {
                         </div>
                         <ReactIScroll iScroll={iScroll} options={this.iScrollOptions}>
                           <div className="social-list">
-                            <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
+                            <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO" />
                             <a className="icon-social icon-social-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/dinngohq" />
                             <a className="icon-social icon-social-fb" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dinngohq" />
                             <a className="icon-social icon-social-medium" target="_blank" rel="noopener noreferrer" href="https://medium.com/dinngo-exchange" />

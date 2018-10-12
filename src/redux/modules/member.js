@@ -20,7 +20,7 @@ export default function reducer(state = initialState, action = {}) {
     }
     case cons.SET_EMAIL_SUBSCRIPTION_FULFILLED: {
       const { msg, result } = action.payload.data;
-      if (result === 'success' || msg === 'This email cannot be added to this list. Please enter a different email address.') {
+      if (result === 'success' || msg.indexOf('already subscribed to list') !== -1 || msg.indexOf('too many recent signup') !== -1) {
         return state.merge({
           setEmailSubscriptionPending: false,
           setEmailSubscriptionSuc: true,

@@ -63,7 +63,7 @@ class Footer extends React.PureComponent {
           <div className="pure-u-1 text-center">
             <div className="row pure-g social-list">
               <div className="pure-u-1-8">
-                <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO_Official" />
+                <a className="icon-social icon-social-telegram" target="_blank" rel="noopener noreferrer" href="https://t.me/DINNGO" />
               </div>
               <div className="pure-u-1-8">
                 <a className="icon-social icon-social-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/dinngohq" />
@@ -94,7 +94,6 @@ class Footer extends React.PureComponent {
               <a className="link" target="_blank" rel="noopener noreferrer" href="https://dinngo.workable.com/">{i18n('footer.link.a')}</a>
               <a className="link" target="_blank" rel="noopener noreferrer" href="https://crowdsale-files.dinngo.co/terms/privacy-policy">{i18n('footer.link.b')}</a>
               <a className="link" target="_blank" rel="noopener noreferrer" href="https://crowdsale-files.dinngo.co/terms/terms-of-use">{i18n('footer.link.c')}</a>
-              <a className="link" target="_blank" rel="noopener noreferrer" href="http://support.dinngo.co/">{i18n('footer.link.d')}</a>
             </div>
           </div>
         </div>

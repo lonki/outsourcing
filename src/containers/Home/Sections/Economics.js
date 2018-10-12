@@ -180,7 +180,7 @@ export default class Economics extends React.PureComponent {
                       <p>{this.labels[1]}</p>
                     </div>
                     <div className="labels-item" data-index="2" onClick={this.showChartTooltip} onMouseOver={this.showChartTooltip}>
-                      <p className="title" style={{ color: this.backgroundColor[1] }}>{this.data[2]}%</p>
+                      <p className="title" style={{ color: this.backgroundColor[2] }}>{this.data[2]}%</p>
                       <p>{this.labels[2]}</p>
                     </div>
                   </div>

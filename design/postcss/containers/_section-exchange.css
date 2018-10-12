@@ -1,12 +1,3 @@
-@keyframes section-exchange-left-bottom-bg-animation {
-  0% {
-    transform: translate(0, -50%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 @keyframes section-exchange-slider-item-first-animation {
   0% {
     opacity: 0;
@@ -60,10 +51,10 @@
     }
 
     .section-exchange-bg {
-        width: 745px;
+        width: 50%;
         height: 446px;
         position: absolute;
-        left: -228px;
+        left: -10%;
         top: 170px;
         background-image: resolve('exchange-bg-left.svg');
         background-size: contain;
@@ -85,19 +76,16 @@
     }
 
     .section-exchange-left-bottom-bg {
-        width: 20%;
+        width: 20.5%;
         height: 95px;
         position: absolute;
-        left: 0px;
-        bottom: -2px;
+        left: 0;
+        bottom: 0;
         background-image: resolve('exchange-bg-left-bottom.png');
         background-position: right;
         background-repeat: no-repeat;
+        background-size: auto 100%;
         z-index: 1;
-    }
-
-    .section-exchange-left-bottom-bg-animation {
-        animation: section-exchange-left-bottom-bg-animation .7s;
     }
 
     .pure-u-1-3, .pure-u-1-2 {
@@ -227,7 +215,7 @@
     }
 
     .section-exchange-slider-item-left-animation {
-        .desktop-slider-item {
+        .desktop-slider-item-shadow {
             &:nth-child(odd) {
                 animation: section-exchange-slider-item-first-animation 2s;
             }
@@ -238,7 +226,7 @@
     }
 
     .section-exchange-slider-item-right-animation {
-        .desktop-slider-item {
+        .desktop-slider-item-shadow {
             &:nth-child(odd) {
                 animation: section-exchange-slider-item-second-animation 4s;
             }
@@ -369,6 +357,26 @@
         }
     }
 
+    .desktop-slider-item-shadow {
+        position: relative;
+
+        &:before {
+            width: 90%;
+            height: 100px;
+            position: absolute;
+            top: 4px;
+            margin-top: 29px;
+            margin-left: 4px;
+            opacity: 0.25;
+            border-radius: 5px;
+            -webkit-filter: blur(20.3px);
+            filter: blur(20.3px);
+            background-image: linear-gradient(to left, #133364, #0087ff);
+            content: '';
+            display: inline-block;
+        }
+    }
+
     .desktop-slider-item {
         width: 90%;
         height: 100px;
@@ -378,6 +386,7 @@
         background-color: #ffffff;
         padding: 20px 14px 5px 36px;
         display: inline-block;
+        z-index: 1;
 
         &:before {
             width: 20px;
@@ -429,6 +438,12 @@
         .desktop-slider-item {
             width: 93%;
         }
+
+        .desktop-slider-item-shadow {
+            &:before {
+                width: 93%;
+            }
+        }
     }
 
     @media $breakpoint-medium-desktop{
@@ -446,6 +461,12 @@
 
         .desktop-slider-item {
             width: 95%;
+        }
+
+        .desktop-slider-item-shadow {
+            &:before {
+                width: 95%;
+            }
         }
     }
 
@@ -562,21 +583,41 @@
             background-position: 100% 0%;
         }
 
-        .desktop-slider-item {
-            padding: 22px 15px;
+        .slick-initialized {
+            .slick-slide {
+                padding: 0 0.3%;
+                .desktop-slider-item-shadow {
+                    text-align: center;
+                }
+            }
+        }        
+
+        .desktop-slider-item-shadow {
+            padding-bottom: 40px;
+            
             &:before {
-                width: 14px;
-                height: 14px;
-                top: 18px;
-                left: 17px;
+                width: 100%;
+                height: 116px;
+            }
+        }
+
+        .desktop-slider-item {
+            padding: 25px 15px 15px 40px;
+            width: 100%;
+            height: 116px;
+            &:before {
+                width: 16px;
+                height: 16px;
+                top: 20px;
+                left: 15px;
             }
 
             .title {
-                padding-left: 25px;
+                padding-left: 0;
                 font-size: 19px;
             }
             .desc {
-                padding-left: 25px;
+                padding-left: 0;
                 font-size: 17px;
             }
         }

@@ -72,13 +72,14 @@ footer {
 }
 
 .footer-right-bg {
-    width: 17%;
+    width: 16%;
     height: 136px;
     position: absolute;
     right: 0;
     top: 0;
     background-image: resolve('footer-bg.png');
     background-repeat: no-repeat;
+    background-size: auto 150%;
     z-index: 1;
 }
 

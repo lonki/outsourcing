@@ -185,10 +185,20 @@
     .section-media {
         .section {
             padding-bottom: 50px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .section-title {
+            margin-left: 30px;
+            font-size: 33px;
+            line-height: 1.09;
+            letter-spacing: 0.4px;
         }
     }
 
     .media-list {
+        padding-left: 30px;
         display: inline-block;
         white-space: nowrap;
     }

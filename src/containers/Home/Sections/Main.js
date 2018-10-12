@@ -61,15 +61,15 @@ export default class Main extends React.PureComponent {
               <div className="section-mainly-bg-mobile" />
             </div>
             <div className="pure-hidden-xs rate-link">
-              <a href="#" className="left-link">
+              <a href="https://www.trackico.io/ico/dinngo/" className="left-link" target="_blank" rel="noopener noreferrer">
                 <div className="link-img ico-track" />
-                <span className="rate">4</span>
-                <span className="rate small">.6</span>
+                <span className="rate">{i18n('home.trackico.rate.left')}</span>
+                <span className="rate small">{i18n('home.trackico.rate.right')}</span>
               </a>
-              <a href="#">
+              <a href="https://icobench.com/ico/dinngo" target="_blank" rel="noopener noreferrer">
                 <div className="link-img ico-bench" />
-                <span className="rate">4</span>
-                <span className="rate small">.6</span>
+                <span className="rate">{i18n('home.icobench.rate.left')}</span>
+                <span className="rate small">{i18n('home.icobench.rate.right')}</span>
               </a>
             </div>
 
@@ -80,13 +80,13 @@ export default class Main extends React.PureComponent {
         <div className="rate-link desktop-rate-link">
           <a href="https://www.trackico.io/ico/dinngo/" target="_blank" className="left-link" rel="noopener noreferrer">
             <div className="link-img ico-track" />
-            <span className="rate">4</span>
-            <span className="rate small">.6</span>
+            <span className="rate">{i18n('home.trackico.rate.left')}</span>
+            <span className="rate small">{i18n('home.trackico.rate.right')}</span>
           </a>
           <a href="https://icobench.com/ico/dinngo" target="_blank" rel="noopener noreferrer">
             <div className="link-img ico-bench" />
-            <span className="rate">5</span>
-            <span className="rate small">.0</span>
+            <span className="rate">{i18n('home.icobench.rate.left')}</span>
+            <span className="rate small">{i18n('home.icobench.rate.right')}</span>
           </a>
         </div>
         <div className="section-mainly-bg-container">

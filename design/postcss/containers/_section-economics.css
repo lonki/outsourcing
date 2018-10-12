@@ -245,7 +245,8 @@
         .labels {
             height: auto;
             flex-direction: row;
-
+            align-items: flex-start;
+            
             &:last-child {
                 margin-top: 39px;
             }

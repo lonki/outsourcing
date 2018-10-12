@@ -94,6 +94,9 @@
     }
 
     .email-subscription {
+        .tips {
+            margin-top: 8px;
+        }
         .subscription-tips-mobile {
             position: static;
             &.success,
@@ -103,6 +106,7 @@
                     display: inline-block;
                     vertical-align: middle;
                     margin-right: 10px;
+                    margin-top: -2px;
                 }
             }
         }

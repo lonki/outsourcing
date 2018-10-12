@@ -10,12 +10,14 @@ import withI18N from 'shared/intl/withI18N';
 const MOBILE_SLIDER_SETTINGS = {
   arrows: false,
   infinite: false,
-  speed: 500,
+  speed: 1000,
   dots: true,
   centerMode: true,
-  centerPadding: '20px',
+  centerPadding: '40px',
   swipeToSlide: true,
   touchThreshold: 10,
+  autoplay: true,
+  autoplaySpeed: 4000,
   responsive: [
     {
       breakpoint: 5000,
@@ -83,8 +85,8 @@ export default class Exchange extends React.PureComponent {
 
     return (
       <section id="exchange" className="section-exchange">
+        <div className="section-exchange-bg" />
         <div className="section row pure-g">
-          <div className="section-exchange-bg" />
           <div className="section-exchange-right-bg" />
           <div className="section-exchange-bg-bottom">
             <div className="bg-icon" />
@@ -129,17 +131,23 @@ export default class Exchange extends React.PureComponent {
           </div>
           <ViewPortAnimation addClassName="section-exchange-slider section-exchange-slider-item-left-animation">
             <div className="pure-u-1-3">
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.a.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.a.desc')}</p>
+              <div className="desktop-slider-item-shadow">
+                <div className="desktop-slider-item">
+                  <p className="title">{i18n('section.exchange.grids.a.title')}</p>
+                  <p className="desc">{i18n('section.exchange.grids.a.desc')}</p>
+                </div>
               </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.b.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.b.desc')}</p>
+              <div className="desktop-slider-item-shadow">
+                <div className="desktop-slider-item">
+                  <p className="title">{i18n('section.exchange.grids.b.title')}</p>
+                  <p className="desc">{i18n('section.exchange.grids.b.desc')}</p>
+                </div>
               </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.c.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.c.desc')}</p>
+              <div className="desktop-slider-item-shadow">
+                <div className="desktop-slider-item">
+                  <p className="title">{i18n('section.exchange.grids.c.title')}</p>
+                  <p className="desc">{i18n('section.exchange.grids.c.desc')}</p>
+                </div>
               </div>
             </div>
           </ViewPortAnimation>
@@ -157,17 +165,23 @@ export default class Exchange extends React.PureComponent {
           </ViewPortAnimation>
           <ViewPortAnimation addClassName="section-exchange-slider section-exchange-slider-item-right-animation">
             <div className="pure-u-1-3 text-right">
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.d.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.d.desc')}</p>
+              <div className="desktop-slider-item-shadow">
+                <div className="desktop-slider-item">
+                  <p className="title">{i18n('section.exchange.grids.d.title')}</p>
+                  <p className="desc">{i18n('section.exchange.grids.d.desc')}</p>
+                </div>
               </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.e.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.e.desc')}</p>
+              <div className="desktop-slider-item-shadow">
+                <div className="desktop-slider-item">
+                  <p className="title">{i18n('section.exchange.grids.e.title')}</p>
+                  <p className="desc">{i18n('section.exchange.grids.e.desc')}</p>
+                </div>
               </div>
-              <div className="desktop-slider-item">
-                <p className="title">{i18n('section.exchange.grids.f.title')}</p>
-                <p className="desc">{i18n('section.exchange.grids.f.desc')}</p>
+              <div className="desktop-slider-item-shadow">
+                <div className="desktop-slider-item">
+                  <p className="title">{i18n('section.exchange.grids.f.title')}</p>
+                  <p className="desc">{i18n('section.exchange.grids.f.desc')}</p>
+                </div>
               </div>
             </div>
           </ViewPortAnimation>
@@ -182,65 +196,77 @@ export default class Exchange extends React.PureComponent {
 
         <div className="pure-hidden-xs">
           <Slider {...MOBILE_SLIDER_SETTINGS}>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.a.title')}</p>
-              <p className="desc">
-                <TextTruncate
-                  line={2}
-                  truncateText="…"
-                  text={i18n('section.exchange.grids.a.desc')}
-                />
-              </p>
+            <div className="desktop-slider-item-shadow">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.a.title')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.a.desc')}
+                  />
+                </p>
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.b.title')}</p>
-              <p className="desc">
-                <TextTruncate
-                  line={2}
-                  truncateText="…"
-                  text={i18n('section.exchange.grids.b.desc')}
-                />
-              </p>
+            <div className="desktop-slider-item-shadow">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.b.title')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.b.desc')}
+                  />
+                </p>
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.c.title')}</p>
-              <p className="desc">
-                <TextTruncate
-                  line={2}
-                  truncateText="…"
-                  text={i18n('section.exchange.grids.c.desc')}
-                />
-              </p>
+            <div className="desktop-slider-item-shadow">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.c.title')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.c.desc')}
+                  />
+                </p>
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.d.title')}</p>
-              <p className="desc">
-                <TextTruncate
-                  line={2}
-                  truncateText="…"
-                  text={i18n('section.exchange.grids.d.desc')}
-                />
-              </p>
+            <div className="desktop-slider-item-shadow">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.d.title')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.d.desc')}
+                  />
+                </p>
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.e.title')}</p>
-              <p className="desc">
-                <TextTruncate
-                  line={2}
-                  truncateText="…"
-                  text={i18n('section.exchange.grids.e.desc')}
-                />
-              </p>
+            <div className="desktop-slider-item-shadow">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.e.title')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.e.desc')}
+                  />
+                </p>
+              </div>
             </div>
-            <div className="desktop-slider-item">
-              <p className="title">{i18n('section.exchange.grids.f.title')}</p>
-              <p className="desc">
-                <TextTruncate
-                  line={2}
-                  truncateText="…"
-                  text={i18n('section.exchange.grids.f.desc')}
-                />
-              </p>
+            <div className="desktop-slider-item-shadow">
+              <div className="desktop-slider-item">
+                <p className="title">{i18n('section.exchange.grids.f.title')}</p>
+                <p className="desc">
+                  <TextTruncate
+                    line={2}
+                    truncateText="…"
+                    text={i18n('section.exchange.grids.f.desc')}
+                  />
+                </p>
+              </div>
             </div>
           </Slider>
         </div>
@@ -259,9 +285,7 @@ export default class Exchange extends React.PureComponent {
           </div>
         </Modal>
       
-        <ViewPortAnimation addClassName="section-exchange-left-bottom-bg-animation">
-          <div className="section-exchange-left-bottom-bg" />
-        </ViewPortAnimation>
+        <div className="section-exchange-left-bottom-bg" />
       </section>
     );
   }

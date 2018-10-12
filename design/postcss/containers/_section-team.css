@@ -332,6 +332,10 @@ $member-img-mobile-width: 130px;
         display: none;
     }
 
+    .member-container-shadow {
+        margin-bottom: 40px;
+    }
+
     .section-team {
         .section {
             padding: 40px 0;

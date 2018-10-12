@@ -16,10 +16,9 @@ const footer = {
   'footer.title': 'EMAIL<br>SUBSCRIPTION',
   'footer.copyright': '© 2018 DINNGO. All rights reserved.',
 
-  'footer.link.a': 'Join Us',
+  'footer.link.a': 'Career',
   'footer.link.b': 'Privacy Policy',
   'footer.link.c': 'Terms Of Use',
-  'footer.link.d': 'FAQ',
 };
 
 const pageHome = {
@@ -28,6 +27,12 @@ const pageHome = {
 
   'home.section.main.title': 'THE MOBILE DIGITAL CURRENCY EXCHANGE',
   'home.section.main.desc': 'DINNGO allows you to instantly trade digital currency and store it in your cold wallet.',
+
+  'home.trackico.rate.left': '4',
+  'home.trackico.rate.right': '.6',
+
+  'home.icobench.rate.left': '4',
+  'home.icobench.rate.right': '.1',
 };
 
 const sectionExchange = {
