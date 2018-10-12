@@ -17,8 +17,8 @@
           0% {
             transform: scale(1);
           }
-          50% {
-            opacity: .5;
+          80% {
+            opacity: .8;
             transform: scale(2);
           }
           100% {
@@ -60,26 +60,24 @@
           position:relative;
           border-radius:100%;
           display: inline-block;
-          animation: slide 1.5s infinite;
+          animation: slide 2s infinite;
         }
 
         .loader-circle-left {
-          transform-origin: right;
           opacity: 0.95;
-          margin-left: 20px;
+          margin-left: 15px;
           z-index: 2;
           background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjYuNzggMTY2Ljc4Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzM1ODhkZjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPuizh+eUoiAyPC90aXRsZT48ZyBpZD0i5ZyW5bGkXzIiIGRhdGEtbmFtZT0i5ZyW5bGkIDIiPjxnIGlkPSLlnJblsaRfMS0yIiBkYXRhLW5hbWU9IuWcluWxpCAxIj48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjgzLjM5IiBjeT0iODMuMzkiIHI9IjgzLjM5Ii8+PC9nPjwvZz48L3N2Zz4=);
         }
 
         .loader-circle-right {
-          transform-origin: left;
-          margin-left: -20px;
+          margin-left: 15px;
           z-index: 1;
           background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjYuNzggMTY2Ljc4Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzFkYzBmZTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPuizh+eUoiAzPC90aXRsZT48ZyBpZD0i5ZyW5bGkXzIiIGRhdGEtbmFtZT0i5ZyW5bGkIDIiPjxnIGlkPSLlnJblsaRfMS0yIiBkYXRhLW5hbWU9IuWcluWxpCAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik04MS43OCwxNDkuNzh2LTE3aDE3di0xN2gtMTd2LTE3aDE3djE3aDE3di0xN2gxN3YtMTdoMTd2LTE3aDE0Ljg5YTgzLjM5LDgzLjM5LDAsMSwwLTk5Ljg5LDk5Ljg4VjE0OS43OFptMTctODVoMTd2MTdoLTE3WiIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMTE1Ljc4IiB5PSIxMTUuNzgiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTgxLjc4LDE0OS43OHYxN2MuNTMsMCwxLjA3LDAsMS42MSwwYTgzLDgzLDAsMCwwLDE1LjM5LTEuNDVWMTQ5Ljc4WiIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iOTguNzgiIHk9IjEzMi43OCIgd2lkdGg9IjE3IiBoZWlnaHQ9IjE3Ii8+PHJlY3QgY2xhc3M9ImNscy0xIiB4PSIxMzIuNzgiIHk9Ijk4Ljc4IiB3aWR0aD0iMTciIGhlaWdodD0iMTciLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xNDkuNzgsMTMyLjc4aC0xN3YxN2gtMTd2MTAuNDdhODMuNzEsODMuNzEsMCwwLDAsNDQuNDctNDQuNDdIMTQ5Ljc4WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE0OS43OCw5OC43OGgxNS41NWE4Myw4MywwLDAsMCwxLjQ1LTE1LjM5YzAtLjU0LDAtMS4wOCwwLTEuNjFoLTE3WiIvPjwvZz48L2c+PC9zdmc+);
         }
 
         .loader-circle-delay {
-          animation-delay: .1s;
+          animation-delay: .25s;
         }
 
         .loader-text {
