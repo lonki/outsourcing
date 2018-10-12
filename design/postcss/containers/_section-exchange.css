@@ -227,6 +227,10 @@
 
     .section-exchange-slider-item-right-animation {
         .desktop-slider-item-shadow {
+            &:before {
+                margin-left: initial;
+                margin-right: 10%;
+            }
             &:nth-child(odd) {
                 animation: section-exchange-slider-item-second-animation 4s;
             }
@@ -361,12 +365,12 @@
         position: relative;
 
         &:before {
-            width: 90%;
+            width: 80%;
             height: 100px;
             position: absolute;
             top: 4px;
             margin-top: 29px;
-            margin-left: 4px;
+            margin-left: 10%;
             opacity: 0.25;
             border-radius: 5px;
             -webkit-filter: blur(20.3px);
@@ -460,7 +464,24 @@
         }
 
         .desktop-slider-item {
-            width: 95%;
+            padding: 20px 15px 15px 35px;
+            width: 100%;
+            height: 116px;
+            &:before {
+                width: 16px;
+                height: 16px;
+                top: 15px;
+                left: 10px;
+            }
+
+            .title {
+                padding-left: 0;
+                font-size: 17px;
+            }
+            .desc {
+                padding-left: 0;
+                font-size: 15px;
+            }
         }
 
         .desktop-slider-item-shadow {
@@ -708,9 +729,7 @@
                 background-repeat: no-repeat;
             }
         }
-    }
 
-    @media $breakpoint-big-mobile {
         .section-exchange-slider {
             display: none;
         }

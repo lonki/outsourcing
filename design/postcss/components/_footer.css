@@ -9,6 +9,7 @@ footer {
     }
 
     .section-title {
+        height: 95px;
         font-size: 46px;
         font-weight: bold;
         line-height: 1.09;
@@ -18,7 +19,6 @@ footer {
 
     .email-subscription {
         justify-content: left;
-        margin-bottom: 12px;
     }
 }
 
@@ -93,7 +93,15 @@ footer {
     margin-top: 100px;
 }
 
-@media $breakpoint-tablet {
+@media $breakpoint-wide-tablets {
+    footer {
+        .section-title {
+            height: 79px;
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
     footer {
         padding-bottom: 20px;
 

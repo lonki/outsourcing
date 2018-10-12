@@ -261,9 +261,23 @@
     .media-s-link {
         height: 32px;
     }
+
+    .media-container-desktop {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .media-link-container {
+        margin-top: 30px;
+    }
 }
 
-@media $breakpoint-tablet {
+@media $breakpoint-big-mobile {
+    .media-container-desktop {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
     .media-img {
         width: 240px;
         height: 150px;

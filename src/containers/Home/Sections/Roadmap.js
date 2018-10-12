@@ -32,7 +32,7 @@ export default class Roadmap extends React.PureComponent {
           },
         },
         {
-          breakpoint: 780,
+          breakpoint: 980,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,

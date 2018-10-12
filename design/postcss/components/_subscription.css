@@ -89,10 +89,6 @@
 }
 
 @media $breakpoint-tablet{
-    .email-subscription-input {
-        min-width: calc(100% - 70px);
-    }
-
     .email-subscription {
         .tips {
             margin-top: 8px;
@@ -142,5 +138,11 @@
         border: none;
         background-color: #1ec0ff;
         color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .email-subscription-input {
+        min-width: calc(100% - 70px);
     }
 }
