@@ -17,12 +17,21 @@ export default class Advisors extends React.PureComponent {
     this.iScrollOptions = {
       scrollX: true,
       scrollY: false,
-      probeType: 4,
       disablePointer: true,
       disableTouch: false, // false if you want the slider to be usable with touch devices
       disableMouse: false,
-      preventDefault: false,
+      preventDefault: true,
     };
+  }
+
+  onScrollStart = (iScrollInstance) => {
+    const { directionLocked } = iScrollInstance;
+
+    if (directionLocked === 'h') {
+      iScrollInstance.options.preventDefault = true;
+    } else {
+      iScrollInstance.options.preventDefault = false;
+    }
   }
 
   advisorsRender = (isMobile = false) => {
@@ -61,7 +70,12 @@ export default class Advisors extends React.PureComponent {
 
           {this.advisorsRender()}
 
-          <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs pure-u-1-1">
+          <ReactIScroll
+            iScroll={iScroll}
+            options={this.iScrollOptions}
+            onScrollStart={this.onScrollStart}
+            className="pure-hidden-xs pure-u-1-1"
+          >
             <div className="section-team-list">
               {this.advisorsRender(true)}
             </div>

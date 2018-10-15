@@ -18,16 +18,28 @@ export default class Team extends React.PureComponent {
     this.iScrollOptions = {
       scrollX: true,
       scrollY: false,
-      probeType: 3,
       disablePointer: true,
       disableTouch: false, // false if you want the slider to be usable with touch devices
       disableMouse: false,
-      preventDefault: false,
+      preventDefault: true,
     };
+
+    this.isStarted = false;
+    this.startY = 0;
   }
 
   componentDidMount() {
-    touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');
+    touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');   
+  }
+
+  onScrollStart = (iScrollInstance) => {
+    const { directionLocked } = iScrollInstance;
+
+    if (directionLocked === 'h') {
+      iScrollInstance.options.preventDefault = true;
+    } else {
+      iScrollInstance.options.preventDefault = false;
+    }
   }
 
   teamsRender = (isMobile = false) => {
@@ -66,7 +78,12 @@ export default class Team extends React.PureComponent {
 
           {this.teamsRender()}
 
-          <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs pure-u-1-1">
+          <ReactIScroll
+            iScroll={iScroll}
+            options={this.iScrollOptions}
+            onScrollStart={this.onScrollStart}
+            className="pure-hidden-xs pure-u-1-1"
+          >
             <div className="section-team-list">
               {this.teamsRender(true)}
             </div>

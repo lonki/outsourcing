@@ -26,7 +26,7 @@ export default class Media extends React.PureComponent {
       disablePointer: true,
       disableTouch: false, // false if you want the slider to be usable with touch devices
       disableMouse: false,
-      preventDefault: false,
+      preventDefault: true,
     };
 
     this.settings = {
@@ -63,6 +63,16 @@ export default class Media extends React.PureComponent {
 
   componentDidMount() {
     touchDeviceHoverHandlerByClass(document.getElementsByClassName('media-container'), 'media-container-hover');
+  }
+
+  onScrollStart = (iScrollInstance) => {
+    const { directionLocked } = iScrollInstance;
+
+    if (directionLocked === 'h') {
+      iScrollInstance.options.preventDefault = true;
+    } else {
+      iScrollInstance.options.preventDefault = false;
+    }
   }
 
   openVideo = (e) => {
@@ -185,7 +195,12 @@ export default class Media extends React.PureComponent {
           </div>
 
           <div className="pure-u-1-1">
-            <ReactIScroll iScroll={iscroll} options={this.iScrollOptions} className="pure-hidden-xs">
+            <ReactIScroll
+              iScroll={iscroll}
+              options={this.iScrollOptions}
+              onScrollStart={this.onScrollStart}
+              className="pure-hidden-xs"
+            >
               <div className="media-list">
                 <a className="media-s-link media-s-link-bench" target="_blank" rel="noopener noreferrer" href="https://icobench.com/ico/dinngo" />
                 <a className="media-s-link media-s-link-track" target="_blank" rel="noopener noreferrer" href="https://www.trackico.io/ico/dinngo/" />
