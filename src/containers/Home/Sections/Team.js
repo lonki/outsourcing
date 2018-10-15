@@ -1,42 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withI18N from 'shared/intl/withI18N';
-import Slider from "react-slick";
+import ReactIScroll from 'react-iscroll';
+import iScroll from 'iscroll';
 import { touchDeviceHoverHandlerByClass } from 'shared/util/touchDevice';
-
-const MOBILE_SLIDER_SETTINGS = {
-  arrows: false,
-  infinite: false,
-  centerMode: true,
-  centerPadding: '40px',
-  speed: 500,
-  dots: false,
-  swipeToSlide: true,
-  touchThreshold: 10,
-  responsive: [
-    {
-      breakpoint: 5000,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 780,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 415,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
 
 @withI18N
 export default class Team extends React.PureComponent {
@@ -44,6 +11,20 @@ export default class Team extends React.PureComponent {
   static propTypes = {
     i18n: PropTypes.func.isRequired,
   };
+
+  constructor(props, context) {
+    super(props, context);
+
+    this.iScrollOptions = {
+      scrollX: true,
+      scrollY: false,
+      probeType: 3,
+      disablePointer: true,
+      disableTouch: false, // false if you want the slider to be usable with touch devices
+      disableMouse: false,
+      preventDefault: false,
+    };
+  }
 
   componentDidMount() {
     touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');
@@ -53,10 +34,11 @@ export default class Team extends React.PureComponent {
     const { i18n } = this.props;
     const render = [];
     const mobileCSS = isMobile ? '' : 'member-container-desktop';
+    const pureClass = isMobile ? '' : 'pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1';
 
     for (let i = 1; i <= 13; i += 1) {
       render.push((
-        <div key={i18n(`section.team.name.${i}`)} className={`pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1 text-center member-container-shadow ${mobileCSS}`}>
+        <div key={i18n(`section.team.name.${i}`)} className={`${pureClass} text-center member-container-shadow ${mobileCSS}`}>
           <div className="member-container">
             <div className={`member-img member-team-${i18n(`section.team.img.${i}`)}`} />
             <div className="member-desc">
@@ -84,11 +66,11 @@ export default class Team extends React.PureComponent {
 
           {this.teamsRender()}
 
-          <div className="pure-hidden-xs pure-u-1-1">
-            <Slider {...MOBILE_SLIDER_SETTINGS}>
+          <ReactIScroll iScroll={iScroll} options={this.iScrollOptions} className="pure-hidden-xs pure-u-1-1">
+            <div className="section-team-list">
               {this.teamsRender(true)}
-            </Slider>
-          </div>
+            </div>
+          </ReactIScroll>
         </div>
 
       </section>
