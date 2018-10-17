@@ -38,7 +38,7 @@
 /* nav-wrap */
 .nav-wrap {
     position: absolute;
-    top: 30px;
+    top: 27px;
     left: 255px;
     text-transform: capitalize;
     z-index: 99;
@@ -116,7 +116,7 @@
         height: 45px;
 
         .logo {
-            top: 10px;
+            top: 7px;
             left: 45px;
             z-index: 100;
         }
@@ -195,6 +195,7 @@
         .social-list {
             display: inline-block;
             white-space: nowrap;
+            padding: 0;
         }
 
         .icon-social {
@@ -262,6 +263,14 @@
 
         &.open {
             display: none;
+        }
+    }
+}
+
+@media $breakpoint-big-mobile {
+    .header {
+        .logo {
+            top: 9px;
         }
     }
 }

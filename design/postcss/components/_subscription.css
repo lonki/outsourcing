@@ -9,7 +9,7 @@
     .tips {
         position: absolute;
         left: 20px;
-        bottom: -20px;
+        bottom: -32px;
         font-size: 13px;
         line-height: 13px;
         color: #ffffff;
@@ -67,7 +67,7 @@
     &::placeholder {
         margin-left: 6px;
         font-size: 15px;
-        line-height: 21px;
+        line-height: 22px;
         color: rgba(255, 255, 255, 0.6);
     }
 }
@@ -110,8 +110,9 @@
 
     .email-subscription-mobile {
         width: 100%;
+        position: relative;
         padding-top: 19px;
-        padding-right: 55px;
+        margin-right: 55px;
     }
 
     .email-subscription-input-mobile {
@@ -130,9 +131,12 @@
     }
 
     .email-subscription-btn {
-        margin-top: 43px;
+        position: absolute;
+        left: 0;
+        top: 150px;
         display: block;
         width: 100%;
+        height: 50px;
         padding: 9px 34px;
         border-radius: 5.7px;
         border: none;

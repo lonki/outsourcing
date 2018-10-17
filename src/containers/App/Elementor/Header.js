@@ -173,7 +173,6 @@ class Header extends React.PureComponent {
             <div className="logo">
               <a className="link" rel="noopener noreferrer" href="/">
                 <div className="logo-img" />
-                <span className="logo-text">{i18n('common.logo')}</span>
               </a>
             </div>
 

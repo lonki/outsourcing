@@ -101,7 +101,6 @@ class Footer extends React.PureComponent {
         <div className="footer-logo logo">
           <a className="link" rel="noopener noreferrer" href="/">
             <div className="logo-img" />
-            <span className="logo-text">{i18n('common.logo')}</span>
           </a>
         </div>
         <p className="copyright">{i18n('footer.copyright')}</p>
