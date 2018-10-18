@@ -22,6 +22,8 @@ export default class Team extends React.PureComponent {
       disableTouch: false, // false if you want the slider to be usable with touch devices
       disableMouse: false,
       preventDefault: true,
+      click: true,
+      tap: true,
     };
 
     this.isStarted = false;
