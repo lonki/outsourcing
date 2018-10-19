@@ -172,10 +172,12 @@
 }
 
 .media-s-link-icoholder {
+    background-position: 20px;
     background-image: resolve('link-s-icoholder.png');
 }
 
 .media-s-link-watch {
+    background-position: 25px;
     background-image: resolve('link-s-watch.png');
 }
 
@@ -184,26 +186,29 @@
 }
 
 @media $breakpoint-wide-tablets {
+    .media-link {
+        margin: 0 20px;
+    }
     .media-s-link-rating {
-        margin-left: 7%;
+        background-position: 5px 0;
     }
     .media-s-link-icoholder {
-        margin-left: 20%;
+        background-position: 15px 0;
     }
     .media-s-link-watch {
-        margin-left: 25%;
+        background-position: 20px 0;
     }
 }
 
 @media $breakpoint-big-mobile {
     .media-s-link-rating {
-        margin-left: 0;
+        background-position: 0 0;
     }
     .media-s-link-icoholder {
-        margin-left: 0;
+        background-position: 10px 0;
     }
     .media-s-link-watch {
-        margin-left: 0;
+        background-position: 20px 0;
     }
     .section-media {
         .section {

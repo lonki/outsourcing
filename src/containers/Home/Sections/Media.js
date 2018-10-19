@@ -26,7 +26,7 @@ export default class Media extends React.PureComponent {
       disablePointer: true,
       disableTouch: false, // false if you want the slider to be usable with touch devices
       disableMouse: false,
-      preventDefault: true,
+      // preventDefault: true,
       click: true,
       tap: true,
     };
@@ -46,6 +46,15 @@ export default class Media extends React.PureComponent {
       pauseOnHover: true,
       pauseOnFocus: true,
       responsive: [
+        {
+          breakpoint: 840,
+          settings: {
+            centerMode: true,
+            centerPadding: '70px',
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
         {
           breakpoint: 568,
           settings: {
