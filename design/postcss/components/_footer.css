@@ -106,12 +106,17 @@ footer {
         }
 
         .logo-img {
+            position: relative;
             width: 32px;
             height: 20px;
+            margin-left: -75px;
             vertical-align: middle;    
 
             &:after {
-                display: none;
+                width: 70px;
+                height: 20px;
+                top: 0;
+                left: calc(50% + 22px);
             }
         }
     }
@@ -163,16 +168,6 @@ footer {
             padding-left: 17px;
             padding-right: 17px;    
         }
-
-        .logo-img {
-            width: 32px;
-            height: 20px;
-            vertical-align: middle;    
-
-            &:after {
-                display: none;
-            }
-        }
     }
 
     .footer-email {
@@ -215,5 +210,15 @@ footer {
     .copyright {
         position: initial;
         text-align: center;
+    }
+}
+
+@media $breakpoint-big-mobile {
+    footer {
+        .logo-img {
+            &:after {
+                display: block;
+            }
+        }
     }
 }

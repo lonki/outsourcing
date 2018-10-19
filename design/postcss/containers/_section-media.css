@@ -41,6 +41,7 @@
     font-size: 17px;
     line-height: 1.41;
     color: #ffffff;
+    word-spacing: initial;
 }
 
 .media-logo {
@@ -182,7 +183,28 @@
     background-image: resolve('link-s-marks.png');
 }
 
+@media $breakpoint-wide-tablets {
+    .media-s-link-rating {
+        margin-left: 7%;
+    }
+    .media-s-link-icoholder {
+        margin-left: 20%;
+    }
+    .media-s-link-watch {
+        margin-left: 25%;
+    }
+}
+
 @media $breakpoint-big-mobile {
+    .media-s-link-rating {
+        margin-left: 0;
+    }
+    .media-s-link-icoholder {
+        margin-left: 0;
+    }
+    .media-s-link-watch {
+        margin-left: 0;
+    }
     .section-media {
         .section {
             padding-bottom: 50px;

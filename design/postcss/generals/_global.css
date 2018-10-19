@@ -6,7 +6,7 @@
 
 body {
 	-webkit-font-smoothing: antialiased;
-	background-color: #133364;
+	background-color: #0a336a;
 
 	&.lock {
 		position: fixed;

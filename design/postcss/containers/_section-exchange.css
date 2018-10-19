@@ -489,6 +489,15 @@
         }
     }
 
+    @media $breakpoint-wide-tablets {
+        .section-exchange-video {
+            width: 100%;
+            height: 300px;
+            margin-top: 35px;
+            background-size: 100% auto;
+        }
+    }
+
     @media $breakpoint-tablet {
         .section-title {
             margin-bottom: 20px;
@@ -497,13 +506,9 @@
         .section-msg {
             font-size: 13px;
         }
-        .section-exchange-video {
-            width: 100%;
-            height: 200px;
-            margin-top: 35px;
-            background-size: contain;
+        .list-img {
+            margin-top: 0;
         }
-
         .list-desc {
             max-width: 95%;
             font-size: 15px;
