@@ -31,7 +31,7 @@ export default class Team extends React.PureComponent {
   }
 
   componentDidMount() {
-    touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');   
+    touchDeviceHoverHandlerByClass(document.getElementsByClassName('member-img'), 'member-img-hover');
   }
 
   onScrollStart = (iScrollInstance) => {
@@ -50,7 +50,7 @@ export default class Team extends React.PureComponent {
     const mobileCSS = isMobile ? '' : 'member-container-desktop';
     const pureClass = isMobile ? '' : 'pure-u-lg-1-3 pure-u-sm-1-2 pure-u-1';
 
-    for (let i = 1; i <= 13; i += 1) {
+    for (let i = 1; i <= 14; i += 1) {
       render.push((
         <div key={i18n(`section.team.name.${i}`)} className={`${pureClass} text-center member-container-shadow ${mobileCSS}`}>
           <div className="member-container">
@@ -96,4 +96,3 @@ export default class Team extends React.PureComponent {
     );
   }
 }
-

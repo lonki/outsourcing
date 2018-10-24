@@ -16,7 +16,7 @@ const footer = {
   'footer.title': 'EMAIL<br>SUBSCRIPTION',
   'footer.copyright': '© 2018 DINNGO. All rights reserved.',
 
-  'footer.link.a': 'Career',
+  'footer.link.a': 'Careers',
   'footer.link.b': 'Privacy Policy',
   'footer.link.c': 'Terms Of Use',
 };
@@ -32,13 +32,13 @@ const pageHome = {
   'home.trackico.rate.right': '.6',
 
   'home.icobench.rate.left': '4',
-  'home.icobench.rate.right': '.1',
+  'home.icobench.rate.right': '.3',
 };
 
 const sectionExchange = {
   'section.exchange.title': 'EXCHANGE<br>FEATURES',
   'section.exchange.desc': 'DINNGO is revolutionizing the way we trade digital currencies. Our cold wallet integrates seamlessly with the DINNGO exchange, providing the secure, fast and convenient asset trading service the market needs.',
-  'section.exchange.list.a.title': 'Dinngo Cold Wallet',
+  'section.exchange.list.a.title': 'DINNGO Cold Wallet',
   'section.exchange.list.a.desc': 'Strengthen the security of your digital currencies storage and the efficiency of the exchange.',
   'section.exchange.list.b.title': 'Cross-Chain Trading',
   'section.exchange.list.b.desc': 'Support trading tokens between different protocols, which is the key limitation for a decentralized exchange.',
@@ -80,7 +80,7 @@ const sectionEconomics = {
 
 const sectionTeam = {
   'section.team.title': 'OUR<br>TEAM',
-  
+
   'section.team.img.1': 'teddy',
   'section.team.name.1': 'HSUAN-TING CHU',
   'section.team.position.1': 'Chief Executive Officer',
@@ -90,74 +90,82 @@ const sectionTeam = {
   'section.team.img.2': 'blake',
   'section.team.name.2': 'BLAKE HO',
   'section.team.position.2': 'Chief Operating Officer',
-  'section.team.desc.2': 'Chief Operating Officer, finance major with banking and operating expertise. Years of experience in Citi bank focusing on banking and marketing.',
+  'section.team.desc.2': 'Finance major with banking and operating expertise. Years of experience in Citi bank focusing on banking and marketing.',
   'section.team.link.2': 'https://www.linkedin.com/in/blakeho/',
 
   'section.team.img.3': 'ben',
   'section.team.name.3': 'BEN HUANG',
   'section.team.position.3': 'Chief Blockchain Officer',
-  'section.team.desc.3': 'Chief Blockchain Officer, engaged in research and development in blockchain technology since 2014. The core blockchain developer of Gcoin and DiQi.',
+  'section.team.desc.3': 'Engaged in research and development in blockchain technology since 2014. The core blockchain developer of Gcoin and DiQi.',
   'section.team.link.3': 'https://www.linkedin.com/in/pthuang/',
 
   'section.team.img.4': 'johnny',
   'section.team.name.4': 'JOHNNY CHUANG',
   'section.team.position.4': 'Chief Financial Officer',
-  'section.team.desc.4': 'Chief Financial Officer, ex-Deloitte, Boston Consulting Group. Columbia University Master with M&A and Japanese Market expertise.',
+  'section.team.desc.4': 'Ex-Deloitte, Boston Consulting Group. Columbia University Master with M&A and Japanese Market expertise.',
   'section.team.link.4': 'https://www.linkedin.com/in/johnnychuang/',
 
   'section.team.img.5': 'star',
   'section.team.name.5': 'STAR FAN',
   'section.team.position.5': 'Marketing Associate',
-  'section.team.desc.5': 'Marketing Associate, the former manager in Shangri-La hotel with extensive experience in upscale customer service and sales.',
+  'section.team.desc.5': 'The former manager in Shangri-La hotel with extensive experience in upscale customer service and sales.',
   'section.team.link.5': 'https://www.linkedin.com/in/star-fan-a6a48980',
 
   'section.team.img.6': 'alice',
   'section.team.name.6': 'ALICE WU',
   'section.team.position.6': 'Designer',
-  'section.team.desc.6': 'Designer, years of experience in branding and software UI/UX. Believe that design is to solve real problems but not just to make things beautiful.',
+  'section.team.desc.6': 'Years of experience in branding and software UI/UX. Believes that design is to solve real problems but not just to make things beautiful.',
   'section.team.link.6': 'https://www.linkedin.com/in/alice-wu-315b6310a',
 
   'section.team.img.7': 'LaticiaFan',
   'section.team.name.7': 'LATICIA FAN',
   'section.team.position.7': 'Head of Public Relation',
-  'section.team.desc.7': 'Head of Public Relation, ex-DMG Director of New Media.',
+  'section.team.desc.7': 'Ex-DMG Director of New Media.',
   'section.team.link.7': 'https://www.linkedin.com/in/laticiafan/',
 
   'section.team.img.8': 'albert',
   'section.team.name.8': 'ALBERT LIN',
   'section.team.position.8': 'Senior Software Engineer',
-  'section.team.desc.8': 'Senior Software Engineer, National Chiao Tung University CS Master. The ex-backend software engineer in Promise Technology.',
+  'section.team.desc.8': 'National Chiao Tung University CS Master. The ex-backend software engineer in Promise Technology.',
   'section.team.link.8': 'https://www.linkedin.com/in/wei-chen-lin-2ab469150/',
 
   'section.team.img.9': 'nick',
   'section.team.name.9': 'NICK CHEN',
   'section.team.position.9': 'Senior Software Engineer',
-  'section.team.desc.9': 'Senior Software Engineer, years of development and management experience. Proficient in build-up backend infrastructure and software architecture design.',
+  'section.team.desc.9': 'Years of development and management experience. Proficient in build-up backend infrastructure and software architecture design.',
   'section.team.link.9': 'https://www.linkedin.com/in/nick-chen-a0262671/',
 
-  'section.team.img.10': 'TravisLiu',
-  'section.team.name.10': 'TRAVIS LIU',
+
+  'section.team.img.10': 'cyril',
+  'section.team.name.10': 'CYRIL YU',
   'section.team.position.10': 'Senior Software Engineer',
-  'section.team.desc.10': 'Senior Software Engineer, AWS expert.',
-  'section.team.link.10': 'https://www.linkedin.com/in/travis-liu-98462972/',
+  'section.team.desc.10': 'Familiar with cloud services, building distributed systems and DevOps flow. Passionate with how technology could make life better.',
+  'section.team.link.10': 'https://www.linkedin.com/in/cyril-yu',
 
-  'section.team.img.11': 'ML-Chen',
-  'section.team.name.11': 'ML CHEN',
+
+  'section.team.img.11': 'TravisLiu',
+  'section.team.name.11': 'TRAVIS LIU',
   'section.team.position.11': 'Senior Software Engineer',
-  'section.team.desc.11': 'Senior Software Engineer, serial entrepreneur, AWS experts.',
-  'section.team.link.11': 'https://www.linkedin.com/in/mlchens/',
+  'section.team.desc.11': 'Born to produce and implement functional software solutions. Cloud-service and problem-solving expert.',
+  'section.team.link.11': 'https://www.linkedin.com/in/travis-liu-98462972/',
 
-  'section.team.img.12': 'jack',
-  'section.team.name.12': 'JACK LIANG',
+  'section.team.img.12': 'ML-Chen',
+  'section.team.name.12': 'ML CHEN',
   'section.team.position.12': 'Senior Software Engineer',
-  'section.team.desc.12': 'Quality Engineer at Apple, University of Tokyo ME Master.',
-  'section.team.link.12': 'https://www.linkedin.com/in/jackliang8/',
+  'section.team.desc.12': 'Serial entrepreneur, an AWS expert with years of experiences in software development and architecture design. .',
+  'section.team.link.12': 'https://www.linkedin.com/in/mlchens/',
 
-  'section.team.img.13': 'NeilWong',
-  'section.team.name.13': 'NEIL WONG',
-  'section.team.position.13': 'Hardware Engineer',
-  'section.team.desc.13': 'Hardware Engineer Lead, Columbia University EE Master, ex-entrepreneur and SuperMicro.',
-  'section.team.link.13': 'https://www.linkedin.com/in/jun-te-wong-542b655b/',
+  'section.team.img.13': 'jack',
+  'section.team.name.13': 'JACK LIANG',
+  'section.team.position.13': 'Senior Software Engineer',
+  'section.team.desc.13': 'Quality Engineer at Apple, University of Tokyo ME Master.',
+  'section.team.link.13': 'https://www.linkedin.com/in/jackliang8/',
+
+  'section.team.img.14': 'NeilWong',
+  'section.team.name.14': 'NEIL WONG',
+  'section.team.position.14': 'Hardware Engineer',
+  'section.team.desc.14': 'Columbia University EE Master, ex-entrepreneur and SuperMicro.',
+  'section.team.link.14': 'https://www.linkedin.com/in/jun-te-wong-542b655b/',
 };
 
 const sectionAdvisors = {
@@ -214,7 +222,7 @@ const sectionRoadmap = {
 
   'section.roadmap.card.1.1': 'Launch Exchange Beta',
   'section.roadmap.card.1.2': 'Run Bug Bounty Campaign',
-  'section.roadmap.card.1.3': 'Delivery the first shipment of DINNGO cold wallets',
+  'section.roadmap.card.1.3': 'Deliver the first shipment of DINNGO cold wallets',
   'section.roadmap.card.1.4': 'Keep the first response of customer support standard to be within 1 day',
 
   'section.roadmap.card.2.1': 'Launch Exchange Official',

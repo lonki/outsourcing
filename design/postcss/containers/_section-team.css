@@ -171,7 +171,7 @@ $member-img-mobile-width: 130px;
     }
 }
 
-@media $breakpoint-big-desktop {  
+@media $breakpoint-big-desktop {
     .member-container-shadow {
         &:before {
             width: $member-container-big-desktop-width;
@@ -490,6 +490,10 @@ $member-img-mobile-width: 130px;
 
 .member-team-nick {
     background-image: resolve('team/team_photo_nick.png');
+}
+
+.member-team-cyril {
+    background-image: url('../img/team/team_photo_cyril.png');
 }
 
 .member-team-TravisLiu {

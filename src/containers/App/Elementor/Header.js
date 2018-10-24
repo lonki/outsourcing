@@ -209,7 +209,7 @@ class Header extends React.PureComponent {
                           </li>
                         </ul>
                         <div className="mobile-nav-white-paper">
-                          <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+                          <a title="White Paper" href="https://about.dinngo.co/whitepaper" className="mobile-btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
                         </div>
                         <ReactIScroll iScroll={iScroll} options={this.iScrollOptions}>
                           <div className="social-list">
@@ -236,7 +236,7 @@ class Header extends React.PureComponent {
               </CSSTransition>
             </div>
 
-            <a title="White Paper" href="https://crowdsale-files.dinngo.co/whitepaper" className="btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
+            <a title="White Paper" href="https://about.dinngo.co/whitepaper" className="btn" target="_blank" rel="noopener noreferrer">{i18n('header.white.paper')}</a>
           </div>
         </div>
       </header>

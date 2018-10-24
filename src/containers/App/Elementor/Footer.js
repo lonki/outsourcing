@@ -92,8 +92,8 @@ class Footer extends React.PureComponent {
           <div className="pure-u-1">
             <div className="footer-links">
               <a className="link" target="_blank" rel="noopener noreferrer" href="https://dinngo.workable.com/">{i18n('footer.link.a')}</a>
-              <a className="link" target="_blank" rel="noopener noreferrer" href="https://crowdsale-files.dinngo.co/terms/privacy-policy">{i18n('footer.link.b')}</a>
-              <a className="link" target="_blank" rel="noopener noreferrer" href="https://crowdsale-files.dinngo.co/terms/terms-of-use">{i18n('footer.link.c')}</a>
+              <a className="link" target="_blank" rel="noopener noreferrer" href="https://about.dinngo.co/statement">{i18n('footer.link.b')}</a>
+              <a className="link" target="_blank" rel="noopener noreferrer" href="https://about.dinngo.co/agreement">{i18n('footer.link.c')}</a>
             </div>
           </div>
         </div>
