@@ -8,6 +8,8 @@ const defaultDomain = {
   __TIMESTAMP__: new Date().getTime(),
   __ENV__: ENV,
   __DEVELOPMENT__: false,
+  __OPEN_COUNTDOWN__: true,
+  __COUNTDOWN_TIME__: 'October 30, 2018 12:00:00',
 };
 
 const config = {

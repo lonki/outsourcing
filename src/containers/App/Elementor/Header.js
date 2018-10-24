@@ -104,7 +104,7 @@ class Header extends React.PureComponent {
 
   handleScroll = () => {
     const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-    const element = $('.section-mainly');
+    const element = $('.section-mainly').length > 0 ? $('.section-mainly') : $('.section-countdown');
     const offset = element.offset();
     const headerHeight = $('.header').height();
     const bottom = offset.top + element.outerHeight() - headerHeight;

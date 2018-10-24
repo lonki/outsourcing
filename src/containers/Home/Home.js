@@ -15,6 +15,7 @@ import Team from './Sections/Team';
 import Advisors from './Sections/Advisors';
 import Media from './Sections/Media';
 import Roadmap from './Sections/Roadmap';
+import CountDown from './Sections/CountDown';
 
 @connect(
   state => ({
@@ -71,7 +72,13 @@ export default class Home extends Component {
     return (
       <main>
         <div className="home">
-          <Main />
+          {!__OPEN_COUNTDOWN__ &&
+            <Main />
+          }
+
+          {__OPEN_COUNTDOWN__ &&
+            <CountDown />
+          }
 
           <VisibilitySensor offset={{ top: 75 }} minTopValue={200} scrollCheck onChange={this.exchangeOnVisibility} partialVisibility resizeDelay={100}>
             <Exchange />

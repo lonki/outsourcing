@@ -180,6 +180,10 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+
+    &.up {
+        bottom: 65px;
+    }
 }
 
 @media $breakpoint-wide-tablets {

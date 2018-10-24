@@ -243,6 +243,17 @@ const sectionRoadmap = {
   'section.roadmap.card.6.2': 'Launch DINNGO Merchant Official',
 };
 
+const sectionCountdown = {
+  'section.countdown.title': 'DGO TOKEN SALE IS COMING',
+  'section.countdown.desc': 'Holders will not only enjoy a 50% discount on transaction fee but receive numerous exclusive benefits.',
+  'section.countdown.interested': 'I\'m interested',
+  'section.countdown.days': 'DAYS',
+  'section.countdown.coming': 'DGO TOKEN SALE IS COMING',
+  'section.countdown.mobile.title': 'DGO TOKEN SALE <br>IS COMING',
+  'section.countdown.mobile.more': 'more',
+  'section.countdown.mobile.coming': 'DGO TOKEN SALE',
+};
+
 export default Object.assign(
   {},
   common,
@@ -255,4 +266,5 @@ export default Object.assign(
   sectionAdvisors,
   sectionMedia,
   sectionRoadmap,
+  sectionCountdown,
 );
