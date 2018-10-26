@@ -24,7 +24,7 @@ export default class CountDown extends React.PureComponent {
             <div className="left-section">
               <h2 className="section-title">{i18n('section.countdown.title')}</h2>
               <p className="section-msg">{i18n('section.countdown.desc')}</p>
-              <a className="section-btn" href="#" target="_blank" rel="noopener noreferrer">{i18n('section.countdown.interested')}</a>
+              <a className="section-btn" href={i18n('section.countdown.interested.link')} target="_blank" rel="noopener noreferrer">{i18n('section.countdown.interested')}</a>
             </div>
 
             <div className="right-section">
@@ -69,7 +69,7 @@ export default class CountDown extends React.PureComponent {
             <p className="section-msg">{i18n('section.countdown.desc')}</p>
           </div>
           <div className="pure-u-1-1 mobile-center">
-            <a className="section-btn" href="#" target="_blank" rel="noopener noreferrer">{i18n('section.countdown.interested')}</a>
+            <a className="section-btn" href={i18n('section.countdown.interested.link')} target="_blank" rel="noopener noreferrer">{i18n('section.countdown.interested')}</a>
           </div>
         </div>
       </section>

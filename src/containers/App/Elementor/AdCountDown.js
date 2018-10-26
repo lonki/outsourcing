@@ -21,13 +21,13 @@ class AdCountDown extends React.PureComponent {
           <span className="close-btn" />
           <span className="title">{i18n('section.countdown.coming')}</span>
           <CountDownToDate date={__COUNTDOWN_TIME__} isSmall />
-          <a className="interested-btn" href="#" target="_blank" rel="noopener noreferrer">{`${i18n('section.countdown.interested')} >`}</a>
+          <a className="interested-btn" href={i18n('section.countdown.interested.link')} target="_blank" rel="noopener noreferrer">{`${i18n('section.countdown.interested')}`}</a>
         </div>
         <div className="fixed-mobile-countdown-container">
           <span className="close-btn" />
           <CountDownToDate date={__COUNTDOWN_TIME__} isXsSmall />
           <span className="title">{i18n('section.countdown.mobile.coming')}</span>
-          <a className="interested-btn" href="#" target="_blank" rel="noopener noreferrer">{i18n('section.countdown.mobile.more')}</a>
+          <a className="interested-btn" href={i18n('section.countdown.interested.link')} target="_blank" rel="noopener noreferrer">{i18n('section.countdown.mobile.more')}</a>
         </div>
       </div>
     );

@@ -247,6 +247,7 @@ const sectionCountdown = {
   'section.countdown.title': 'DGO TOKEN SALE IS COMING',
   'section.countdown.desc': 'Holders will not only enjoy a 50% discount on transaction fee but receive numerous exclusive benefits.',
   'section.countdown.interested': 'I\'m interested',
+  'section.countdown.interested.link': '#',
   'section.countdown.days': 'DAYS',
   'section.countdown.coming': 'DGO TOKEN SALE IS COMING',
   'section.countdown.mobile.title': 'DGO TOKEN SALE <br>IS COMING',

@@ -202,22 +202,23 @@
     }
 
     .close-btn {
+        width: 24px;
+        height: 24px;
         position: absolute;
-        top: 16px;
+        top: 10px;
         left: 10%;
         display: inline-block;
-        width: 14px;
-        height: 14px;
         overflow: hidden;
         cursor: pointer;
+        border-radius: 50%;
 
         &:before, &:after {
             content: '';
             position: absolute;
             height: 1px;
-            width: 100%;
+            width: 60%;
             top: 50%;
-            left: 0;
+            left: 22%;
             margin-top: -1px;
             background: #133364;
         }
@@ -228,10 +229,14 @@
         &:after {
             transform: rotate(-45deg);
         }
+
+        &:hover {
+            background-color: #e8ecf0;
+        }
     }
 
     .title {
-        margin-left: 25px;
+        margin-left: 30px;
         font-size: 21px;
         font-weight: bold;
         font-style: normal;
@@ -298,6 +303,17 @@
         letter-spacing: normal;
         text-align: right;
         color: #2d9dfe;
+
+        &:after {
+            content: '>';
+            font-size: 17px;
+            margin-left: 9px;
+            color: #2d9dfe;
+        }
+
+        &:hover {
+            color: #133364;
+        }
     }
 }
 
@@ -339,6 +355,7 @@
 
 @media screen and (max-width: 767px) {
     .section-countdown {
+        height: calc(100vh - 50px);
         .section {
             display: none;
         }
@@ -386,7 +403,7 @@
 
             .days {
                 margin-top: 10px;
-                font-size: 80px;
+                font-size: 70px;
             }
         }
 
@@ -406,18 +423,32 @@
         }
 
         .desktop-rate-link {
-            top: 410px;
+            top: 390px;
             bottom: initial;
         }
 
         .rate-link {
+            .link-img {
+                width: 70px;
+                height: 25px;
+            }
+            .rate {
+                font-size: 17px;
+                line-height: 37px;
+
+                &.small {
+                    font-size: 13px;
+                    line-height: 36px;
+                }
+            }
             .left-link {
-                margin-right: 25px;
+                margin-right: 35px;
             }
         }
     }
 
     .fixed-countdown {
+        height: 50px;
         .fixed-countdown-container {
             display: none;
         }
@@ -428,13 +459,14 @@
         }
 
         .close-btn {
-            left: 3%;
+            top: 15px;
+            left: 2%;
         }
 
         .countdown {
             width: 42px;
             height: 42px;
-            top: 1px;
+            top: 4px;
             left: 40px;
             padding-top: 13px;
             font-size: 22.2px;
@@ -462,13 +494,13 @@
         .title {
             margin-left: 0;
             font-size: 21px;
-            line-height: 45px;
+            line-height: 50px;
         }
 
         .interested-btn {
             right: 3%;
             font-size: 15px;
-            line-height: 45px;
+            line-height: 50px;
             letter-spacing: 0.2px;
         }
     }
