@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import isMobile from 'ismobilejs';
 import withI18N from 'shared/intl/withI18N';
 import { CountDownToDate } from 'components';
 
@@ -16,6 +17,7 @@ export default class CountDown extends React.PureComponent {
 
   render() {
     const { i18n } = this.props;
+    const linkStyle = isMobile.tablet ? { bottom: '90px' } : {};
 
     return (
       <section className="section-countdown">
@@ -45,7 +47,7 @@ export default class CountDown extends React.PureComponent {
             </div>
           </div>
         </div>
-        <div className="rate-link desktop-rate-link">
+        <div className="rate-link desktop-rate-link" style={linkStyle}>
           <a href="https://www.trackico.io/ico/dinngo/" target="_blank" className="left-link" rel="noopener noreferrer">
             <div className="link-img ico-track" />
             <span className="rate">{i18n('home.trackico.rate.left')}</span>

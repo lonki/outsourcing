@@ -9,7 +9,7 @@ const defaultDomain = {
   __ENV__: ENV,
   __DEVELOPMENT__: false,
   __OPEN_COUNTDOWN__: true,
-  __COUNTDOWN_TIME__: 'October 30, 2018 12:00:00',
+  __COUNTDOWN_TIME__: 'December 1, 2018 12:00:00',
 };
 
 const config = {

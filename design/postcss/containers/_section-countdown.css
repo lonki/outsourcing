@@ -1,4 +1,5 @@
 .section-countdown {
+    position: relative;
     height: calc(100vh - 45px);
     min-height: 615px;
     position: relative;
@@ -20,6 +21,7 @@
         height: 100%;
         align-items: center;
         justify-items: center;
+        flex-flow: row;
     }
 
     .section-mobile {
@@ -197,6 +199,10 @@
     background-image: linear-gradient(to top, #f0f6fe, #fcfcfc);
     z-index: 200;
 
+    &.hide {
+        display: none;
+    }
+
     .fixed-mobile-countdown-container {
         display: none;
     }
@@ -322,6 +328,10 @@
         .left-section {
             padding-left: 10%;
         }
+
+        /* .desktop-rate-link {
+            bottom: 90px;
+        } */
     }
     .fixed-countdown {
         padding: 0 1%;
@@ -361,11 +371,12 @@
         }
 
         .section-mobile {
-            padding: 20% 18px 0 18px;
+            padding: 75px 18px 0 18px;
             display: block;
         }
 
         .section-title {
+            max-width: initial;
             margin-bottom: 30px;
             font-size: 34px;
             line-height: 1.06;
