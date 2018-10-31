@@ -20,6 +20,7 @@ class Footer extends React.PureComponent {
 
   static propTypes = {
     i18n: PropTypes.func.isRequired,
+    className: PropTypes.string.isRequired,
     setEmailSubscriptionPending: PropTypes.bool.isRequired,
     setEmailSubscriptionSuc: PropTypes.bool.isRequired,
     setEmailSubscriptionErr: PropTypes.bool.isRequired,
@@ -48,10 +49,10 @@ class Footer extends React.PureComponent {
   }
 
   render() {
-    const { i18n } = this.props;
+    const { i18n, className } = this.props;
 
     return (
-      <footer>
+      <footer className={className}>
         <div className="section row pure-g">
           <div className="pure-u-1-1 pure-u-md-1-3">
             <h2 className="section-title">{i18n({ id: 'footer.title' }, 'html')}</h2>

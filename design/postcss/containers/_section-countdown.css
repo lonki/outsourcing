@@ -355,6 +355,10 @@
         .countdown {
             transform: translate(25%, 0);
         }
+
+        .section-content {
+            transform: translate(0, -10%);
+        }
     }
     .fixed-countdown {
         .title {
@@ -368,6 +372,10 @@
         height: calc(100vh - 50px);
         .section {
             display: none;
+        }
+
+        .section-content {
+            transform: translate(0, -10%);
         }
 
         .section-mobile {
@@ -513,6 +521,14 @@
             font-size: 15px;
             line-height: 50px;
             letter-spacing: 0.2px;
+        }
+    }
+}
+
+@media $breakpoint-big-mobile {
+    .section-countdown {
+        .section-content {
+            transform: translate(0, 0);
         }
     }
 }
